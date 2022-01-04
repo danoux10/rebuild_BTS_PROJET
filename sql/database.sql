@@ -21,7 +21,7 @@ create table ruche(
     ruche_name varchar(255) not null
 );
 
-create table rucher(
+create table rucher_data(
     rucher_id int auto_increment primary key not null,
     rucher_name varchar(255) not null,
     rucher_loction varchar(255) not null,
@@ -38,4 +38,6 @@ create table ruche_data(
     time_data time not null,
     data_id int(255) not null,
     foreign key (data_id) references ruche(ruche_id)
-)
+);
+
+INSERT INTO status (status_name) VALUES ('admin')
