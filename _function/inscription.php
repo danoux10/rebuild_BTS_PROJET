@@ -1,12 +1,4 @@
-<body style="background: black;color: white">
-
 <?php
-	try {
-		$bdd = new PDO('mysql:host=localhost;dbname=rucher;charset=utf8', 'root', '');
-	} catch (Exception $e) {
-		die('Erreur : ' . $e->getMessage());
-	}
-	session_start();
     @$add_user = $_POST['add_user'];
     if (isset($add_user)){
         // variable dzclartion;
@@ -33,19 +25,3 @@
         }
     }
 ?>
-<form action="" method="post">
-    fistname:<input type="text" name="firstname" value="<?php echo @$firstname; ?>" required><br>
-    lastname:<input type="text" name="lastname" value="<?php echo @$lastname; ?>" required><br>
-    email:<input type="email" name="email" value="<?php echo @$email; ?>" required><br>
-    password:<input type="password" name="password" required><br>
-    verif_password:<input type="password" name="verif_password" required><br>
-    <select name="status" id="">
-        <option value="0">status</option>
-        <option value="1">admin</option>
-    </select>
-    <input type="submit" value="valid" name="add_user"><br>
-</form>
-<?php
-    echo $_SESSION['errorMe'];
-?>
-</body>
