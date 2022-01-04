@@ -3,7 +3,7 @@
 	include_once '../_function/inscription.php';
 	
 	//selection user code
-	include_once '../_function/update_utilisateur.php';
+	include_once '../_function/user_gestion.php';
 	
 	//add status
 	@$addStatus= $_POST['submit_status'];

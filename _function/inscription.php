@@ -1,5 +1,6 @@
 <?php
     @$add_user = $_POST['add_user'];
+		$errors = array();
     if (isset($add_user)){
         // variable dzclartion;
         $firstname = htmlspecialchars($_POST['firstname']);
@@ -12,22 +13,22 @@
         //verif_pass == password
         if ($password == $verif_pass){
 	        if($status == 0){
-		        $_SESSION['errorMe']='Choisir un status';
+		        $errors['status']='Choisir un status';
 	        }else{
-                $_SESSION['errorMe']='';
-                //cryot password
+						//cryot password
 		        $cryptPass = password_hash($password, PASSWORD_BCRYPT);
-    	        $userAdd = $bdd ->prepare('INSERT INTO users SET firstname= ?,lastname= ?,mail= ?,password= ?,status_reference= ?');
+						$userAdd = $bdd ->prepare('INSERT INTO users SET firstname= ?,lastname= ?,mail= ?,password= ?,status_reference= ?');
 		        $userAdd ->execute([$firstname,$lastname,$email,$cryptPass,$status]);
-            unset($email);
-            unset($firstname);
-            unset($lastname);
+            $email='';
+            unset($password);
+            $firstname='';
+            $lastname='';
             }
         }else{
-            $_SESSION['errorMe'] = 'Mot de passe non identique';
+            $errors['password'] = 'Mot de passe non identique';
         }
-				unset($_SESSION['errorMe']);
-				$_SESSION['firstname'] = $firstname;
+				@$_SESSION['password']= $password;
+		    $_SESSION['firstname'] = $firstname;
 				$_SESSION['lastname'] = $lastname;
 				$_SESSION['email'] = $email;
     }
