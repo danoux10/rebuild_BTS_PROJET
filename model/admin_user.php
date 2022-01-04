@@ -1,6 +1,5 @@
     <?php
         include_once '../controller/header.php';
-        include_once '../view/user_admin.php';
     ?>
 
     <title>Admin User</title>
@@ -19,6 +18,11 @@
         <option value="1">admin</option>
     </select>
     <input type="submit" value="valid" name="add_user" class="border-white cursor-pointer border"><br>
+</form>
+<form action="" method="post">
+    <br>status add <br>
+    status name: <input type="text" name="status_name" class="text-black">
+    <input type="submit" name="submit_status" value="ajouter" class="border border-white" required>
 </form>
 <?php    include_once '../controller/footer.php'; ?>
 </body>

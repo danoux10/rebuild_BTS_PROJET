@@ -2,4 +2,5 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <?php
   include_once '../_function/connexion.php';
+  include_once '../view/user_admin.php';
 ?>

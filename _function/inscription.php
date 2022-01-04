@@ -8,7 +8,6 @@
         $password = htmlspecialchars($_POST['password']);
         $verif_pass = htmlspecialchars($_POST['verif_password']);
         $status = htmlspecialchars($_POST['status']);
-        
         //verif_pass == password
         if ($password == $verif_pass){
 	        if($status == 0){
