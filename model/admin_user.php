@@ -7,10 +7,11 @@
 <body class="bg-black text-white">
 <?php include_once '../controller/navbar.php';?>
 
+<?php echo $_SESSION['errorMe']?>
 <form action="" method="post">
-    fistname:<input class="text-black" type="text" name="firstname" value="<?php echo @$firstname; ?>" required><br>
-    lastname:<input class="text-black" type="text" name="lastname" value="<?php echo @$lastname; ?>" required><br>
-    email:<input class="text-black" type="email" name="email" value="<?php echo @$email; ?>" required><br>
+    fistname:<input class="text-black" type="text" name="firstname" value="<?php echo @$_SESSION['firstname']; ?>" required><br>
+    lastname:<input class="text-black" type="text" name="lastname" value="<?php echo @$_SESSION['lastname']; ?>" required><br>
+    email:<input class="text-black" type="email" name="email" value="<?php echo @$_SESSION['email']; ?>" required><br>
     password:<input class="text-black" type="password" name="password" required><br>
     verif_password:<input class="text-black" type="password" name="verif_password" required><br>
     <select name="status" id="" class="text-black">

@@ -8,6 +8,7 @@
         $password = htmlspecialchars($_POST['password']);
         $verif_pass = htmlspecialchars($_POST['verif_password']);
         $status = htmlspecialchars($_POST['status']);
+				
         //verif_pass == password
         if ($password == $verif_pass){
 	        if($status == 0){
@@ -18,9 +19,16 @@
 		        $cryptPass = password_hash($password, PASSWORD_BCRYPT);
     	        $userAdd = $bdd ->prepare('INSERT INTO users SET firstname= ?,lastname= ?,mail= ?,password= ?,status_reference= ?');
 		        $userAdd ->execute([$firstname,$lastname,$email,$cryptPass,$status]);
+            unset($email);
+            unset($firstname);
+            unset($lastname);
             }
         }else{
             $_SESSION['errorMe'] = 'Mot de passe non identique';
         }
+				unset($_SESSION['errorMe']);
+				$_SESSION['firstname'] = $firstname;
+				$_SESSION['lastname'] = $lastname;
+				$_SESSION['email'] = $email;
     }
 ?>
