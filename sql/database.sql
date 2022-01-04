@@ -5,7 +5,7 @@ create table status(
   status_name varchar(255) not null
 );
 
-create table user(
+create table users(
     user_id int auto_increment primary key not null ,
     firstname varchar(255) not null,
     lastname varchar(255) not null,
