@@ -1,6 +1,14 @@
+<style>
+    *{
+        background: black;
+        color: white;
+    }
+</style>
 <?php
 	include_once '../_config/bdd.php';
 	$statusData = $bdd->query('select * from status');
+	$rucheData = $bdd->query('select * from ruche');
+	$rucherData = $bdd->query('select * from rucher_data');
 	
 	//select status
 	function selectStatus(){
@@ -14,5 +22,32 @@
 		}
 		$select_status .="</select>";
 		return $select_status;
+	}
+	
+	function selectRuche(){
+		global $rucheData;
+		$select_ruche = "<select name='ruche_value' class='text-black'>";
+		$select_ruche .="<option value='0'>ruche</option>";
+		foreach ($rucheData as $data){
+			$name = $data['ruche_name'];
+			$id = $data['ruche_id'];
+			$select_ruche .="<option value='$id'>ruche $name</option>";
+		}
+		$select_ruche .="</select>";
+		return $select_ruche;
+	}
+
+	function selectRucher(){
+		global $rucherData;
+		$select_rucher = "<select name='rucher_value' class='text-black'>";
+		$select_rucher .="<option value='0'>rucher</option>";
+		foreach ($rucherData as $data){
+			$name = $data['rucher_name'];
+			$id = $data['rucher_id'];
+			$location = $data['rucher_location'];
+			$select_rucher .="<option value='$id'>$name à $location</option>";
+		}
+		$select_rucher .="</select>";
+		return $select_rucher;
 	}
 	
