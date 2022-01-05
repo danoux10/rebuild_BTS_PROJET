@@ -1,7 +1,14 @@
+<style>
+    *{
+        background: black;
+        color: white;
+    }
+</style>
 <?php
 	include_once '../_config/bdd.php';
 	$statusData = $bdd->query('select * from status');
 	$userData = $bdd->query('select * from users inner join status on users.status_reference=status.status_id ');
+	$rucheData = $bdd->query('select * from ruche');
 	
 	function viewStatus(){
 		global $statusData;
@@ -37,4 +44,22 @@ function viewUsers(){
 		$table_user .="</tbody>";
 		$table_user .="</table>";
 		return$table_user;
+}
+
+function viewRuche()
+{
+	global $rucheData;
+    $table_ruche="<table>";
+    $table_ruche.="<tbody>";
+    foreach ($rucheData as $data){
+		$name = $data['ruche_name'];
+		$value = $data['ruche_value'];
+		$table_ruche .="<tr>";
+		$table_ruche .="<td> $name </td>";
+		$table_ruche .="<td> $value </td>";
+		$table_ruche .="</tr>";
+	}
+	$table_ruche.="</tbody>";
+	$table_ruche.="<table>";
+    return $table_ruche;
 }

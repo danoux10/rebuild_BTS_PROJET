@@ -1,13 +1,11 @@
     <?php
         include_once '../controller/header.php';
-//        include_once '../_function/inscription.php';
+        include_once '../_function/inscription.php';
     ?>
     <title>Admin User</title>
 </head>
 <body style="background: black;color: white">
 <?php include_once '../controller/navbar.php';?>
-<?php    include_once '../_function/inscription.php'; ?>
-
 
 <?php
   foreach ($errors as $message){
