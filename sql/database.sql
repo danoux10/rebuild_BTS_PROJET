@@ -35,11 +35,16 @@ create table ruche_data(
     temperature_data int(255),
     humi_data int(255),
     poids_data int(255),
-    date_data date ,
-    time_data time ,
-    data_id int(255)
+    date_data date not null ,
+    time_data time not null ,
+    data_id int(255)not null
 );
 
 INSERT INTO status (status_name) VALUES ('admin');
-INSERT INTO rucher_data (rucher_name, rucher_location) VALUES ('1','paris')
+INSERT INTO rucher_data (rucher_name, rucher_location) VALUES ('1','paris');
+INSERT INTO rucher_data (rucher_name, rucher_location) VALUES ('2','paris');
+INSERT INTO rucher_data (rucher_name, rucher_location) VALUES ('3','lille');
+INSERT INTO rucher_data (rucher_name, rucher_location) VALUES ('4','reims');
+INSERT INTO rucher_data (rucher_name, rucher_location) VALUES ('5','troyes')
+
 

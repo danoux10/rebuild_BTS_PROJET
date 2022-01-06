@@ -27,11 +27,28 @@
     <br>
     <input type="submit" name="valid_rucher">
 </form>
-
+<form action="" method="post" >
+  <div style="display: flex; justify-content: center; align-items: center">
+	  <?php
+		  echo selectTableRucher();
+	  ?>
+	  <?php
+		  echo selectTableRuche();
+	  ?>
+  </div>
+    <input type="submit" name="ajouter ruche" style="width: 100px;height: 40px">
+</form>
 <?php
-    echo @addRucher();
-	echo @addRuche();
-	echo @viewRuche();
+	@$valid_ruche = $_POST['valid_ruche'];
+	@$valid_rucher = $_POST['valid_rucher'];
+    
+//	if(isset($valid_rucher)){
+//      echo addRucher();
+//    }
+//    if(isset($valid_ruche)){
+//      echo addRuche();
+//    }
+//	echo viewRuche();
  ?>
 <?php
     include_once '../controller/footer.php';
