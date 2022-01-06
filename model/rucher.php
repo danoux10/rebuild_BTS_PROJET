@@ -27,11 +27,11 @@
     <br>
     <input type="submit" name="valid_rucher">
 </form>
+
 <?php
-    echo addRucher();
-	echo addRuche();
-	echo "<br>";
-	echo viewRuche();
+    echo @addRucher();
+	echo @addRuche();
+	echo @viewRuche();
  ?>
 <?php
     include_once '../controller/footer.php';
