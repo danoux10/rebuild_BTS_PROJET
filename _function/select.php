@@ -19,12 +19,13 @@
 	}
 	
 	function selectRuche(){
-		global $rucheData;
+		global $bdd;
+		$rucheData = $bdd->query('select * from ruche');
 		$select_ruche = "<select name='ruche_value' class='text-black'>";
 		$select_ruche .="<option value='0'>ruche</option>";
 		foreach ($rucheData as $data){
 			$name = $data['ruche_name'];
-			$id = $data['ruche_id'];
+			$id = $data['ruche_value'];
 			$select_ruche .="<option value='$id'>ruche $name</option>";
 		}
 		$select_ruche .="</select>";
@@ -79,7 +80,8 @@
 	}
 	
 	function selectTableRuche(){
-		global $rucheData;
+		global $bdd;
+		$rucheData = $bdd->query('select * from ruche');
 		$table_ruche="<table>";
 		$table_ruche.="<tbody>";
 		foreach ($rucheData as $data){
@@ -98,3 +100,4 @@
 		$table_ruche.="<table>";
 		return $table_ruche;
 	}
+
