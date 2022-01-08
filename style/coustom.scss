@@ -1,0 +1,132 @@
+body{
+  margin :0;
+  font-family: sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul,ol{
+  list-style: none;
+}
+
+//ANCHOR navbar style
+#navbar{
+  background: #000;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  ul{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    li{
+      a{
+        color:darkgoldenrod;
+        text-shadow: 1px 1px 0px orange;
+        position: relative;
+        font-weight: bold;
+        transition: all ease .6s;
+        &::before{
+          content: "";
+          width: 0;
+          height: 0.1em;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          background: orange;
+          transition: all .3s;
+        }
+        &:hover{
+          &::before{
+            width: 100%;
+            left: 0;
+            background: darkgoldenrod;
+          }
+        }
+      }
+    }
+  }
+}
+
+//ANCHOR form style
+.form_style{
+  border: 1px outset silver;
+  box-shadow: 2px 2px 2px silver;
+  display: flex;
+  justify-content: center;
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .user_info{
+      display: flex;
+      flex-direction: column;
+    }
+    input{
+      border: 1px solid darkgoldenrod;
+      box-shadow: 2px 2px 2px black;
+    }
+    label{
+      font-weight: bold;
+    }
+    button{
+      border: 1px outset lightgrey;
+      box-shadow: 1px 1px 1px grey;
+      background: none;
+      padding: 1%;
+      font-weight: bold;
+      margin: 2% 0;
+      cursor: pointer;
+      transition: all ease .5s;
+      &:hover{
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px black;
+        background: black;
+        color: white;
+        transition: all ease .5s;
+      }
+  }
+}
+
+//ANCHOR connexion
+#connexion_content{
+  margin-top: 20%;
+  margin-left: 45%;
+  width: 300px;
+  #form_connexion{
+      div{
+      }
+          img{
+         width: 10%;
+      }
+    }
+  }
+}
+
+//ANCHOR inscription
+#inscription_content{
+  margin-top: 15%;
+  margin-left: 35%;
+  width: 500px;
+  height: 500px;
+  #form_inscription{
+    div{
+      img{
+        width: 5%;
+      }
+    }
+    .content{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
