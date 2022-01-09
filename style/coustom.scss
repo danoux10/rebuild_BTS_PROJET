@@ -5,12 +5,28 @@ body{
 
 a{
   text-decoration: none;
+  color: none;
 }
 
 ul,ol{
   list-style: none;
 }
 
+.top{
+  margin-top: 5%;
+}
+
+.hidden{
+  visibility: hidden;
+  transition: all ease .5s;
+}
+.show{
+  transition: all ease .5s;
+  display: block;
+}
+
+.active{cursor: pointer}
+.desactive{ cursor: pointer}
 //ANCHOR navbar style
 #navbar{
   background: #000;
@@ -25,8 +41,8 @@ ul,ol{
       a{
         color:darkgoldenrod;
         text-shadow: 1px 1px 0px orange;
-        position: relative;
         font-weight: bold;
+        position: relative;
         transition: all ease .6s;
         &::before{
           content: "";
@@ -94,19 +110,24 @@ ul,ol{
         transition: all ease .5s;
       }
   }
+  }
 }
 
 //ANCHOR connexion
 #connexion_content{
-  margin-top: 20%;
-  margin-left: 45%;
+  padding: .5% 0;
+  z-index: 1;
+  background: rgba($color: silver, $alpha: .8);
+  position: fixed;
+  top: 45%;
+  left: 44.5%;
   width: 300px;
   #form_connexion{
-      div{
-      }
-          img{
-         width: 10%;
-      }
+    input{
+      background: none;
+    }
+    button{
+      margin-top: 7%;
     }
   }
 }
@@ -129,4 +150,57 @@ ul,ol{
       justify-content: space-around;
     }
   }
+}
+
+//ANCHOR delete user alert
+#delete_alert{
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  border-radius: 10px;
+  margin-top: 25%;
+  margin-left: 45%;
+  padding: 1%;
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .tor_button{
+      display: flex;
+      justify-content: space-around;
+      width: 300px;
+      button{
+        font-weight: bold;
+        color : white;
+        width: 50px;
+        height: 30px;
+        font-size: 15px;
+        text-transform: uppercase;
+        transition: all ease .5s;
+        cursor: pointer;
+
+        &:hover{
+          transition: all ease .5s;
+          border: 1px white;
+        }
+      }
+      #confirm_delete{
+        background: green;
+      }
+      #cancel_delete{
+        background: darkred;
+      }
+    }
+  }
+}
+
+//ANCHOR home page
+#home_contener{ 
+  display: flex;
+  width: 20%;
+  position: relative;
+  left: 40%;
+  margin-top: 10%;
 }

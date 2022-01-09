@@ -2,8 +2,6 @@
   include_once '../_config/bdd.php';
   session_start();
 ?>
-<!doctype html>
-<html lang=fr>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"

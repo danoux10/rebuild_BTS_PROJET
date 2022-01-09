@@ -5,41 +5,53 @@ body {
 
 a {
   text-decoration: none;
+  color: none;
 }
 
 ul, ol {
   list-style: none;
 }
 
+.top {
+  margin-top: 5%;
+}
+
+.hidden {
+  visibility: hidden;
+  transition: all ease 0.5s;
+}
+
+.show {
+  transition: all ease 0.5s;
+  display: block;
+}
+
+.active {
+  cursor: pointer;
+}
+
+.desactive {
+  cursor: pointer;
+}
+
 #navbar {
   background: #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 100vw;
 }
-
 #navbar ul {
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
-
 #navbar ul li a {
   color: darkgoldenrod;
   text-shadow: 1px 1px 0px orange;
-  position: relative;
   font-weight: bold;
-  -webkit-transition: all ease .6s;
-  transition: all ease .6s;
+  position: relative;
+  transition: all ease 0.6s;
 }
-
 #navbar ul li a::before {
   content: "";
   width: 0;
@@ -48,10 +60,8 @@ ul, ol {
   bottom: 0;
   right: 0;
   background: orange;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  transition: all 0.3s;
 }
-
 #navbar ul li a:hover::before {
   width: 100%;
   left: 0;
@@ -60,94 +70,64 @@ ul, ol {
 
 .form_style {
   border: 1px outset silver;
-  -webkit-box-shadow: 2px 2px 2px silver;
-          box-shadow: 2px 2px 2px silver;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 2px 2px 2px silver;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .form_style form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
-
 .form_style form div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .form_style form .user_info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .form_style form input {
   border: 1px solid darkgoldenrod;
-  -webkit-box-shadow: 2px 2px 2px black;
-          box-shadow: 2px 2px 2px black;
+  box-shadow: 2px 2px 2px black;
 }
-
 .form_style form label {
   font-weight: bold;
 }
-
 .form_style form button {
   border: 1px outset lightgrey;
-  -webkit-box-shadow: 1px 1px 1px grey;
-          box-shadow: 1px 1px 1px grey;
+  box-shadow: 1px 1px 1px grey;
   background: none;
   padding: 1%;
   font-weight: bold;
   margin: 2% 0;
   cursor: pointer;
-  -webkit-transition: all ease .5s;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
 }
-
 .form_style form button:hover {
   border: 1px solid black;
-  -webkit-box-shadow: 1px 1px 1px black;
-          box-shadow: 1px 1px 1px black;
+  box-shadow: 1px 1px 1px black;
   background: black;
   color: white;
-  -webkit-transition: all ease .5s;
-  transition: all ease .5s;
+  transition: all ease 0.5s;
 }
 
-.form_style #connexion_content {
-  margin-top: 20%;
-  margin-left: 45%;
+#connexion_content {
+  padding: 0.5% 0;
+  z-index: 1;
+  background: rgba(192, 192, 192, 0.8);
+  position: fixed;
+  top: 45%;
+  left: 44.5%;
   width: 300px;
 }
-
-.form_style #connexion_content #form_connexion img {
-  width: 10%;
+#connexion_content #form_connexion input {
+  background: none;
+}
+#connexion_content #form_connexion button {
+  margin-top: 7%;
 }
 
 #inscription_content {
@@ -156,17 +136,63 @@ ul, ol {
   width: 500px;
   height: 500px;
 }
-
 #inscription_content #form_inscription div img {
   width: 5%;
 }
-
 #inscription_content #form_inscription .content {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
+
+#delete_alert {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  border-radius: 10px;
+  margin-top: 25%;
+  margin-left: 45%;
+  padding: 1%;
+}
+#delete_alert form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#delete_alert form .tor_button {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+#delete_alert form .tor_button button {
+  font-weight: bold;
+  color: white;
+  width: 50px;
+  height: 30px;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+#delete_alert form .tor_button button:hover {
+  transition: all ease 0.5s;
+  border: 1px white;
+}
+#delete_alert form .tor_button #confirm_delete {
+  background: green;
+}
+#delete_alert form .tor_button #cancel_delete {
+  background: darkred;
+}
+
+#home_contener {
+  display: flex;
+  width: 20%;
+  position: relative;
+  left: 40%;
+  margin-top: 10%;
+}
+
 /*# sourceMappingURL=coustom.css.map */
