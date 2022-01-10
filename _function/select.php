@@ -1,11 +1,12 @@
 <?php
 	include_once '../_config/bdd.php';
-	$statusData = $bdd->query('select * from status');
 	$rucheData = $bdd->query('select * from ruche');
+	$userData = $bdd->query('select * from users inner join status on users.status_reference=status.status_id ');
 	$locationData = $bdd->query('select distinct(rucher_location) from rucher_data');
 	//select status
 	function selectStatus(){
-		global $statusData;
+		global $bdd;
+		$statusData = $bdd->query('select * from status');
 		$select_status = "<select name='status' class='text-black'>";
 		$select_status .="<option value='0'>Status</option>";
 		foreach ($statusData as $data){
@@ -15,6 +16,27 @@
 		}
 		$select_status .="</select>";
 		return $select_status;
+	}
+	
+	function selectTableUser(){
+		global $userData;
+		$table_user = "<tbody>";
+		foreach ($userData as $data){
+			$lastname = $data['lastname'] ;
+			$firstname = $data['firstname'];
+			$email= $data['mail'];
+			$status= $data['status_name'];
+			$id= $data['user_id'];
+			//table generateur
+			$table_user .="<tr>";
+			$table_user .="<td>$lastname</td>";
+			$table_user .="<td>$firstname</td>";
+			$table_user .="<td>$email</td>";
+			$table_user .="<td>$status</td>";
+			$table_user .="<td class='selectCh'><input type='radio' name='select_user' value='$id'></td>";
+		}
+		$table_user .= "</tbody>";
+		return$table_user;
 	}
 	
 	function selectRuche(){

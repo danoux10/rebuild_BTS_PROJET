@@ -1,10 +1,9 @@
+//view form connexion
 var connexion_btn = document.getElementById('connexion_view');
-
 var connexion_form = document.getElementById('connexion_content');
 
 connexion_form.classList.add('hidden');
 connexion_btn.classList.add('desactive');
-
 
 function toggleConnexionf() {
     if(connexion_btn.classList.contains('desactive')){

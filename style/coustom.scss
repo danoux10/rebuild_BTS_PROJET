@@ -133,15 +133,21 @@ ul,ol{
 }
 
 //ANCHOR inscription
-#inscription_content{
-  margin-top: 15%;
-  margin-left: 35%;
+.form_style{
+  position: fixed;
+  top: 20%;
+  left: 40%;
   width: 500px;
   height: 500px;
-  #form_inscription{
+  background: white;
+  .form_content{
     div{
-      img{
+      .img_inscription{
         width: 5%;
+      }
+      .img_update{
+        width: 10%;
+        transform: rotate(60deg);
       }
     }
     .content{
@@ -154,15 +160,17 @@ ul,ol{
 
 //ANCHOR delete user alert
 #delete_alert{
+  background: #fff;
+  position: fixed;
+  top: 40%;
+  left: 45%;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   width: 350px;
   border-radius: 10px;
-  margin-top: 25%;
-  margin-left: 45%;
   padding: 1%;
-  form{
+  .delete_content{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -203,4 +211,221 @@ ul,ol{
   position: relative;
   left: 40%;
   margin-top: 10%;
+}
+
+//ANCHOR adminuser
+.admin {
+  padding: 0 5%;
+  display: flex;
+  height: 75vh;
+  justify-content: space-between;
+  .view_user {
+    width: 45%;
+    padding: 1%;
+    .user_table{
+      width: 100%;
+      text-align: center;
+      tr {
+        th {
+          background: silver;
+        }
+        td,th {
+          border: 1px solid black;
+        }
+        td {
+          padding: .5%;
+        }
+      }
+      thead{
+        th{
+          width: 25%;
+        }
+        display: block;
+        margin-right: 6px;
+      }
+      tbody{
+        td{
+          width: 25%;
+        }
+        display: block;
+        overflow-y: auto;
+        height: 65vh;
+        &::-webkit-scrollbar{
+          width: 6px;
+          background: #b8860b;
+        }
+        &::-webkit-scrollbar-thumb{
+          width: 6px;
+          border-radius:50px ;
+          background: rgba(192,192,192,.9);
+        }
+        tr:nth-child(even) {
+          background: lightgray;
+        }
+      }
+    }
+  }
+
+  .user_form {
+    width: 40%;
+    padding: 1%;
+    .button_custum {
+      border: 1px solid black;
+      padding: 1%;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all ease .5s;
+    }
+    .user_btn {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 5%;
+      #view_addUser {
+        background: rgba(0, 255, 0, .3);
+        &:hover {
+          border: 1px solid green;
+          box-shadow: 2px 2px 2px rgba(0, 255, 0, .5);
+          background: rgba(0, 255, 0, .5);
+          transition: all ease .5s;
+        }
+      }
+      #view_update {
+        background: rgba(255, 178, 0, .5);
+        &:hover {
+          border: 1px solid rgb(255, 178, 0);
+          box-shadow: 2px 2px 2px rgb(255, 178, 0);
+          background: rgba(255, 178, 0, .5);
+          transition: all ease .5s;
+        }
+      }
+      #view_delete {
+        background: rgba(255, 0, 0, .3);
+        &:hover {
+          border: 1px solid darkred;
+          box-shadow: 2px 2px 2px rgba(255, 0, 0, .5);
+          background: rgba(255, 0, 0, .3);
+          transition: all ease .5s;
+        }
+      }
+    }
+  }
+
+  .other_btn {
+    padding: 1%;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    height: 60vh;
+    .status_view {
+      text-align: center;
+      min-width: 200px;
+
+      th {
+        background: silver;
+        padding: 1%;
+      }
+
+      tbody {
+        tr:nth-child(even) {
+          background: lightgray;
+        }
+      }
+    }
+    #view_status{
+      background: rgba(0, 255, 0, .3);
+
+      &:hover {
+        border: 1px solid green;
+        box-shadow: 2px 2px 2px rgba(0, 255, 0, .5);
+        background: rgba(0, 255, 0, .5);
+        transition: all ease .5s;
+      }
+    }
+  }
+}
+
+#status_content{
+  width: 250px;
+  height: 150px;
+  left: 45%;
+  top: 35%;
+  box-shadow: 2px 2px 2px rgba(218,165,32,.7);
+}
+
+.cancel_btn{
+  border:none;
+  background: none;
+  transition: all ease .5s;
+  cursor: pointer;
+  &:hover{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    transition: all ease .5s;
+  }
+}
+
+#update_content{
+  position: fixed;
+  width: 20%;
+  padding-bottom: 1%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  top: 35%;
+  right: 5%;
+  #form_update{
+    .head_form{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .img_update{
+        width: 10%;
+        transform: rotate(65deg);
+      }
+    }
+    .big{
+      display: flex;
+      flex-direction: column;
+      .content{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        .user_info{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin: 1% 0;
+        }
+        .email{
+          select{
+            margin-top: 2%;
+          }
+        }
+      }
+    }
+    .btn_update{
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-around;
+      .submit{
+        border: 1px outset lightgrey;
+        box-shadow: 1px 1px 1px grey;
+        background: none;
+        padding: 1%;
+        font-weight: bold;
+        margin: 2% 0;
+        cursor: pointer;
+        transition: all ease .5s;
+        &:hover{
+          border: 1px solid black;
+          box-shadow: 1px 1px 1px black;
+          background: black;
+          color: white;
+          transition: all ease .5s;
+        }
+      }
+    }
+  }
 }

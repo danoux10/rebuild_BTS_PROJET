@@ -130,43 +130,51 @@ ul, ol {
   margin-top: 7%;
 }
 
-#inscription_content {
-  margin-top: 15%;
-  margin-left: 35%;
+.form_style {
+  position: fixed;
+  top: 20%;
+  left: 40%;
   width: 500px;
   height: 500px;
+  background: white;
 }
-#inscription_content #form_inscription div img {
+.form_style .form_content div .img_inscription {
   width: 5%;
 }
-#inscription_content #form_inscription .content {
+.form_style .form_content div .img_update {
+  width: 10%;
+  transform: rotate(60deg);
+}
+.form_style .form_content .content {
   width: 100%;
   display: flex;
   justify-content: space-around;
 }
 
 #delete_alert {
+  background: #fff;
+  position: fixed;
+  top: 40%;
+  left: 45%;
   border: 1px solid black;
   display: flex;
   justify-content: center;
   width: 350px;
   border-radius: 10px;
-  margin-top: 25%;
-  margin-left: 45%;
   padding: 1%;
 }
-#delete_alert form {
+#delete_alert .delete_content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#delete_alert form .tor_button {
+#delete_alert .delete_content .tor_button {
   display: flex;
   justify-content: space-around;
   width: 300px;
 }
-#delete_alert form .tor_button button {
+#delete_alert .delete_content .tor_button button {
   font-weight: bold;
   color: white;
   width: 50px;
@@ -176,14 +184,14 @@ ul, ol {
   transition: all ease 0.5s;
   cursor: pointer;
 }
-#delete_alert form .tor_button button:hover {
+#delete_alert .delete_content .tor_button button:hover {
   transition: all ease 0.5s;
   border: 1px white;
 }
-#delete_alert form .tor_button #confirm_delete {
+#delete_alert .delete_content .tor_button #confirm_delete {
   background: green;
 }
-#delete_alert form .tor_button #cancel_delete {
+#delete_alert .delete_content .tor_button #cancel_delete {
   background: darkred;
 }
 
@@ -193,6 +201,209 @@ ul, ol {
   position: relative;
   left: 40%;
   margin-top: 10%;
+}
+
+.admin {
+  padding: 0 5%;
+  display: flex;
+  height: 75vh;
+  justify-content: space-between;
+}
+.admin .view_user {
+  width: 45%;
+  padding: 1%;
+}
+.admin .view_user .user_table {
+  width: 100%;
+  text-align: center;
+}
+.admin .view_user .user_table tr th {
+  background: silver;
+}
+.admin .view_user .user_table tr td, .admin .view_user .user_table tr th {
+  border: 1px solid black;
+}
+.admin .view_user .user_table tr td {
+  padding: 0.5%;
+}
+.admin .view_user .user_table thead {
+  display: block;
+  margin-right: 6px;
+}
+.admin .view_user .user_table thead th {
+  width: 25%;
+}
+.admin .view_user .user_table tbody {
+  display: block;
+  overflow-y: auto;
+  height: 65vh;
+}
+.admin .view_user .user_table tbody td {
+  width: 25%;
+}
+.admin .view_user .user_table tbody::-webkit-scrollbar {
+  width: 6px;
+  background: #b8860b;
+}
+.admin .view_user .user_table tbody::-webkit-scrollbar-thumb {
+  width: 6px;
+  border-radius: 50px;
+  background: rgba(192, 192, 192, 0.9);
+}
+.admin .view_user .user_table tbody tr:nth-child(even) {
+  background: lightgray;
+}
+.admin .user_form {
+  width: 40%;
+  padding: 1%;
+}
+.admin .user_form .button_custum {
+  border: 1px solid black;
+  padding: 1%;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+.admin .user_form .user_btn {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+.admin .user_form .user_btn #view_addUser {
+  background: rgba(0, 255, 0, 0.3);
+}
+.admin .user_form .user_btn #view_addUser:hover {
+  border: 1px solid green;
+  box-shadow: 2px 2px 2px rgba(0, 255, 0, 0.5);
+  background: rgba(0, 255, 0, 0.5);
+  transition: all ease 0.5s;
+}
+.admin .user_form .user_btn #view_update {
+  background: rgba(255, 178, 0, 0.5);
+}
+.admin .user_form .user_btn #view_update:hover {
+  border: 1px solid #ffb200;
+  box-shadow: 2px 2px 2px #ffb200;
+  background: rgba(255, 178, 0, 0.5);
+  transition: all ease 0.5s;
+}
+.admin .user_form .user_btn #view_delete {
+  background: rgba(255, 0, 0, 0.3);
+}
+.admin .user_form .user_btn #view_delete:hover {
+  border: 1px solid darkred;
+  box-shadow: 2px 2px 2px rgba(255, 0, 0, 0.5);
+  background: rgba(255, 0, 0, 0.3);
+  transition: all ease 0.5s;
+}
+.admin .other_btn {
+  padding: 1%;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  height: 60vh;
+}
+.admin .other_btn .status_view {
+  text-align: center;
+  min-width: 200px;
+}
+.admin .other_btn .status_view th {
+  background: silver;
+  padding: 1%;
+}
+.admin .other_btn .status_view tbody tr:nth-child(even) {
+  background: lightgray;
+}
+.admin .other_btn #view_status {
+  background: rgba(0, 255, 0, 0.3);
+}
+.admin .other_btn #view_status:hover {
+  border: 1px solid green;
+  box-shadow: 2px 2px 2px rgba(0, 255, 0, 0.5);
+  background: rgba(0, 255, 0, 0.5);
+  transition: all ease 0.5s;
+}
+
+#status_content {
+  width: 250px;
+  height: 150px;
+  left: 45%;
+  top: 35%;
+  box-shadow: 2px 2px 2px rgba(218, 165, 32, 0.7);
+}
+
+.cancel_btn {
+  border: none;
+  background: none;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+.cancel_btn:hover {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  transition: all ease 0.5s;
+}
+
+#update_content {
+  position: fixed;
+  width: 20%;
+  padding-bottom: 1%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  top: 35%;
+  right: 5%;
+}
+#update_content #form_update .head_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#update_content #form_update .head_form .img_update {
+  width: 10%;
+  transform: rotate(65deg);
+}
+#update_content #form_update .big {
+  display: flex;
+  flex-direction: column;
+}
+#update_content #form_update .big .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#update_content #form_update .big .content .user_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 0;
+}
+#update_content #form_update .big .content .email select {
+  margin-top: 2%;
+}
+#update_content #form_update .btn_update {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+#update_content #form_update .btn_update .submit {
+  border: 1px outset lightgrey;
+  box-shadow: 1px 1px 1px grey;
+  background: none;
+  padding: 1%;
+  font-weight: bold;
+  margin: 2% 0;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+#update_content #form_update .btn_update .submit:hover {
+  border: 1px solid black;
+  box-shadow: 1px 1px 1px black;
+  background: black;
+  color: white;
+  transition: all ease 0.5s;
 }
 
 /*# sourceMappingURL=coustom.css.map */

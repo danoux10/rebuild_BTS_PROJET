@@ -26,12 +26,11 @@ function viewUsers(){
 			$mail = $data['mail'];
 			$userStatus = $data['status_name'];
 			$userId = $data['user_id'];
-            //table generateur
+			//table generateur
 			$table_user .="<tr>";
 			$table_user .="<td> $name </td>";
 			$table_user .="<td> $mail </td>";
 			$table_user .="<td> $userStatus </td>";
-			$table_user .="<td> <input type='radio' name='select_user' value='$userId'></td>";
 			$table_user .="</tr>";
 		}
 		$table_user .="</tbody>";

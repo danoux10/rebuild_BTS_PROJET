@@ -27,7 +27,9 @@
     <div id="home_contener">
        <img src="../img/ruche.svg" alt="" id="image_home">
     </div>
-<script src="../script/show.js"></script>
-<?php include_once '../_function/connexion.php'?>
+<?php
+  include_once '../controller/footer.php';
+  include_once '../_function/connexion.php';
+?>
 </body>
 </html>
