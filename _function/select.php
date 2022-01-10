@@ -2,7 +2,6 @@
 	include_once '../_config/bdd.php';
 	$statusData = $bdd->query('select * from status');
 	$rucheData = $bdd->query('select * from ruche');
-	$rucherData = $bdd->query('select * from rucher_data');
 	$locationData = $bdd->query('select distinct(rucher_location) from rucher_data');
 	//select status
 	function selectStatus(){
@@ -33,7 +32,8 @@
 	}
 
 	function selectRucher(){
-		global $rucherData;
+		global $bdd;
+		$rucherData = $bdd->query('select * from rucher_data');
 		$select_rucher = "<select name='rucher_value' class='text-black'>";
 		$select_rucher .="<option value='0'>rucher</option>";
 		foreach ($rucherData as $data){
@@ -60,9 +60,9 @@
 
 		//select table
 	function selectTableRucher(){
-		global $rucherData;
-		$table_rucher = "<table>";
-		$table_rucher .= "<tbody>";
+		global $bdd;
+		$rucherData = $bdd->query('select * from rucher_data');
+		$table_rucher = "<tbody>";
 		foreach ($rucherData as $data){
 			$location = $data['rucher_location'];
 			$name = $data['rucher_name'];
@@ -75,15 +75,13 @@
 			$table_rucher .="</tr>";
 		}
 		$table_rucher .= "</tbody>";
-		$table_rucher .= "</table>";
 		return $table_rucher;
 	}
 	
 	function selectTableRuche(){
 		global $bdd;
 		$rucheData = $bdd->query('select * from ruche');
-		$table_ruche="<table>";
-		$table_ruche.="<tbody>";
+		$table_ruche="<tbody>";
 		foreach ($rucheData as $data){
 			$name = $data['ruche_name'];
 			$id = $data['ruche_id'];
@@ -97,7 +95,26 @@
 			$table_ruche .="</tr>";
 		}
 		$table_ruche.="</tbody>";
-		$table_ruche.="<table>";
+		return $table_ruche;
+	}
+
+	function selectTableSingle(){
+		global $bdd;
+		$rucheData = $bdd->query('select * from ruche');
+		$table_ruche="<tbody>";
+		foreach ($rucheData as $data){
+			$name = $data['ruche_name'];
+			$id = $data['ruche_id'];
+			$rucher = $data['rucher_value'];
+			$value = $data['ruche_value'];
+			$table_ruche .="<tr>";
+			$table_ruche .="<td> $name </td>";
+			$table_ruche .="<td> $value </td>";
+			$table_ruche .="<td> $rucher </td>";
+			$table_ruche .="<td> <input type='radio' name='checkRuche[]' value='$id'> </td>";
+			$table_ruche .="</tr>";
+		}
+		$table_ruche.="</tbody>";
 		return $table_ruche;
 	}
 
