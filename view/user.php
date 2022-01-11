@@ -10,25 +10,38 @@
 </head>
 <?php include_once '../controller/navbar.php';?>
 <div class="admin top">
-    <form action="" method="post" class="view_user">
-        <table class="scroll user_table">
-            <thead>
-            <tr>
-                <th>Prenom</th>
-                <th>Nom</th>
-                <th>Email</th>
-                <th>Status</th>
-                <th>Sct</th>
-            </tr>
-            </thead>
-          <?php echo selectTableUser(); ?>
-        </table>
+    <form action="user.php" method="post" class="view_user">
+       <div>
+            <table class="scroll user_table">
+                <thead>
+                    <tr>
+                        <th>Prenom</th>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Sct</th>
+                    </tr>
+                </thead>
+                <?php
+                   echo selectTableUser();
+                ?>
+            </table>
+        </div>
+        <button class="button_custum" name="update_user" id="view_update">Modifier Utilisateur</button>
+        <div id="delete_alert" class="">
+            <div class="delete_content">
+                <p>Etes vous sur de vouloir supprimer l'Utilisateur</p>
+                <div class="tor_button">
+                    <button type="submit" name="delete_confirm" id="confirm_delete" title="action irréversible">Oui</button>
+                    <button type="submit" name="delete_cancel" id="cancel_delete">non</button>
+                </div>
+            </div>
+        </div>
     </form>
     <form action="" method="post" class="user_form">
         <div class="user_btn">
             <span class="button_custum" id="view_addUser">Ajouter Utilisateur</span>
-            <button class="button_custum" name="update_user" id="view_update">Modifier Utilisateur</button>
-            <button class="button_custum" name="delete_user" id="view_delete">Suprimer Utilisateur</button>
+            <span class="button_custum"  id="view_delete">Suprimer Utilisateur</span>
         </div>
         <div class="other_btn">
             <table class="sroll status_view">
@@ -43,7 +56,7 @@
         </div>
     </form>
     <div id="update_content">
-        <form action="" method="post" id="form_update" class="form_content">
+        <form action="user.php" method="post" id="form_update" class="form_content">
             <div class="head_form">
                 <img src="../img/bee-evil.svg" alt="" class="img_update">
                 <h2>Update</h2>
@@ -52,19 +65,17 @@
                 <div class="content">
                     <div class="user_info">
                         <label for="nom_update">Nom</label>
-                        <input type="text" name="lastname" id="nom_update">
+                        <input type="text" name="lastname" value="<?php echo $_SESSION['firstname'] ?>" id="nom_update">
                     </div>
                     <div class="user_info">
                         <label for="prenom_update">Prenom</label>
-                        <input type="text" name="firstname" id="prenom_update">
+                        <input type="text" name="firstname" id="prenom_update" value="<?php echo $_SESSION['lastname']?>">
                     </div>
-                    
                     <div class="user_info email">
                         <label for="email_update">Email</label>
-                        <input type="mail" name="email" id="email_update">
+                        <input type="mail" name="email" id="email_update" value="<?php echo $_SESSION['email']; ?>">
                         <?php echo selectStatus(); ?>
                     </div>
-                    
                     <div class="user_info">
                         <label for="password_update">Password</label>
                         <input type="password" name="password" id="password_update">
@@ -75,7 +86,7 @@
                     </div>
                 </div>
                 <div class="btn_update">
-                    <button type="submit" name="update_user" class="submit">Update</button>
+                    <button type="submit" name="confirm_update_U" class="submit">Update</button>
                     <button type="submit" name="cancel_update" class="cancel_btn">Annuler</button>
                 </div>
             </div>

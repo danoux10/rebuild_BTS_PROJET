@@ -16,17 +16,18 @@ ul,ol{
   margin-top: 5%;
 }
 
-.hidden{
-  visibility: hidden;
-  transition: all ease .5s;
-}
-.show{
-  transition: all ease .5s;
-  display: block;
-}
-
+.hidden{visibility: hidden;}
+.show{display: block;}
 .active{cursor: pointer}
 .desactive{ cursor: pointer}
+.button_custum {
+  border: 1px solid black;
+  padding: 1%;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all ease .5s;
+}
+
 //ANCHOR navbar style
 #navbar{
   background: #000;
@@ -218,12 +219,14 @@ ul,ol{
   padding: 0 5%;
   display: flex;
   height: 75vh;
-  justify-content: space-between;
   .view_user {
     width: 45%;
     padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     .user_table{
-      width: 100%;
+      width: 178%;
       text-align: center;
       tr {
         th {
@@ -238,14 +241,14 @@ ul,ol{
       }
       thead{
         th{
-          width: 25%;
+          width: 24%;
         }
         display: block;
         margin-right: 6px;
       }
       tbody{
         td{
-          width: 25%;
+          width: 23.5%;
         }
         display: block;
         overflow-y: auto;
@@ -264,18 +267,21 @@ ul,ol{
         }
       }
     }
+    #view_update {
+      border: none;
+      background: rgba(255, 178, 0, .5);
+      &:hover {
+        border: 1px solid rgb(255, 178, 0);
+        box-shadow: 2px 2px 2px rgb(255, 178, 0);
+        background: rgba(255, 178, 0, .5);
+        transition: all ease .5s;
+      }
+    }
   }
 
   .user_form {
     width: 40%;
     padding: 1%;
-    .button_custum {
-      border: 1px solid black;
-      padding: 1%;
-      border-radius: 3px;
-      cursor: pointer;
-      transition: all ease .5s;
-    }
     .user_btn {
       display: flex;
       justify-content: space-around;
@@ -286,15 +292,6 @@ ul,ol{
           border: 1px solid green;
           box-shadow: 2px 2px 2px rgba(0, 255, 0, .5);
           background: rgba(0, 255, 0, .5);
-          transition: all ease .5s;
-        }
-      }
-      #view_update {
-        background: rgba(255, 178, 0, .5);
-        &:hover {
-          border: 1px solid rgb(255, 178, 0);
-          box-shadow: 2px 2px 2px rgb(255, 178, 0);
-          background: rgba(255, 178, 0, .5);
           transition: all ease .5s;
         }
       }
@@ -319,12 +316,10 @@ ul,ol{
     .status_view {
       text-align: center;
       min-width: 200px;
-
       th {
         background: silver;
         padding: 1%;
       }
-
       tbody {
         tr:nth-child(even) {
           background: lightgray;
@@ -333,7 +328,6 @@ ul,ol{
     }
     #view_status{
       background: rgba(0, 255, 0, .3);
-
       &:hover {
         border: 1px solid green;
         box-shadow: 2px 2px 2px rgba(0, 255, 0, .5);

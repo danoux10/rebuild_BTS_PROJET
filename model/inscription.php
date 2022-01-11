@@ -1,9 +1,10 @@
 <?php
-		include_once '../_function/form.php';
     @$add_user = $_POST['add_user'];
-		@$update_user = $_POST['update_user'];
-    @$delete_user = $_POST['delete_user'];
+		@$update_user = $_POST['confirm_update_U'];
+		@$cancelUpdate_user = $_POST['cancel_update'];
+    @$confirm_delete = $_POST['delete_confirm'];
     @$add_status = $_POST['add_status'];
+		@$select_user = $_POST['update_user'];
 		$errors = array();
     if (isset($add_user)){
         // variable dzclartion; bn,lm;
@@ -35,13 +36,57 @@
 				$_SESSION['lastname'] = $lastname;
 				$_SESSION['email'] = $email;
     }
-	
-		if(isset($delete_user)){
-			include '../controller/supprim.php';
+		
+		//update user
+		if(isset($select_user)){
+			@$userId = $_POST['selected_user'];
+			if ($userId == 0){
+					$errors['select_delete']='selectioner un utilisateur';
+			}else {
+				$_SESSION['userSelected'] = $userId;
+			}
+		}
+		$_SESSION['firstname'] = "";
+		$_SESSION['lastname'] = "";
+		$_SESSION['email'] = "";
+		@$userSelected = intval($_SESSION['userSelected']);
+		@$selected_user = $bdd->query("select * from users where user_id='$userSelected'");
+		foreach ($selected_user as $data){
+			$_SESSION['firstname'] = $data['firstname'];
+			$_SESSION['lastname'] = $data['lastname'];
+			$_SESSION['email'] = $data['mail'];
 		}
 		
-		if(isset($update_user_user)){
+		if(isset($update_user)){
+			$firstname = htmlspecialchars($_POST['firstname']);
+			$lastname = htmlspecialchars($_POST['lastname']);
+			$email = htmlspecialchars($_POST['email']);
+			$status = intval($_POST['status']);
+			if($status == 0){
+				$errors['status']='Choisir un status';
+			}else{
+				if (htmlspecialchars($_POST['password']) == htmlspecialchars($_POST['verif_password'])){
+					$password = htmlspecialchars($_POST['password']);
+					$cryptPass = password_hash($password, PASSWORD_BCRYPT);
+					$update = $bdd->query("update users set firstname='$firstname', lastname='$lastname', mail='$email', password='$cryptPass', status_reference='$status' where user_id='$userSelected'");
+					$message['update_user']='utilisateur mis a jours';
+					unset($_SESSION['userSelected']);
+				}
+			}
 		}
+		if(isset($cancelUpdate_user)){
+			unset($_SESSION['userSelected']);
+		}
+		
+		//supprim user
+	if(isset($confirm_delete)){
+		@$select = $_POST['selected_user'];
+		if ($select == 0){
+			$errors['select_delete']='selectioner un utilisateur';
+		}else{
+			$delete = $bdd->query("delete from users where user_id='$select'");
+		}
+	}
 		
 		//ANCHOR status
 		if(isset($add_status)){

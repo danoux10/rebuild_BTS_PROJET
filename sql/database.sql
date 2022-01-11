@@ -32,9 +32,9 @@ create table ruche(
 
 create table ruche_data(
     auto_data int auto_increment not null primary key,
-    temperature_data int(255),
-    humi_data int(255),
-    poids_data int(255),
+    temperature_data float(255),
+    humi_data float(255),
+    poids_data float(255),
     date_data date not null ,
     time_data time not null ,
     data_id int(255)not null

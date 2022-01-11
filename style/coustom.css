@@ -18,11 +18,9 @@ ul, ol {
 
 .hidden {
   visibility: hidden;
-  transition: all ease 0.5s;
 }
 
 .show {
-  transition: all ease 0.5s;
   display: block;
 }
 
@@ -32,6 +30,14 @@ ul, ol {
 
 .desactive {
   cursor: pointer;
+}
+
+.button_custum {
+  border: 1px solid black;
+  padding: 1%;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all ease 0.5s;
 }
 
 #navbar {
@@ -207,14 +213,16 @@ ul, ol {
   padding: 0 5%;
   display: flex;
   height: 75vh;
-  justify-content: space-between;
 }
 .admin .view_user {
   width: 45%;
   padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .admin .view_user .user_table {
-  width: 100%;
+  width: 178%;
   text-align: center;
 }
 .admin .view_user .user_table tr th {
@@ -231,7 +239,7 @@ ul, ol {
   margin-right: 6px;
 }
 .admin .view_user .user_table thead th {
-  width: 25%;
+  width: 24%;
 }
 .admin .view_user .user_table tbody {
   display: block;
@@ -239,7 +247,7 @@ ul, ol {
   height: 65vh;
 }
 .admin .view_user .user_table tbody td {
-  width: 25%;
+  width: 23.5%;
 }
 .admin .view_user .user_table tbody::-webkit-scrollbar {
   width: 6px;
@@ -253,16 +261,19 @@ ul, ol {
 .admin .view_user .user_table tbody tr:nth-child(even) {
   background: lightgray;
 }
+.admin .view_user #view_update {
+  border: none;
+  background: rgba(255, 178, 0, 0.5);
+}
+.admin .view_user #view_update:hover {
+  border: 1px solid #ffb200;
+  box-shadow: 2px 2px 2px #ffb200;
+  background: rgba(255, 178, 0, 0.5);
+  transition: all ease 0.5s;
+}
 .admin .user_form {
   width: 40%;
   padding: 1%;
-}
-.admin .user_form .button_custum {
-  border: 1px solid black;
-  padding: 1%;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: all ease 0.5s;
 }
 .admin .user_form .user_btn {
   display: flex;
@@ -276,15 +287,6 @@ ul, ol {
   border: 1px solid green;
   box-shadow: 2px 2px 2px rgba(0, 255, 0, 0.5);
   background: rgba(0, 255, 0, 0.5);
-  transition: all ease 0.5s;
-}
-.admin .user_form .user_btn #view_update {
-  background: rgba(255, 178, 0, 0.5);
-}
-.admin .user_form .user_btn #view_update:hover {
-  border: 1px solid #ffb200;
-  box-shadow: 2px 2px 2px #ffb200;
-  background: rgba(255, 178, 0, 0.5);
   transition: all ease 0.5s;
 }
 .admin .user_form .user_btn #view_delete {

@@ -33,7 +33,7 @@
 			$table_user .="<td>$firstname</td>";
 			$table_user .="<td>$email</td>";
 			$table_user .="<td>$status</td>";
-			$table_user .="<td class='selectCh'><input type='radio' name='select_user' value='$id'></td>";
+			$table_user .="<td class='selectCh'><input type='radio' name='selected_user' value='$id'></td>";
 		}
 		$table_user .= "</tbody>";
 		return$table_user;
