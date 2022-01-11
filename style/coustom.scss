@@ -214,7 +214,7 @@ ul,ol{
   margin-top: 10%;
 }
 
-//ANCHOR adminuser
+//ANCHOR adminUser
 .admin {
   padding: 0 5%;
   display: flex;
@@ -423,3 +423,125 @@ ul,ol{
     }
   }
 }
+
+//ANCHOR adminRuche
+#rucher_admin{
+  #rucher_content {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    height: 75vh;
+    table{
+      border: 1px solid white;
+      thead{
+        th{
+          background: silver;
+        }
+      }
+      tbody{
+        tr:nth-child(even){
+          background: lightgray;
+        }
+      }
+    }
+    .left {
+      display: flex;
+      padding: 1%;
+      align-items: center;
+      justify-content: space-around;
+      width: 45%;
+      .view_ruche{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border: 1px solid ;
+        .btn_ruche{
+          border: 1px solid red;
+          width: 100%;
+
+        }
+        .view\&select{
+          display: flex;
+          justify-content: space-around;
+          .graph{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            #graph_content{
+              background: #000;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .form_ruche{
+        width: 100%;
+        height: 100%;
+        .btn_content{
+          height: 20%;
+          margin-top: 1.5%;
+          margin-bottom: 5%;
+          padding: 1.5%;
+          .btn_ruche{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 3.5%;
+            .ajouter{
+              border: none;
+              background: rgba(0, 255, 0, .3);
+              &:hover {
+                border: 1px solid green;
+                box-shadow: 2px 2px 2px rgba(0, 255, 0, .5);
+                background: rgba(0, 255, 0, .5);
+                transition: all ease .5s;
+              }
+            }
+            .modifier{
+              border: none;
+              background: rgba(255, 178, 0, .5);
+              &:hover {
+                border: 1px solid rgb(255, 178, 0);
+                box-shadow: 2px 2px 2px rgb(255, 178, 0);
+                background: rgba(255, 178, 0, .5);
+                transition: all ease .5s;
+              }
+            }
+          }
+          .other_btn{
+            margin-top: 2%;
+            display: flex;
+            justify-content: space-around;
+            #admin_rucher{
+              border: none;
+              font-weight: bold;
+              background: rgba(255,255,0,.5);
+              &:hover{
+                border: 1px solid rgb(255, 178, 0);
+                box-shadow: 2px 2px 2px rgb(255, 178, 0);
+                background: rgba(255, 178, 0, .5);
+                transition: all ease .5s;
+              }
+            }
+          }
+        }
+        .table_content{
+          height: 65%;
+          margin-bottom: 1.5%;
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}
+
+
+

@@ -408,4 +408,115 @@ ul, ol {
   transition: all ease 0.5s;
 }
 
+#rucher_admin #rucher_content {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  height: 75vh;
+}
+#rucher_admin #rucher_content table {
+  border: 1px solid white;
+}
+#rucher_admin #rucher_content table thead th {
+  background: silver;
+}
+#rucher_admin #rucher_content table tbody tr:nth-child(even) {
+  background: lightgray;
+}
+#rucher_admin #rucher_content .left {
+  display: flex;
+  padding: 1%;
+  align-items: center;
+  justify-content: space-around;
+  width: 45%;
+}
+#rucher_admin #rucher_content .left .view_ruche {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
+}
+#rucher_admin #rucher_content .left .view_ruche .btn_ruche {
+  border: 1px solid red;
+  width: 100%;
+}
+#rucher_admin #rucher_content .left .view_ruche .view\&select {
+  display: flex;
+  justify-content: space-around;
+}
+#rucher_admin #rucher_content .left .view_ruche .view\&select .graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#rucher_admin #rucher_content .left .view_ruche .view\&select .graph #graph_content {
+  background: #000;
+}
+#rucher_admin #rucher_content .right {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#rucher_admin #rucher_content .right .form_ruche {
+  width: 100%;
+  height: 100%;
+}
+#rucher_admin #rucher_content .right .form_ruche .btn_content {
+  height: 20%;
+  margin-top: 1.5%;
+  margin-bottom: 5%;
+  padding: 1.5%;
+}
+#rucher_admin #rucher_content .right .form_ruche .btn_content .btn_ruche {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 3.5%;
+}
+#rucher_admin #rucher_content .right .form_ruche .btn_content .btn_ruche .ajouter {
+  border: none;
+  background: rgba(0, 255, 0, 0.3);
+}
+#rucher_admin #rucher_content .right .form_ruche .btn_content .btn_ruche .ajouter:hover {
+  border: 1px solid green;
+  box-shadow: 2px 2px 2px rgba(0, 255, 0, 0.5);
+  background: rgba(0, 255, 0, 0.5);
+  transition: all ease 0.5s;
+}
+#rucher_admin #rucher_content .right .form_ruche .btn_content .btn_ruche .modifier {
+  border: none;
+  background: rgba(255, 178, 0, 0.5);
+}
+#rucher_admin #rucher_content .right .form_ruche .btn_content .btn_ruche .modifier:hover {
+  border: 1px solid #ffb200;
+  box-shadow: 2px 2px 2px #ffb200;
+  background: rgba(255, 178, 0, 0.5);
+  transition: all ease 0.5s;
+}
+#rucher_admin #rucher_content .right .form_ruche .btn_content .other_btn {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-around;
+}
+#rucher_admin #rucher_content .right .form_ruche .btn_content .other_btn #admin_rucher {
+  border: none;
+  font-weight: bold;
+  background: rgba(255, 255, 0, 0.5);
+}
+#rucher_admin #rucher_content .right .form_ruche .btn_content .other_btn #admin_rucher:hover {
+  border: 1px solid #ffb200;
+  box-shadow: 2px 2px 2px #ffb200;
+  background: rgba(255, 178, 0, 0.5);
+  transition: all ease 0.5s;
+}
+#rucher_admin #rucher_content .right .form_ruche .table_content {
+  height: 65%;
+  margin-bottom: 1.5%;
+  display: flex;
+  justify-content: space-around;
+}
+
 /*# sourceMappingURL=coustom.css.map */
