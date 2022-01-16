@@ -108,10 +108,8 @@
 			$name = $data['ruche_name'];
 			$id = $data['ruche_id'];
 			$rucher = $data['rucher_value'];
-			$value = $data['ruche_value'];
 			$table_ruche .="<tr>";
 			$table_ruche .="<td> $name </td>";
-			$table_ruche .="<td> $value </td>";
 			$table_ruche .="<td> $rucher </td>";
 			$table_ruche .="<td> <input type='checkbox' name='checkRuche[]' value='$id'> </td>";
 			$table_ruche .="</tr>";

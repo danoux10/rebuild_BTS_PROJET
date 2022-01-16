@@ -7,8 +7,8 @@
 	}
 </style>
 <form action="" method="post">
-    nombre'nom' de ruche : de <input type="text" name="minRuche" autocomplete="off"> à <input type="text" name="maxRuche" autocomplete="off"><br>
-    value carde : de <input type="text" name="minCard" autocomplete="off"> à <input type="text" name="maxCard" autocomplete="off"><br>
+    nombre'nom' de ruche : de <input type="text" name="minRuche" autocomplete="off"><br>
+    value carde : de <input type="text" name="minCard" autocomplete="off"><br>
     max : <input type="text" name="max" autocomplete="off">
     <br>
     <input type="submit" name="ruche_auto">
@@ -37,17 +37,15 @@
 	include_once '../_config/bdd.php';
 	
 	if (isset($_POST['ruche_auto'])){
-		$minRuche = $_POST['minRuche'];
-		$maxRuche = $_POST['maxRuche'];
-		$minCard = $_POST['minCard'];
-		$maxCard = $_POST['maxCard'];
+		$Name = $_POST['minRuche'];
+		$Card = $_POST['minCard'];
 		$max = $_POST['max'];
 		$rucher_id = 0;
 		for ($min = 0; $min<$max; $min++){
-			$rucheName_genaration = rand($minRuche,$maxRuche);
-			$rucheCard_generation = rand($minCard,$maxCard);
+            $Name++;
+            $Card++;
 			$insert_ruche=$bdd->prepare('insert into ruche set ruche_value=?,ruche_name=?');
-			$insert_ruche->execute([$rucheCard_generation,$rucheName_genaration]);
+			$insert_ruche->execute([$Card,$Name]);
 		}
         echo 'ruche ajouter<br>';
 	}
