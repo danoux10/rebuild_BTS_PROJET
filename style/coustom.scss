@@ -670,13 +670,9 @@ tbody{
   position: fixed;
   top: 25%;
   left: 35%;
-  .form_part{
-    border: none;
+  //Cummon part
+  fieldset{
     background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     border-radius: 25px;
     box-shadow: 2px 2px 2px silver;
     legend{
@@ -689,34 +685,97 @@ tbody{
       img{
         width: 25%;
       }
+  }
+  .form_content{
+    margin: .5% 0;
+    display: flex;
+    padding: .5%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    label{
+      cursor: pointer;
     }
-    .form_content{
-      margin: .5% 0;
+  }
+  .add_btn{
+    margin-top: 1.5%;
+    cursor:pointer;
+    background: none;
+    border-radius:50px;
+    border: 1px double green;
+    transition:all ease .5s;
+    &:hover{
+      background: rgba(0,255,0,.5);
+      transition:all ease .5s;
+      box-shadow : 1px 1px 1px silver;
+    }
+  }
+  .update_btn{
+    margin-top: 1.5%;
+    cursor:pointer;
+    background: none;
+    border-radius:50px;
+    border: 1px double darkgoldenrod;
+    transition:all ease .5s;
+    &:hover{
+      background: darkgoldenrod;
+      transition:all ease .5s;
+      box-shadow : 1px 1px 1px silver;
+      color: white;
+    }
+  }
+  .delete_btn{
+    margin-top: 1.5%;
+    cursor:pointer;
+    background: none;
+    border-radius:50px;
+    border: 1px double darkred;
+    transition:all ease .5s;
+    &:hover{
+      background: rgba(95,0,0,1);
+      transition:all ease .5s;
+      box-shadow : 1px 1px 1px silver;
+      color: white;
+    }
+  }
+}
+  //form add ruche&rucher
+  .form_part{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  //fom update ruche&rucher
+  .form_Row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 20vw;
+    .ruche_left{
       display: flex;
-      padding: .5%;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      label{
-        cursor: pointer;
+    }
+    .ruche_right{
+      display: flex;
+      width: 50%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h4{
+      }
+      select{
+        border: none;
+        option:nth-child(even){
+          background: lightgray;
+          border-bottom: 1px solid grey;
+        }
       }
     }
-    .add_btn{
-      margin-top: 1.5%;
-      cursor:pointer;
-      background: none;
-      border-radius:50px;
-      border: 1px double green;
-      transition:all ease .5s;
-      &:hover{
-        background: rgba(0,255,0,.5);
-        transition:all ease .5s;
-        box-shadow : 1px 1px 1px silver;
-      }
-    }
   }
-  .add_form{
-  }
-  .update_form{
-  }
-}
+
+}//end ruche form style

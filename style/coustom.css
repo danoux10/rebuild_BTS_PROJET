@@ -635,17 +635,12 @@ tbody::-webkit-scrollbar-thumb {
   top: 25%;
   left: 35%;
 }
-#ruche_form_content .form_part {
-  border: none;
+#ruche_form_content fieldset {
   background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border-radius: 25px;
   box-shadow: 2px 2px 2px silver;
 }
-#ruche_form_content .form_part legend {
+#ruche_form_content fieldset legend {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -653,10 +648,10 @@ tbody::-webkit-scrollbar-thumb {
   border-radius: 50px;
   box-shadow: 2px 2px 2px silver;
 }
-#ruche_form_content .form_part legend img {
+#ruche_form_content fieldset legend img {
   width: 25%;
 }
-#ruche_form_content .form_part .form_content {
+#ruche_form_content fieldset .form_content {
   margin: 0.5% 0;
   display: flex;
   padding: 0.5%;
@@ -664,10 +659,10 @@ tbody::-webkit-scrollbar-thumb {
   align-items: center;
   flex-direction: column;
 }
-#ruche_form_content .form_part .form_content label {
+#ruche_form_content fieldset .form_content label {
   cursor: pointer;
 }
-#ruche_form_content .form_part .add_btn {
+#ruche_form_content fieldset .add_btn {
   margin-top: 1.5%;
   cursor: pointer;
   background: none;
@@ -675,10 +670,71 @@ tbody::-webkit-scrollbar-thumb {
   border: 1px double green;
   transition: all ease 0.5s;
 }
-#ruche_form_content .form_part .add_btn:hover {
+#ruche_form_content fieldset .add_btn:hover {
   background: rgba(0, 255, 0, 0.5);
   transition: all ease 0.5s;
   box-shadow: 1px 1px 1px silver;
+}
+#ruche_form_content fieldset .update_btn {
+  margin-top: 1.5%;
+  cursor: pointer;
+  background: none;
+  border-radius: 50px;
+  border: 1px double darkgoldenrod;
+  transition: all ease 0.5s;
+}
+#ruche_form_content fieldset .update_btn:hover {
+  background: darkgoldenrod;
+  transition: all ease 0.5s;
+  box-shadow: 1px 1px 1px silver;
+  color: white;
+}
+#ruche_form_content fieldset .delete_btn {
+  margin-top: 1.5%;
+  cursor: pointer;
+  background: none;
+  border-radius: 50px;
+  border: 1px double darkred;
+  transition: all ease 0.5s;
+}
+#ruche_form_content fieldset .delete_btn:hover {
+  background: #5f0000;
+  transition: all ease 0.5s;
+  box-shadow: 1px 1px 1px silver;
+  color: white;
+}
+#ruche_form_content .form_part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#ruche_form_content .form_Row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  width: 20vw;
+}
+#ruche_form_content .form_Row .ruche_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#ruche_form_content .form_Row .ruche_right {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#ruche_form_content .form_Row .ruche_right select {
+  border: none;
+}
+#ruche_form_content .form_Row .ruche_right select option:nth-child(even) {
+  background: lightgray;
+  border-bottom: 1px solid grey;
 }
 
 /*# sourceMappingURL=coustom.css.map */
