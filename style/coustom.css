@@ -445,9 +445,6 @@ tbody::-webkit-scrollbar-thumb {
   justify-content: space-around;
   height: 75vh;
 }
-#rucher_admin #rucher_content table {
-  border: 1px solid white;
-}
 #rucher_admin #rucher_content table thead th {
   background: silver;
 }
@@ -631,6 +628,57 @@ tbody::-webkit-scrollbar-thumb {
 }
 #rucher_admin #rucher_content .right .form_ruche .table_content .view_rucher tbody td {
   width: 10%;
+}
+
+#ruche_form_content {
+  position: fixed;
+  top: 25%;
+  left: 35%;
+}
+#ruche_form_content .form_part {
+  border: none;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px silver;
+}
+#ruche_form_content .form_part legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50px;
+  box-shadow: 2px 2px 2px silver;
+}
+#ruche_form_content .form_part legend img {
+  width: 25%;
+}
+#ruche_form_content .form_part .form_content {
+  margin: 0.5% 0;
+  display: flex;
+  padding: 0.5%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#ruche_form_content .form_part .form_content label {
+  cursor: pointer;
+}
+#ruche_form_content .form_part .add_btn {
+  margin-top: 1.5%;
+  cursor: pointer;
+  background: none;
+  border-radius: 50px;
+  border: 1px double green;
+  transition: all ease 0.5s;
+}
+#ruche_form_content .form_part .add_btn:hover {
+  background: rgba(0, 255, 0, 0.5);
+  transition: all ease 0.5s;
+  box-shadow: 1px 1px 1px silver;
 }
 
 /*# sourceMappingURL=coustom.css.map */

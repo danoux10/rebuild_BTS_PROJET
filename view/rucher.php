@@ -94,6 +94,9 @@
         </form>
     </div>
 </div>
+<?php
+    include '../controller/form_rucher.html';
+?>
 <script src="../script/show_graph.js"></script>
 </body>
 </html>

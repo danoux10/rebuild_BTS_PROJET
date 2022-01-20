@@ -64,7 +64,7 @@ tbody{
   }
 }
 
-//ANCHOR navbar style
+//LINK navbar style
 #navbar{
   background: #000;
   display: flex;
@@ -103,7 +103,7 @@ tbody{
   }
 }
 
-//ANCHOR form style
+//LINK form style
 .form_style{
   border: 1px outset silver;
   box-shadow: 2px 2px 2px silver;
@@ -150,7 +150,7 @@ tbody{
   }
 }
 
-//ANCHOR connexion
+//LINK connexion
 #connexion_content{
   padding: .5% 0;
   z-index: 1;
@@ -169,7 +169,7 @@ tbody{
   }
 }
 
-//ANCHOR inscription
+//LINK inscription
 .form_style{
   position: fixed;
   top: 20%;
@@ -195,7 +195,7 @@ tbody{
   }
 }
 
-//ANCHOR delete user alert
+//LINK delete user alert
 #delete_alert{
   background: #fff;
   position: fixed;
@@ -240,7 +240,7 @@ tbody{
   }
 }
 
-//ANCHOR home page
+//LINK home page
 #home_contener{ 
   display: flex;
   width: 20%;
@@ -249,7 +249,7 @@ tbody{
   margin-top: 10%;
 }
 
-//ANCHOR adminUser
+//LINK adminUser
 .admin {
   padding: 0 5%;
   display: flex;
@@ -459,7 +459,7 @@ tbody{
   }
 }
 
-//ANCHOR adminRuche
+//LINK adminRuche
 #rucher_admin{
   #rucher_content {
     margin-top: 5%;
@@ -467,7 +467,6 @@ tbody{
     justify-content: space-around;
     height: 75vh;
     table{
-      border: 1px solid white;
       thead{
         th{
           background: silver;
@@ -666,5 +665,58 @@ tbody{
   }
 }
 
-
-
+//LINK form rucher
+#ruche_form_content{
+  position: fixed;
+  top: 25%;
+  left: 35%;
+  .form_part{
+    border: none;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px silver;
+    legend{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 50px;
+      box-shadow: 2px 2px 2px silver;
+      img{
+        width: 25%;
+      }
+    }
+    .form_content{
+      margin: .5% 0;
+      display: flex;
+      padding: .5%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      label{
+        cursor: pointer;
+      }
+    }
+    .add_btn{
+      margin-top: 1.5%;
+      cursor:pointer;
+      background: none;
+      border-radius:50px;
+      border: 1px double green;
+      transition:all ease .5s;
+      &:hover{
+        background: rgba(0,255,0,.5);
+        transition:all ease .5s;
+        box-shadow : 1px 1px 1px silver;
+      }
+    }
+  }
+  .add_form{
+  }
+  .update_form{
+  }
+}
