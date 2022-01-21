@@ -29,7 +29,7 @@
         </fieldset>
     </form>
     <!--LINK form update ruche-->
-    <form id="update_ruche" class="update_form hidden">
+    <form id="update_ruche" class="update_form" >
         <fieldset class="form_Row">
             <legend>
                 <img alt="ruche_add_icon" src="../img/rucheUpdate.svg">
@@ -71,15 +71,44 @@
               <input id="rucherName_add" name="" type="text">
             </span>
             <span class="form_content">
-              <label for="rucherValue_add">Valeur Rucher</label>
-              <input id="rucherValue_add" name="" type="text">
+              <label for="rucherLocation_add">Localisation Rucher</label>
+              <input id="rucherLocation_add" name="" type="text">
             </span>
             <button class="add_btn" name="">Ajouter Rucher</button>
         </fieldset>
     </form>
     <!--LINK form update rucher-->
     <form id="update_rucher" class="update_form">
-
+        <fieldset class="form_Row">
+            <legend>
+                <img alt="ruche_add_icon" src="../img/rucherUpdate.svg">
+                <h3>Update rucher</h3>
+            </legend>
+            <div class="ruche_left">
+                <span class="form_content">
+                    <label for="rucherName_add">Nom Rucher</label>
+                    <input id="rucherName_add" name="" type="text">
+                </span>
+                <span class="form_content">
+                    <label for="rucherLocation_add">Localisation Rucher</label>
+                    <input id="rucherLocation_add" name="" type="text">
+                </span>
+                <button class="add_btn" name="">Ajouter Rucher</button>
+            </div>
+            <div class="ruche_right">
+                <table class="select_ruche">
+                    <thead>
+                    <th>Nom</th>
+                    <th>Rucher</th>
+                    <th>Select</th>
+                    </thead>
+                    <?php echo selectTableRuche(); ?>
+                </table>
+                <span class="form_content">
+                    <button type="submit" name="" class="add_btn">Ajouter Ruche</button>
+                </span>
+            </div>
+        </fieldset>
     </form>
 </div>
 </body>

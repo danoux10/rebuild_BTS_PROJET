@@ -12,7 +12,7 @@
 <?php include_once '../controller/navbar.php'; ?>
 <div id="rucher_content">
     <div class="left">
-        <form action="" method="post" class="view_ruche">
+        <form action="" method="post" class="view_ruche" hidden>
             <!--btn select view-->
             <div class="btn_ruche">
                 <div class="dataSelect dateSelect">
@@ -46,20 +46,20 @@
                     <canvas id="graph_content"></canvas>
                 </div>
                 <div class="table&select">
-                    <table class="select_ruche">
+                    <table class="select_single">
                         <thead>
                         <th>Nom</th>
                         <th>Rucher</th>
                         <th>Select</th>
                         </thead>
-                        <?php echo selectTableRuche(); ?>
+						<?php echo selectTableSingle(); ?>
                     </table>
                 </div>
             </div>
         </form>
     </div>
     <div class="right">
-        <form action="" method="post" class="form_ruche">
+        <form action="" method="post" class="form_ruche ">
             <div class="btn_content">
                 <div class="btn_ruche">
                     <span id="ajout_ruche" class="ajouter button_custum">Ajouter ruche</span>
@@ -73,14 +73,13 @@
                 </div>
             </div>
             <div class="table_content">
-                <table class="select_single">
+                <table class="select_ruche">
                     <thead>
                     <th>Nom</th>
-                    <th>Valeur</th>
                     <th>Rucher</th>
                     <th>Select</th>
                     </thead>
-					<?php echo selectTableSingle(); ?>
+					<?php echo selectTableRuche(); ?>
                 </table>
                 <table class="view_rucher">
                     <thead>

@@ -524,24 +524,16 @@ tbody::-webkit-scrollbar-thumb {
   background: #000;
   width: 500px;
 }
-#rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_ruche {
-  width: 200px;
-}
-#rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_ruche thead {
+#rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_single thead {
   display: block;
-  margin-right: 6px;
 }
-#rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_ruche thead th {
-  width: 85%;
-}
-#rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_ruche tbody {
+#rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_single tbody {
   display: block;
-  overflow-y: auto;
-  height: 57vh;
+  overflow: auto;
+  height: 45vh;
 }
-#rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_ruche tbody td {
-  width: 65%;
-  text-align: center;
+#rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_single tbody td {
+  width: 10%;
 }
 #rucher_admin #rucher_content .right {
   width: 45%;
@@ -602,21 +594,29 @@ tbody::-webkit-scrollbar-thumb {
   transition: all ease 0.5s;
 }
 #rucher_admin #rucher_content .right .form_ruche .table_content {
-  height: 65%;
+  height: 50%;
   margin-bottom: 1.5%;
   display: flex;
   justify-content: space-around;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content .select_single thead {
-  display: block;
+#rucher_admin #rucher_content .right .form_ruche .table_content .select_ruche {
+  width: 200px;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content .select_single tbody {
+#rucher_admin #rucher_content .right .form_ruche .table_content .select_ruche thead {
   display: block;
-  overflow: auto;
-  height: 45vh;
+  margin-right: 6px;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content .select_single tbody td {
-  width: 10%;
+#rucher_admin #rucher_content .right .form_ruche .table_content .select_ruche thead th {
+  width: 85%;
+}
+#rucher_admin #rucher_content .right .form_ruche .table_content .select_ruche tbody {
+  display: block;
+  overflow-y: auto;
+  height: 345px;
+}
+#rucher_admin #rucher_content .right .form_ruche .table_content .select_ruche tbody td {
+  width: 65%;
+  text-align: center;
 }
 #rucher_admin #rucher_content .right .form_ruche .table_content .view_rucher thead {
   display: block;
@@ -636,6 +636,7 @@ tbody::-webkit-scrollbar-thumb {
   left: 35%;
 }
 #ruche_form_content fieldset {
+  border: none;
   background: white;
   border-radius: 25px;
   box-shadow: 2px 2px 2px silver;
@@ -714,7 +715,7 @@ tbody::-webkit-scrollbar-thumb {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  width: 20vw;
+  width: 25vw;
 }
 #ruche_form_content .form_Row .ruche_left {
   display: flex;
@@ -735,6 +736,23 @@ tbody::-webkit-scrollbar-thumb {
 #ruche_form_content .form_Row .ruche_right select option:nth-child(even) {
   background: lightgray;
   border-bottom: 1px solid grey;
+}
+#ruche_form_content .form_Row .ruche_right thead {
+  display: block;
+}
+#ruche_form_content .form_Row .ruche_right tbody {
+  display: block;
+  overflow: auto;
+  height: 150px;
+}
+#ruche_form_content .form_Row .ruche_right tbody td {
+  width: 10%;
+}
+#ruche_form_content .form_Row .ruche_right tbody tr {
+  box-shadow: 0px 1px 1px;
+}
+#ruche_form_content .form_Row .ruche_right tbody tr:nth-child(even) {
+  background: silver;
 }
 
 /*# sourceMappingURL=coustom.css.map */
