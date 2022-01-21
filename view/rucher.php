@@ -94,8 +94,10 @@
     </div>
 </div>
 <?php
-    include '../controller/form_rucher.php';
+    include_once '../controller/form_rucher.php';
+    include_once '../model/rucher_admin.php';
 ?>
 <script src="../script/show_graph.js"></script>
+<script src="../script/ruche_show.js"></script>
 </body>
 </html>

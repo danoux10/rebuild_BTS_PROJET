@@ -15,7 +15,6 @@ cancel_btn_s.classList.add('active');
 delete_btn.classList.add('desactive');
 delete_view.classList.add('hidden');
 
-
 function toggleUserAdd(){
     if(addUser_btn.classList.contains('desactive')){
         addUser_btn.classList.remove('desactive');

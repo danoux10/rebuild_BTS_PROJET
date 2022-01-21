@@ -668,8 +668,8 @@ tbody{
 //LINK form rucher
 #ruche_form_content{
   position: fixed;
-  top: 25%;
-  left: 35%;
+  top: 35%;
+  left: 45%;
   //Cummon part
   fieldset{
     border: none;
@@ -685,6 +685,12 @@ tbody{
       box-shadow: 2px 2px 2px silver;
       img{
         width: 25%;
+      }
+      h3{
+        background: white;
+        border-radius: 50px;
+        padding: 1%;
+        width: 90%;
       }
   }
   .form_content{
