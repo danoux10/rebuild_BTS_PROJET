@@ -3,13 +3,17 @@ var rucher_add = document.getElementById('add_rucher');
 
 //btn
 var ruche_add_btn = document.getElementById('ajout_ruche');
-var rucher_add_btn = document.getElementById('ajout_rucher');
+var rucher_add_btn = document.getElementById('ajout_rucher')
+var annul_ruche=document.getElementById('cancel_ruche');
+var annul_rucher=document.getElementById('cancel_rucher');
 
 ruche_add.classList.add('hidden');
 rucher_add.classList.add('hidden');
 
 ruche_add_btn.classList.add('desactive');
 rucher_add_btn.classList.add('desactive');
+annul_ruche.classList.add('desactive');
+annul_rucher.classList.add('desactive');
 
 
 function toggleRucheAdd(){
@@ -55,5 +59,26 @@ function toggleRucherAdd(){
         ruche_add.classList.add('hidden');
     }
 }
+
+function hiddenRuche(){
+    if(annul_ruche.classList.contains('desactive')){
+        ruche_add.classList.add('hidden');
+        ruche_add.classList.remove('show');
+        ruche_add_btn.classList.add('desactive');
+        ruche_add_btn.classList.remove('active');
+    }
+}
+
+function hiddenRucher(){
+    if(annul_rucher.classList.contains('desactive')){
+        rucher_add.classList.add('hidden');
+        rucher_add.classList.remove('show');
+        rucher_add_btn.classList.add('desactive');
+        rucher_add_btn.classList.remove('active');
+    }
+}
+
 ruche_add_btn.addEventListener('click',toggleRucheAdd);
 rucher_add_btn.addEventListener('click',toggleRucherAdd);
+annul_ruche.addEventListener('click',hiddenRuche);
+annul_rucher.addEventListener('click',hiddenRucher);
