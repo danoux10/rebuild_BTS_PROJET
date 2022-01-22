@@ -102,15 +102,13 @@
 	
 	function selectTableRuche(){
 		global $bdd;
-		$rucheData = $bdd->query('select * from ruche');
+		$rucheData = $bdd->query('select * from ruche where rucher_affect=0');
 		$table_ruche="<tbody>";
 		foreach ($rucheData as $data){
 			$name = $data['ruche_name'];
 			$id = $data['ruche_id'];
-			$rucher = $data['rucher_value'];
 			$table_ruche .="<tr>";
 			$table_ruche .="<td> $name </td>";
-			$table_ruche .="<td> $rucher </td>";
 			$table_ruche .="<td> <input type='checkbox' name='checkRuche[]' value='$id'> </td>";
 			$table_ruche .="</tr>";
 		}
@@ -120,12 +118,12 @@
 
 	function selectTableSingle(){
 		global $bdd;
-		$rucheData = $bdd->query('select * from ruche');
+		$rucheData = $bdd->query('select * from ruche inner join rucher_data on rucher_data.rucher_id=ruche.rucher_value');
 		$table_ruche="<tbody>";
 		foreach ($rucheData as $data){
 			$name = $data['ruche_name'];
 			$id = $data['ruche_id'];
-			$rucher = $data['rucher_value'];
+			$rucher = $data['rucher_name'];
 			$table_ruche .="<tr>";
 			$table_ruche .="<td> $name </td>";
 			$table_ruche .="<td> $rucher </td>";

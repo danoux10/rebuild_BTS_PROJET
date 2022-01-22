@@ -43,9 +43,10 @@
 		$rucher_id = 0;
 		for ($min = 0; $min<$max; $min++){
             $Name++;
-            $Card++;
-			$insert_ruche=$bdd->prepare('insert into ruche set ruche_value=?,ruche_name=?');
-			$insert_ruche->execute([$Card,$Name]);
+            $Card--;
+            $val = 0;
+			$insert_ruche=$bdd->prepare('insert into ruche set ruche_value=?,ruche_name=?,rucher_affect=?');
+			$insert_ruche->execute([$Card,$Name,$val]);
 		}
         echo 'ruche ajouter<br>';
 	}
@@ -65,9 +66,10 @@
 	    $minCard = $_POST['Cardmin'];
 	    $max = $_POST['max'];
         for ($min=0;$min<$max;$min++){
-            $temp=rand($minTemp,$maxTemp);
-            $humi=rand($minHumi,$maxHumi);
-            $Kg=rand($minKg,$maxKg);
+            $virgule = rand(0,10)/10;
+            $temp=rand($minTemp,$maxTemp)+$virgule;
+            $humi=rand($minHumi,$maxHumi)+$virgule;
+            $Kg=rand($minKg,$maxKg)+$virgule;
             $date=date('Y-m-d',rand($minDate,$maxDate));
             $heure=date('H:i',rand($minhour,$maxhour));
             $card = rand($minCard,$maxCard);

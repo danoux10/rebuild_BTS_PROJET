@@ -63,25 +63,26 @@
             <div class="btn_content">
                 <div class="btn_ruche">
                     <span id="ajout_ruche" class="ajouter button_custum">Ajouter ruche</span>
-                    <button type="sumbit" name="update_ruche" class="modifier button_custum">Update ruche</button>
                     <span id="ajout_rucher" class="ajouter button_custum">Ajouter rucher</span>
-                    <button type="sumbit" name="update_rucher" class="modifier button_custum">Updata rucher</button>
+                    <button type="sumbit" name="ruche_rucher" class="modifier button_custum">Mettre ruche dans rucher</button>
                 </div>
                 <div class="other_btn">
-					<?php echo selectLocation(); ?>
-                    <button class="button_custum" id="admin_rucher">Gestion rucher</button>
+<!--                    TODO si tu as le temps -->
+<!--					--><?php //echo selectLocation(); ?>
+<!--                    <button class="button_custum" id="admin_rucher">Gestion rucher</button>-->
                 </div>
             </div>
             <div class="table_content">
                 <table class="select_ruche">
+                    <caption>Ruche</caption>
                     <thead>
                     <th>Nom</th>
-                    <th>Rucher</th>
                     <th>Select</th>
                     </thead>
 					<?php echo selectTableRuche(); ?>
                 </table>
                 <table class="view_rucher">
+                    <caption>Rucher</caption>
                     <thead>
                     <th>Nom rucher</th>
                     <th>Localisation</th>
@@ -115,37 +116,6 @@
             </span>
         </fieldset>
     </form>
-    <!--LINK form update ruche-->
-    <form id="update_ruche" class="update_form"  method="post" hidden>
-        <fieldset class="form_Row">
-            <legend>
-                <img alt="ruche_add_icon" src="../img/rucheUpdate.svg">
-                <h3>Update Ruche</h3>
-            </legend>
-            <div class="ruche_left">
-                <span class="form_content">
-                  <label for="rucheName_add">Nom Ruche</label>
-                  <input id="rucheName_add" name="" type="text">
-                </span>
-                <span class="form_content">
-                  <label for="rucheValue_add">Valeur Ruche</label>
-                  <input id="rucheValue_add" name="" type="text">
-                </span>
-                <button class="update_btn" name="">Update Ruche</button>
-            </div>
-            <div class="ruche_right">
-                <h4>Rucher : 4563</h4>
-														<?php
-																require_once '../_function/select.php';
-																echo selectRucher();
-														?>
-                <span class="form_content">
-                    <button type="submit" name="" class="add_btn">Retirer rucher</button>
-                    <button type="submit" name="" class="delete_btn">Retirer rucher</button>
-                </span>
-            </div>
-        </fieldset>
-    </form>
     <!--LINK form add rucher-->
     <form id="add_rucher" class="add_form"  method="post">
         <fieldset class="form_part">
@@ -165,39 +135,6 @@
                 <button class="add_btn" name="add_rucher" type="submit">Ajouter Rucher</button>
                 <span id="cancel_rucher">Annuler</span>
             </span>
-        </fieldset>
-    </form  method="post">
-    <!--LINK form update rucher-->
-    <form id="update_rucher" class="update_form" method="post" hidden>
-        <fieldset class="form_Row">
-            <legend>
-                <img alt="ruche_add_icon" src="../img/rucherUpdate.svg">
-                <h3>Update rucher</h3>
-            </legend>
-            <div class="ruche_left">
-                <span class="form_content">
-                    <label for="rucherName_add">Nom Rucher</label>
-                    <input id="rucherName_add" name="" type="text">
-                </span>
-                <span class="form_content">
-                    <label for="rucherLocation_add">Localisation Rucher</label>
-                    <input id="rucherLocation_add" name="" type="text">
-                </span>
-                <button class="add_btn" name="">Ajouter Rucher</button>
-            </div>
-            <div class="ruche_right">
-                <table class="select_ruche">
-                    <thead>
-                    <th>Nom</th>
-                    <th>Rucher</th>
-                    <th>Select</th>
-                    </thead>
-																		<?php echo selectTableRuche(); ?>
-                </table>
-                <span class="form_content">
-                    <button type="submit" name="" class="add_btn">Ajouter Ruche</button>
-                </span>
-            </div>
         </fieldset>
     </form>
 </div>

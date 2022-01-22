@@ -27,14 +27,15 @@ create table ruche(
     ruche_value varchar(255) not null,
     ruche_name varchar(255) not null,
     rucher_value int(255),
+    rucher_affect boolean not null,
     foreign key (rucher_value) references rucher_data(rucher_id)
 );
 
 create table ruche_data(
     auto_data int auto_increment not null primary key,
-    temperature_data float(255),
-    humi_data float(255),
-    poids_data float(255),
+    temperature_data float,
+    humi_data float,
+    poids_data float,
     date_data date not null ,
     time_data time not null ,
     data_id int(255)not null
