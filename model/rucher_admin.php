@@ -1,10 +1,26 @@
 <?php
 		$errors = array();
 		//LINK view ruche
-		//var declaration
+		//ANCHOR selection view
+		@$viewBtn = $_POST['view_ruche'];
 		
+		if(isset($viewBtn)){
+				$firstdate= $_POST['firstDate'];
+				$lastdate= $_POST['lastDate'];
+				$hoursStart= $_POST['hoursStart'];
+				$hoursEnd= $_POST['hoursEnd'];
+				if(empty($_POST['radioRuche'])){
+						echo "<script >alert('selectionner une Ruche'); </script>";
+				}else{
+						$_SESSION['ruche']=$_POST['radioRuche'];
+						$_SESSION['first']=$firstdate;
+						$_SESSION['last']=$lastdate;
+						$_SESSION['start']=$hoursStart;
+						$_SESSION['end']=$hoursEnd;
+				}
+		}
 //LINK admin ruche
-	//	//ANCHOR add ruche
+	//ANCHOR add ruche
 	@$add_ruche= $_POST['add_ruche'];
 	if (isset($add_ruche)){
 			$ruche_value=htmlspecialchars($_POST['ruche_value']);
@@ -29,10 +45,6 @@
 	if(isset($rucheInRucher)){
 			@$rucheSelect = $_POST['checkRuche'];
 			@$rucherSelect = $_POST['rucher'];
-			var_dump($rucheSelect);
-			echo '<br>';
-			var_dump($rucherSelect);
-			echo '<br>';
 			if($rucheSelect==NULL){
 					$errors['selectRuche']="choisir les ruches a ajouter";
 			}

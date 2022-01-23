@@ -8,6 +8,12 @@
 <link rel="stylesheet" href="../style/coustom.css">
 <title>Gestion Ruche</title>
 </head>
+<style>
+    *{
+        background: #000;
+        color: white;
+    }
+</style>
 <body id="rucher_admin">
 <?php include_once '../controller/navbar.php'; ?>
 <div id="rucher_content">
@@ -18,21 +24,21 @@
                 <div class="dataSelect dateSelect">
                     <span>
                         <label for="firstDate">Date Début :</label>
-                        <input type="date" name="fistDate" id="firstDate">
+                        <input type="date" name="firstDate" id="firstDate" value="2021-01-01" required>
                     </span>
                     <span>
                         <label for="lastDate">Date Fin :</label>
-                        <input type="date" name="lastDate" id="firstDate">
+                        <input type="date" name="lastDate" id="firstDate" value="2021-12-31" required>
                     </span>
                 </div>
                 <div class="dataSelect">
                     <span>
                         <label for="hoursStart">Heure Début :</label>
-                        <input type="time" name="hoursStart" id="hoursStart">
+                        <input type="time" name="hoursStart" id="hoursStart" value="00:00" required>
                     </span>
                     <span>
                         <label for="hoursEnd">Heure Fin :</label>
-                        <input type="time" name="hoursEnd" id="hoursEnd">
+                        <input type="time" name="hoursEnd" id="hoursEnd" value="23:59" required>
                     </span>
                 </div>
                 <div class="dataSelect choose">

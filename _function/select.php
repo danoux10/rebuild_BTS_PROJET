@@ -127,7 +127,7 @@
 			$table_ruche .="<tr>";
 			$table_ruche .="<td> $name </td>";
 			$table_ruche .="<td> $rucher </td>";
-			$table_ruche .="<td> <input type='radio' name='checkRuche[]' value='$id'> </td>";
+			$table_ruche .="<td> <input type='radio' name='radioRuche' value='$id'> </td>";
 			$table_ruche .="</tr>";
 		}
 		$table_ruche.="</tbody>";
