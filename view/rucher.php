@@ -37,7 +37,7 @@
                 </div>
                 <div class="dataSelect choose">
                     <button type="submit" name="view_ruche" class="view_rucheBtn">View Ruche</button>
-                    <button type="submit" name="dl_ruche" class="view_rucheBtn">Télécharger data</button>
+                    <?php echo @$_SESSION['download'];?>
                 </div>
             </div>
 

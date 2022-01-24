@@ -3,7 +3,6 @@
 		//LINK view ruche
 		//ANCHOR selection view
 		@$viewBtn = $_POST['view_ruche'];
-		@$downloadBtn = $_POST['dl_ruche'];
 		if(isset($viewBtn)){
 				$dateStart= $_POST['firstDate'];
 				$dateEnd= $_POST['lastDate'];
@@ -27,6 +26,7 @@
 										$poids[]=$data['poids_data'];
 										$dateRuche[]=substr($data['time_data'],0,5);
 								}
+								$_SESSION['download'] = "<a href='../_function/csv.php' class='view_rucheBtn'>download data</a>";
 						}
 						if ($dateStart != $dateEnd){
 								foreach ($result as $data){
@@ -40,27 +40,14 @@
 										$poids[]=$data['poids_data'];
 										$dateRuche[]=$dateFr;
 								}
+								$_SESSION['download'] = "<a href='../_function/csv.php' class='view_rucheBtn'>download data</a>";
 						}
 						foreach ($rucheN as $item){
 								$ruche_name = 'ruche: '.$item['ruche_name'];
 						}
+						$_SESSION['ruche_name']=$ruche_name;
 				}
 		}
-		//ANCHOR download data
-		if(isset($downloadBtn)){
-				$dateStart= $_POST['firstDate'];
-				$dateEnd= $_POST['lastDate'];
-				$hoursStart= $_POST['hoursStart'];
-				$hoursEnd= $_POST['hoursEnd'];
-				$_SESSION['first']=$dateStart;
-				$_SESSION['last']=$dateEnd;
-				$_SESSION['start']=$hoursStart;
-				$_SESSION['end']=$hoursEnd;
-				if(){
-				
-				}
-		}
-		
 //LINK admin ruche
 	//ANCHOR add ruche
 	@$add_ruche= $_POST['add_ruche'];
@@ -102,4 +89,5 @@
 					$errors['rucheInRucher']="les ruches ont bien été ajoutér au rucher";
 			}
 	}
+
 ?>

@@ -495,7 +495,9 @@ tbody{
           }
           .choose{
             margin: 1% 0;
-            button{
+            button,a{
+              color: black;
+              font-weight: normal;
               border : 1px solid black;
               background: none;
               border-radius: 50px;

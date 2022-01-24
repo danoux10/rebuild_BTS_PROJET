@@ -472,7 +472,9 @@ tbody::-webkit-scrollbar-thumb {
 #rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose {
   margin: 1% 0;
 }
-#rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose button {
+#rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose button, #rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose a {
+  color: black;
+  font-weight: normal;
   border: 1px solid black;
   background: none;
   border-radius: 50px;
@@ -480,7 +482,7 @@ tbody::-webkit-scrollbar-thumb {
   transition: all ease 0.5s;
   cursor: pointer;
 }
-#rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose button:hover {
+#rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose button:hover, #rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose a:hover {
   background: rgba(184, 134, 11, 0.5);
   border: none;
   box-shadow: 2px 2px 2px silver;

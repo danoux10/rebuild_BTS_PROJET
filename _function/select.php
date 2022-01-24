@@ -3,6 +3,7 @@
 	$rucheData = $bdd->query('select * from ruche');
 	$userData = $bdd->query('select * from users inner join status on users.status_reference=status.status_id ');
 	$locationData = $bdd->query('select distinct(rucher_location) from rucher_data');
+	$rucheSelect = $_SESSION['ruche'];
 	//select status
 	function selectStatus(){
 		global $bdd;
@@ -117,18 +118,26 @@
 	}
 
 	function selectTableSingle(){
-		global $bdd;
+		global $bdd,$rucheSelect;
 		$rucheData = $bdd->query('select * from ruche inner join rucher_data on rucher_data.rucher_id=ruche.rucher_value');
 		$table_ruche="<tbody>";
 		foreach ($rucheData as $data){
 			$name = $data['ruche_name'];
 			$id = $data['ruche_id'];
 			$rucher = $data['rucher_name'];
-			$table_ruche .="<tr>";
-			$table_ruche .="<td> $name </td>";
-			$table_ruche .="<td> $rucher </td>";
-			$table_ruche .="<td> <input type='radio' name='radioRuche' value='$id'> </td>";
-			$table_ruche .="</tr>";
+			if($rucheSelect == $id){
+					$table_ruche .="<tr>";
+					$table_ruche .="<td> $name </td>";
+					$table_ruche .="<td> $rucher </td>";
+					$table_ruche .="<td> <input type='radio' name='radioRuche' checked value='$id'> </td>";
+					$table_ruche .="</tr>";
+			}else{
+					$table_ruche .="<tr>";
+					$table_ruche .="<td> $name </td>";
+					$table_ruche .="<td> $rucher </td>";
+					$table_ruche .="<td> <input type='radio' name='radioRuche' value='$id'> </td>";
+					$table_ruche .="</tr>";
+			}
 		}
 		$table_ruche.="</tbody>";
 		return $table_ruche;
