@@ -9,3 +9,6 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <!--<link rel="stylesheet" href="../style/tailwind.css">-->
 <link rel="stylesheet" href="../style/coustom.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+

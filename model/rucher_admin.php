@@ -3,22 +3,64 @@
 		//LINK view ruche
 		//ANCHOR selection view
 		@$viewBtn = $_POST['view_ruche'];
-		
+		@$downloadBtn = $_POST['dl_ruche'];
 		if(isset($viewBtn)){
-				$firstdate= $_POST['firstDate'];
-				$lastdate= $_POST['lastDate'];
+				$dateStart= $_POST['firstDate'];
+				$dateEnd= $_POST['lastDate'];
 				$hoursStart= $_POST['hoursStart'];
 				$hoursEnd= $_POST['hoursEnd'];
+				$_SESSION['first']=$dateStart;
+				$_SESSION['last']=$dateEnd;
+				$_SESSION['start']=$hoursStart;
+				$_SESSION['end']=$hoursEnd;
 				if(empty($_POST['radioRuche'])){
 						echo "<script >alert('selectionner une Ruche'); </script>";
 				}else{
-						$_SESSION['ruche']=$_POST['radioRuche'];
-						$_SESSION['first']=$firstdate;
-						$_SESSION['last']=$lastdate;
-						$_SESSION['start']=$hoursStart;
-						$_SESSION['end']=$hoursEnd;
+						$ruche = $_POST['radioRuche'];
+						$_SESSION['ruche']=$ruche;
+						$rucheN = $bdd->query("select * from ruche where ruche_value='$ruche'");
+						$result = $bdd->query("select * from ruche_data where data_id='$ruche' and date_data between '$dateStart' and '$dateEnd' and time_data between '$hoursStart' and '$hoursEnd' order by date_data,time_data asc");
+						if ($dateStart==$dateEnd){
+								foreach ($result as $data){
+										$temps[]=$data['temperature_data'];
+										$humi[]=$data['humi_data'];
+										$poids[]=$data['poids_data'];
+										$dateRuche[]=substr($data['time_data'],0,5);
+								}
+						}
+						if ($dateStart != $dateEnd){
+								foreach ($result as $data){
+										$dateUk = $data['date_data'];
+										$years=substr($dateUk,0,4);
+										$month=substr($dateUk,5,2);
+										$day=substr($dateUk,8,2);
+										$dateFr = $day.'/'.$month.'/'.$years;
+										$temps[]=$data['temperature_data'];
+										$humi[]=$data['humi_data'];
+										$poids[]=$data['poids_data'];
+										$dateRuche[]=$dateFr;
+								}
+						}
+						foreach ($rucheN as $item){
+								$ruche_name = 'ruche: '.$item['ruche_name'];
+						}
 				}
 		}
+		//ANCHOR download data
+		if(isset($downloadBtn)){
+				$dateStart= $_POST['firstDate'];
+				$dateEnd= $_POST['lastDate'];
+				$hoursStart= $_POST['hoursStart'];
+				$hoursEnd= $_POST['hoursEnd'];
+				$_SESSION['first']=$dateStart;
+				$_SESSION['last']=$dateEnd;
+				$_SESSION['start']=$hoursStart;
+				$_SESSION['end']=$hoursEnd;
+				if(){
+				
+				}
+		}
+		
 //LINK admin ruche
 	//ANCHOR add ruche
 	@$add_ruche= $_POST['add_ruche'];

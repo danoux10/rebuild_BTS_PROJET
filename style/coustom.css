@@ -521,7 +521,6 @@ tbody::-webkit-scrollbar-thumb {
   margin-right: 1%;
 }
 #rucher_admin #rucher_content .left .view_ruche .view\&select .graph #graph_content {
-  background: #000;
   width: 500px;
 }
 #rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_single thead {
@@ -615,7 +614,7 @@ tbody::-webkit-scrollbar-thumb {
   height: 345px;
 }
 #rucher_admin #rucher_content .right .form_ruche .table_content .select_ruche tbody td {
-  width: 65%;
+  width: 90%;
   text-align: center;
 }
 #rucher_admin #rucher_content .right .form_ruche .table_content .view_rucher thead {

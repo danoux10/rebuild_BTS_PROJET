@@ -8,12 +8,6 @@
 <link rel="stylesheet" href="../style/coustom.css">
 <title>Gestion Ruche</title>
 </head>
-<style>
-    *{
-        background: #000;
-        color: white;
-    }
-</style>
 <body id="rucher_admin">
 <?php include_once '../controller/navbar.php'; ?>
 <div id="rucher_content">
@@ -24,25 +18,26 @@
                 <div class="dataSelect dateSelect">
                     <span>
                         <label for="firstDate">Date Début :</label>
-                        <input type="date" name="firstDate" id="firstDate" value="2021-01-01" required>
+                        <input type="date" name="firstDate" id="firstDate" value="<?php echo @$_SESSION['first']; ?>" required>
                     </span>
                     <span>
                         <label for="lastDate">Date Fin :</label>
-                        <input type="date" name="lastDate" id="firstDate" value="2021-12-31" required>
+                        <input type="date" name="lastDate" id="firstDate" value="<?php echo @$_SESSION['last']; ?>" required>
                     </span>
                 </div>
                 <div class="dataSelect">
                     <span>
                         <label for="hoursStart">Heure Début :</label>
-                        <input type="time" name="hoursStart" id="hoursStart" value="00:00" required>
+                        <input type="time" name="hoursStart" id="hoursStart" value="<?php echo @$_SESSION['start']; ?>" required>
                     </span>
                     <span>
                         <label for="hoursEnd">Heure Fin :</label>
-                        <input type="time" name="hoursEnd" id="hoursEnd" value="23:59" required>
+                        <input type="time" name="hoursEnd" id="hoursEnd" value="<?php echo @$_SESSION['end']; ?>" required>
                     </span>
                 </div>
                 <div class="dataSelect choose">
                     <button type="submit" name="view_ruche" class="view_rucheBtn">View Ruche</button>
+                    <button type="submit" name="dl_ruche" class="view_rucheBtn">Télécharger data</button>
                 </div>
             </div>
 
@@ -146,8 +141,12 @@
 </div>
 <?php
     include_once '../model/rucher_admin.php';
+    include_once '../_function/graph.php';
 ?>
 <script src="../script/show_graph.js"></script>
 <script src="../script/ruche_show.js"></script>
+<?php
+    include_once '../controller/footer.php';
+?>
 </body>
 </html>
