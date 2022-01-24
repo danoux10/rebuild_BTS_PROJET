@@ -42,10 +42,8 @@ create table ruche_data(
 );
 
 INSERT INTO status (status_name) VALUES ('admin');
-INSERT INTO rucher_data (rucher_name, rucher_location) VALUES ('1','paris');
-INSERT INTO rucher_data (rucher_name, rucher_location) VALUES ('2','paris');
-INSERT INTO rucher_data (rucher_name, rucher_location) VALUES ('3','lille');
-INSERT INTO rucher_data (rucher_name, rucher_location) VALUES ('4','reims');
-INSERT INTO rucher_data (rucher_name, rucher_location) VALUES ('5','troyes')
+INSERT INTO status (status_name) VALUES ('user');
+insert into users (firstname, lastname, mail, password, status_reference) values ('admin','admin','admin@gmail.com','$2y$10$YQOdVKqgRPLyXRuwnSIViuIRkstebCiJ5tEl9lz7KkhOS/hwv1pw2','1');
+insert into users (firstname, lastname, mail, password, status_reference) values ('user','user','user@gmail.com','$2y$10$9maud1QAu3M/HNU4Q8iS7OjE42LOcC63a3bhPtzIb3zxvdxDvaC02','2');
 
 

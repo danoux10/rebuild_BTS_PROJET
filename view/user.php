@@ -4,11 +4,15 @@
 	include_once '../controller/header.php';
 	require_once '../_function/view.php';
 	require_once '../_function/select.php';
-	?>
+    if($_SESSION['status']!=1){
+        header('location:home.php');
+    }
+?>
 <link rel="stylesheet" href="../style/coustom.css">
 <title>Gestion Utilisateur</title>
 </head>
-<?php include_once '../controller/navbar.php';?>
+<?php
+		include_once '../controller/navbar.php';?>
 <div class="admin top">
     <form action="user.php" method="post" class="view_user">
        <div>
@@ -65,15 +69,15 @@
                 <div class="content">
                     <div class="user_info">
                         <label for="nom_update">Nom</label>
-                        <input type="text" name="lastname" value="<?php echo $_SESSION['firstname'] ?>" id="nom_update">
+                        <input type="text" name="lastname" value="<?php echo @$_SESSION['firstname'] ?>" id="nom_update">
                     </div>
                     <div class="user_info">
                         <label for="prenom_update">Prenom</label>
-                        <input type="text" name="firstname" id="prenom_update" value="<?php echo $_SESSION['lastname']?>">
+                        <input type="text" name="firstname" id="prenom_update" value="<?php echo @$_SESSION['lastname']?>">
                     </div>
                     <div class="user_info email">
                         <label for="email_update">Email</label>
-                        <input type="mail" name="email" id="email_update" value="<?php echo $_SESSION['email']; ?>">
+                        <input type="mail" name="email" id="email_update" value="<?php echo @$_SESSION['email']; ?>">
                         <?php echo selectStatus(); ?>
                     </div>
                     <div class="user_info">

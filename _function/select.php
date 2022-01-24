@@ -3,7 +3,7 @@
 	$rucheData = $bdd->query('select * from ruche');
 	$userData = $bdd->query('select * from users inner join status on users.status_reference=status.status_id ');
 	$locationData = $bdd->query('select distinct(rucher_location) from rucher_data');
-	$rucheSelect = $_SESSION['ruche'];
+	@$rucheSelect = $_SESSION['ruche'];
 	//select status
 	function selectStatus(){
 		global $bdd;

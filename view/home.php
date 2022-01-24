@@ -7,7 +7,8 @@
 <title>Accueil</title>
 </head>
 <body>
-<?php include_once '../controller/navbar.php';?>
+<?php
+  include_once '../controller/navbar.php';?>
 <!--home page no connect-->
     <div id="connexion_content" class="form_style">
         <form action="" method="post" id="form_connexion">
@@ -27,6 +28,10 @@
     <div id="home_contener">
        <img src="../img/ruche.svg" alt="" id="image_home">
     </div>
+<form method="post" class="button_connexion">
+    <button type="submit" name="user_btn">connexion user</button>
+    <button type="submit" name="admin_btn">connexion admin</button>
+</form>
 <?php
   include_once '../controller/footer.php';
   include_once '../_function/connexion.php';

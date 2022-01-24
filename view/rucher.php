@@ -4,15 +4,19 @@
 		include_once '../controller/header.php';
 		require_once '../_function/view.php';
 		require_once '../_function/select.php';
+		if($_SESSION['status'] == 0){
+            header('location:home.php');
+		}
 ?>
 <link rel="stylesheet" href="../style/coustom.css">
 <title>Gestion Ruche</title>
 </head>
 <body id="rucher_admin">
 <?php include_once '../controller/navbar.php'; ?>
+<a  title="generateur de data" href="../_function/auto%20data.php" class="invisible" target="_blank">generateur de donner et ruche</a>
 <div id="rucher_content">
     <div class="left">
-        <form action="" method="post" class="view_ruche" hidden>
+        <form action="" method="post" class="view_ruche">
             <!--btn select view-->
             <div class="btn_ruche">
                 <div class="dataSelect dateSelect">
@@ -59,7 +63,7 @@
             </div>
         </form>
     </div>
-    <div class="right">
+    <div class="right" id="<?php if($_SESSION['status']!=1){echo 'invisible';}?>">
         <form action="" method="post" class="form_ruche">
             <div class="btn_content">
                 <div class="btn_ruche">
@@ -118,11 +122,11 @@
         </fieldset>
     </form>
     <!--LINK form add rucher-->
-    <form id="add_rucher" class="add_form"  method="post">
+    <form id="add_rucher" class="add_form" method="post">
         <fieldset class="form_part">
             <legend>
-                <img alt="rucher_add_icon" src="../img/rucherAdd.svg">
-                <h3>Ajouter Rucher</h3>
+              <img alt="rucher_add_icon" src="../img/rucherAdd.svg">
+              <h3>Ajouter Rucher</h3>
             </legend>
             <span class="form_content">
               <label for="rucherName_add">Nom Rucher</label>
@@ -133,8 +137,8 @@
               <input id="rucherLocation_add" name="location" autocomplete="off" type="text" required>
             </span>
             <span>
-                <button class="add_btn" name="add_rucher" type="submit">Ajouter Rucher</button>
-                <span id="cancel_rucher">Annuler</span>
+              <button class="add_btn" name="add_rucher" type="submit">Ajouter Rucher</button>
+              <span id="cancel_rucher">Annuler</span>
             </span>
         </fieldset>
     </form>

@@ -35,11 +35,11 @@ td,th{
   fill: black;
   border: 1px solid black;
 }
-
 .hidden{
   visibility: hidden;
   display: none;
 }
+
 .show{display: block;}
 .active{cursor: pointer}
 .desactive{ cursor: pointer}
@@ -159,6 +159,7 @@ tbody{
   top: 45%;
   left: 44.5%;
   width: 300px;
+  height: 20vh;
   #form_connexion{
     input{
       background: none;
@@ -247,6 +248,21 @@ tbody{
   position: relative;
   left: 40%;
   margin-top: 10%;
+}
+.button_connexion{
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  position: relative;
+  left: 40%;
+  margin-top: 2%;
+  button{
+    width: 110px;
+    background: none;
+    border-radius: 20px;
+    padding: 1%;
+    cursor:pointer;
+  }
 }
 
 //LINK adminUser
@@ -461,10 +477,20 @@ tbody{
 
 //LINK adminRuche
 #rucher_admin{
+  .invisible{
+    position: fixed;
+    left: 45%;
+    top: 10%;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(232,232,232,.5);
+  }
   #rucher_content {
-    margin-top: 5%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
     height: 75vh;
     table{
       thead{
@@ -482,7 +508,7 @@ tbody{
       display: flex;
       padding: 1%;
       justify-content: space-around;
-      width: 45%;
+      width: 80%;
       .view_ruche{
         display: flex;
         flex-direction: column;
@@ -567,8 +593,11 @@ tbody{
         }
       }
     }
+    #invisible{
+      display: none;
+    }
     .right {
-      width: 45%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;

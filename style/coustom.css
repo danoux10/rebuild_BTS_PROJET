@@ -159,6 +159,7 @@ tbody::-webkit-scrollbar-thumb {
   top: 45%;
   left: 44.5%;
   width: 300px;
+  height: 20vh;
 }
 #connexion_content #form_connexion input {
   background: none;
@@ -238,6 +239,22 @@ tbody::-webkit-scrollbar-thumb {
   position: relative;
   left: 40%;
   margin-top: 10%;
+}
+
+.button_connexion {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  position: relative;
+  left: 40%;
+  margin-top: 2%;
+}
+.button_connexion button {
+  width: 110px;
+  background: none;
+  border-radius: 20px;
+  padding: 1%;
+  cursor: pointer;
 }
 
 .admin {
@@ -439,10 +456,20 @@ tbody::-webkit-scrollbar-thumb {
   transition: all ease 0.5s;
 }
 
+#rucher_admin .invisible {
+  position: fixed;
+  left: 45%;
+  top: 10%;
+  height: 50px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgba(232, 232, 232, 0.5);
+}
 #rucher_admin #rucher_content {
-  margin-top: 5%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
   height: 75vh;
 }
 #rucher_admin #rucher_content table thead th {
@@ -455,7 +482,7 @@ tbody::-webkit-scrollbar-thumb {
   display: flex;
   padding: 1%;
   justify-content: space-around;
-  width: 45%;
+  width: 80%;
 }
 #rucher_admin #rucher_content .left .view_ruche {
   display: flex;
@@ -536,8 +563,11 @@ tbody::-webkit-scrollbar-thumb {
 #rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_single tbody td {
   width: 10%;
 }
+#rucher_admin #rucher_content #invisible {
+  display: none;
+}
 #rucher_admin #rucher_content .right {
-  width: 45%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
