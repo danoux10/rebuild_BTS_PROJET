@@ -13,6 +13,10 @@
 </head>
 <body id="rucher_admin">
 <?php include_once '../controller/navbar.php'; ?>
+<nav id="showAndHide">
+    <span id="graph_view"><p>View graph</p></span>
+    <span id="rucher_view"><p>View Admin Rucher</p></span>
+</nav>
 <a  title="generateur de data" href="../_function/auto%20data.php" class="easter_egg" target="_blank">generateur de donner et ruche</a>
 <div id="rucher_content">
 <!--    LINK left-->

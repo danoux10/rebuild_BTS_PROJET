@@ -31,7 +31,7 @@
         <button type="submit" name="admin_btn">connexion admin</button>
     </form>
 </div>
-<!--<script type="text/javascript" src="../script/show_connexion.js"></script>-->
+<script type="text/javascript" src="../script/show_connexion.js"></script>
 <?php
   include_once '../_function/connexion.php';
 ?>

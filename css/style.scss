@@ -9,8 +9,11 @@ a{
 }
 
 //LINK commun
+.invisible{
+  visibility:hidden;
+}
 .hidden{
-  display:none;
+  display: none;
 }
 .show{
   display:block;
@@ -26,6 +29,37 @@ a{
 }
 button{
   cursor: pointer;
+}
+
+//nav show hide
+#showAndHide{
+  margin-top: .5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  //height: 30px;
+  span{
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 0 .5%;
+    height: 40px;
+    border-radius: 50px;
+    transition: all ease 1s;
+    //fixme on desktop style
+    &:hover{
+      border: 1px solid black;
+      font-weight: bolder;
+      box-shadow: 1px 1px 1px silver;
+      transition: all ease 1s;
+      background: rgba(darkgoldenrod,.5);
+    }
+  }
 }
 
 //scrolling slide
@@ -99,6 +133,9 @@ button{
     margin-top: 1%;
   }
 }
+
+//LINK rucher page
+
 //LINK responsive
 //desktop
 @media  screen and (min-width:1441px) {

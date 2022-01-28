@@ -89,7 +89,7 @@
 			$name = $data['rucher_name'];
 			$id = $data['rucher_id'];
 			// table generateur
-			$table_rucher .="<span class='rucher'>";
+			$table_rucher ="<span class='rucher'>";
 			$table_rucher .="<p>$name</p>";
 			$table_rucher .="<p>$location</p>";
 			$table_rucher .="<input type='radio' name='rucher' value='$id'>";
@@ -104,7 +104,7 @@
 		foreach ($rucheData as $data){
 			$name = $data['ruche_name'];
 			$id = $data['ruche_id'];
-			$table_ruche .="<span class='ruche_multi'>";
+			$table_ruche ="<span class='ruche_multi'>";
 			$table_ruche .="<p> $name </p>";
 			$table_ruche .="<input type='checkbox' name='checkRuche[]' value='$id'>";
 			$table_ruche .="</span>";
@@ -115,12 +115,13 @@
 	function selectTableSingle(){
 		global $bdd,$rucheSelect;
 		$rucheData = $bdd->query('select * from ruche inner join rucher_data on rucher_data.rucher_id=ruche.rucher_value');
-		foreach ($rucheData as $data){
+			$table_ruche = "<div class='sigle_ruche'>";
+			foreach ($rucheData as $data){
 			$name = $data['ruche_name'];
 			$id = $data['ruche_id'];
 			$rucher = $data['rucher_name'];
 			if($rucheSelect == $id){
-					$table_ruche .="<span class='single_ruche'>";
+					$table_ruche .="<span>";
 					$table_ruche .="<p> $name </p>";
 					$table_ruche .="<p> $rucher </p>";
 					$table_ruche .="<input type='radio' name='radioRuche' checked value='$id'>";
@@ -133,6 +134,7 @@
 					$table_ruche .="</span>";
 			}
 		}
+		$table_ruche .="</div>";
 		return $table_ruche;
 	}
 

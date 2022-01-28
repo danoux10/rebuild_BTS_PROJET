@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .hidden {
   display: none;
 }
@@ -28,6 +32,34 @@ a {
 
 button {
   cursor: pointer;
+}
+
+#showAndHide {
+  margin-top: 0.5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#showAndHide span {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0 0.5%;
+  height: 40px;
+  border-radius: 50px;
+  transition: all ease 1s;
+}
+#showAndHide span:hover {
+  border: 1px solid black;
+  font-weight: bolder;
+  box-shadow: 1px 1px 1px silver;
+  transition: all ease 1s;
+  background: rgba(184, 134, 11, 0.5);
 }
 
 #navbar {
