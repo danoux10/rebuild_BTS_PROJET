@@ -20,7 +20,7 @@
             <label for="password_connexion">Password</label>
             <input type="password" name="password">
         </div>
-        <button type="submit" name="connexion">Connexion</button>
+        <button type="submit" name="connexion" class="top">Connexion</button>
     </form>
 </div>
 <!-- image -->
@@ -31,8 +31,8 @@
         <button type="submit" name="admin_btn">connexion admin</button>
     </form>
 </div>
+<!--<script type="text/javascript" src="../script/show_connexion.js"></script>-->
 <?php
-  include_once '../controller/footer.php';
   include_once '../_function/connexion.php';
 ?>
 </body>

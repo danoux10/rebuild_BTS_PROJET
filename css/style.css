@@ -15,6 +15,21 @@ a {
   display: block;
 }
 
+.top {
+  margin-top: 4%;
+}
+
+.user_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+}
+
 #navbar {
   background: black;
   width: 100vw;
@@ -35,6 +50,37 @@ a {
 }
 #navbar nav ul li a {
   color: orangered;
+}
+
+#connexion_content {
+  padding: 0 1% 1% 1%;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(360deg, rgba(192, 192, 192, 0.8) 0%, rgba(255, 255, 255, 0.7) 100%);
+}
+#connexion_content #form_connexion {
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#connexion_content #form_connexion input {
+  background: rgba(255, 152, 1, 0.5);
+  border: 1px solid black;
+  box-shadow: none;
+}
+#connexion_content #form_connexion button {
+  background: rgba(255, 155, 0, 0.5);
+  padding: 1%;
+  box-shadow: none;
+  border: 1px solid black;
+  transition: all ease 0.5s;
 }
 
 #home_contener {
@@ -65,6 +111,19 @@ a {
     width: 100%;
     left: 0;
     background: darkgoldenrod;
+  }
+
+  #connexion_content {
+    position: absolute;
+    top: 40%;
+    left: 44%;
+    z-index: 1;
+  }
+  #connexion_content #form_connexion button:hover {
+    border-radius: 20px;
+    border: none;
+    background: #ff9b00;
+    transition: all ease 0.6s;
   }
 
   #home_contener {
@@ -99,6 +158,18 @@ a {
   }
   #navbar nav ul li a {
     text-shadow: 0.5px 0.5px 0.5px orange;
+  }
+
+  #connexion_content {
+    position: absolute;
+    top: 31%;
+    left: 25.5%;
+  }
+  #connexion_content #form_connexion button:hover {
+    border-radius: 20px;
+    border: none;
+    background: #ff9b00;
+    transition: all ease 0.6s;
   }
 
   #home_contener {

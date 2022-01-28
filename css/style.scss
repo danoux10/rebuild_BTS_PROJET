@@ -1,4 +1,4 @@
-//reset
+//LINK resetCSS
 body{
   margin: 0;
   font-family: sans-serif;
@@ -8,13 +8,25 @@ a{
   text-decoration: none;
 }
 
+//LINK commun
 .hidden{
   display:none;
 }
 .show{
   display:block;
 }
-
+.top{
+  margin-top: 4%;
+}
+.user_info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+button{
+  cursor: pointer;
+}
 
 //scrolling slide
 
@@ -47,7 +59,36 @@ a{
 
 //LINK home page
 //ANCHOR connexion form
-
+#connexion_content{
+  padding: 0 1% 1% 1%;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(360deg, rgba(192,192,192,.8) 0%, rgba(255,255,255,.7) 100%);;;
+  #form_connexion{
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    input{
+      background: rgba(255,152,1,.5);
+      border: 1px solid black;
+      box-shadow: none;
+    }
+    button{
+      background:rgba(255,155,0,.5);
+      padding: 1%;
+      box-shadow: none;
+      border: 1px solid black;
+      transition: all ease .5s;
+    }
+  }
+}
 //ANCHOR img
 #home_contener{
   display: flex;
@@ -92,7 +133,24 @@ a{
   }
   //LINK home page
   //ANCHOR connexion form
-
+  #connexion_content{
+    position: absolute;
+    top: 40%;
+    left: 44%;
+    z-index: 1;
+    #form_connexion{
+      input{
+      }
+      button{
+        &:hover{
+          border-radius: 20px;
+          border: none;
+          background: rgb(255,155,0);
+          transition: all ease .6s;
+        }
+      }
+    }
+  }
   //ANCHOR img
   #home_contener{
     position: absolute;
@@ -137,7 +195,23 @@ a{
   }
   //LINK home page
   //ANCHOR connexion form
-
+  #connexion_content{
+    position: absolute;
+    top: 31%;
+    left: 25.5%;
+    #form_connexion{
+      input{
+      }
+      button{
+        &:hover{
+          border-radius: 20px;
+          border: none;
+          background: rgb(255,155,0);
+          transition: all ease .6s;
+        }
+      }
+    }
+  }
   //ANCHOR img
   #home_contener{
     position: absolute;
