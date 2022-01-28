@@ -3,7 +3,7 @@
 <?php
     include_once '../controller/header.php';
 ?>
-<link rel="stylesheet" href="../style/coustom.css">
+<link rel="stylesheet" href="../alpha/coustom.css">
 <title>Accueil</title>
 </head>
 <body>

@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+#navbar {
+  background: black;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+#navbar nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 95vw;
+  position: relative;
+  left: -15px;
+}
+#navbar nav ul li {
+  color: orangered;
+  cursor: pointer;
+}
+#navbar nav ul li a {
+  color: orangered;
+}
+
+@media screen and (min-width: 1441px) {
+  #navbar nav ul li a, #navbar nav ul li .connexion {
+    position: relative;
+  }
+  #navbar nav ul li a::before, #navbar nav ul li .connexion::before {
+    content: "";
+    width: 0;
+    height: 0.1em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: orange;
+    transition: all 0.3s;
+  }
+  #navbar nav ul li a:hover::before, #navbar nav ul li .connexion:hover::before {
+    width: 100%;
+    left: 0;
+    background: darkgoldenrod;
+  }
+}
+@media screen and (max-width: 1440px) {
+  #navbar {
+    font-size: 12px;
+  }
+  #navbar nav ul li {
+    text-shadow: 0.5px 0.5px 0.5px orange;
+  }
+  #navbar nav ul li a {
+    text-shadow: 0.5px 0.5px 0.5px orange;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

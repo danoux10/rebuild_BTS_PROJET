@@ -38,6 +38,9 @@ td, th {
 
 .hidden {
   visibility: hidden;
+}
+
+.invisible {
   display: none;
 }
 
@@ -456,7 +459,7 @@ tbody::-webkit-scrollbar-thumb {
   transition: all ease 0.5s;
 }
 
-#rucher_admin .invisible {
+#rucher_admin .easter_egg {
   position: fixed;
   left: 45%;
   top: 10%;
@@ -465,41 +468,35 @@ tbody::-webkit-scrollbar-thumb {
   border-radius: 10px;
   box-shadow: 1px 1px 1px rgba(232, 232, 232, 0.5);
 }
-#rucher_admin #rucher_content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5%;
-  height: 75vh;
-}
-#rucher_admin #rucher_content table thead th {
+#rucher_admin .left table thead th, #rucher_admin .right table thead th {
   background: silver;
 }
-#rucher_admin #rucher_content table tbody tr:nth-child(even) {
+#rucher_admin .left table tbody tr:nth-child(even), #rucher_admin .right table tbody tr:nth-child(even) {
   background: lightgray;
 }
-#rucher_admin #rucher_content .left {
+#rucher_admin .left .left, #rucher_admin .right .left {
   display: flex;
   padding: 1%;
   justify-content: space-around;
   width: 80%;
+  height: 100%;
 }
-#rucher_admin #rucher_content .left .view_ruche {
+#rucher_admin .left .left .view_ruche, #rucher_admin .right .left .view_ruche {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
 }
-#rucher_admin #rucher_content .left .view_ruche .btn_ruche {
+#rucher_admin .left .left .view_ruche .btn_ruche, #rucher_admin .right .left .view_ruche .btn_ruche {
   width: 100%;
 }
-#rucher_admin #rucher_content .left .view_ruche .btn_ruche .dateSelect {
+#rucher_admin .left .left .view_ruche .btn_ruche .dateSelect, #rucher_admin .right .left .view_ruche .btn_ruche .dateSelect {
   margin: 1% 0;
 }
-#rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose {
+#rucher_admin .left .left .view_ruche .btn_ruche .choose, #rucher_admin .right .left .view_ruche .btn_ruche .choose {
   margin: 1% 0;
 }
-#rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose button, #rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose a {
+#rucher_admin .left .left .view_ruche .btn_ruche .choose button, #rucher_admin .left .left .view_ruche .btn_ruche .choose a, #rucher_admin .right .left .view_ruche .btn_ruche .choose button, #rucher_admin .right .left .view_ruche .btn_ruche .choose a {
   color: black;
   font-weight: normal;
   border: 1px solid black;
@@ -509,7 +506,7 @@ tbody::-webkit-scrollbar-thumb {
   transition: all ease 0.5s;
   cursor: pointer;
 }
-#rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose button:hover, #rucher_admin #rucher_content .left .view_ruche .btn_ruche .choose a:hover {
+#rucher_admin .left .left .view_ruche .btn_ruche .choose button:hover, #rucher_admin .left .left .view_ruche .btn_ruche .choose a:hover, #rucher_admin .right .left .view_ruche .btn_ruche .choose button:hover, #rucher_admin .right .left .view_ruche .btn_ruche .choose a:hover {
   background: rgba(184, 134, 11, 0.5);
   border: none;
   box-shadow: 2px 2px 2px silver;
@@ -517,12 +514,12 @@ tbody::-webkit-scrollbar-thumb {
   text-shadow: 1px 1px 1px grey;
   transition: all ease 0.5s;
 }
-#rucher_admin #rucher_content .left .view_ruche .btn_ruche .dataSelect {
+#rucher_admin .left .left .view_ruche .btn_ruche .dataSelect, #rucher_admin .right .left .view_ruche .btn_ruche .dataSelect {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-#rucher_admin #rucher_content .left .view_ruche .btn_ruche .dataSelect .view_choose {
+#rucher_admin .left .left .view_ruche .btn_ruche .dataSelect .view_choose, #rucher_admin .right .left .view_ruche .btn_ruche .dataSelect .view_choose {
   display: flex;
   justify-content: center;
   border: 1px solid black;
@@ -532,16 +529,16 @@ tbody::-webkit-scrollbar-thumb {
   padding: 0.2% 1%;
   transition: all ease 0.5s;
 }
-#rucher_admin #rucher_content .left .view_ruche .btn_ruche .dataSelect .view_choose:hover {
+#rucher_admin .left .left .view_ruche .btn_ruche .dataSelect .view_choose:hover, #rucher_admin .right .left .view_ruche .btn_ruche .dataSelect .view_choose:hover {
   background: rgba(184, 134, 11, 0.5);
   transition: all ease 0.5s;
 }
-#rucher_admin #rucher_content .left .view_ruche .view\&select {
+#rucher_admin .left .left .view_ruche .view\&select, #rucher_admin .right .left .view_ruche .view\&select {
   margin-top: 1%;
   display: flex;
   justify-content: space-between;
 }
-#rucher_admin #rucher_content .left .view_ruche .view\&select .graph {
+#rucher_admin .left .left .view_ruche .view\&select .graph, #rucher_admin .right .left .view_ruche .view\&select .graph {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -549,115 +546,123 @@ tbody::-webkit-scrollbar-thumb {
   width: 100%;
   margin-right: 1%;
 }
-#rucher_admin #rucher_content .left .view_ruche .view\&select .graph #graph_content {
+#rucher_admin .left .left .view_ruche .view\&select .graph #graph_content, #rucher_admin .right .left .view_ruche .view\&select .graph #graph_content {
   width: 500px;
 }
-#rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_single thead {
+#rucher_admin .left .left .view_ruche .view\&select .table\&select .select_single thead, #rucher_admin .right .left .view_ruche .view\&select .table\&select .select_single thead {
   display: block;
 }
-#rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_single tbody {
+#rucher_admin .left .left .view_ruche .view\&select .table\&select .select_single tbody, #rucher_admin .right .left .view_ruche .view\&select .table\&select .select_single tbody {
   display: block;
   overflow: auto;
   height: 45vh;
 }
-#rucher_admin #rucher_content .left .view_ruche .view\&select .table\&select .select_single tbody td {
+#rucher_admin .left .left .view_ruche .view\&select .table\&select .select_single tbody td, #rucher_admin .right .left .view_ruche .view\&select .table\&select .select_single tbody td {
   width: 10%;
 }
-#rucher_admin #rucher_content #invisible {
+#rucher_admin .left #invisible, #rucher_admin .right #invisible {
   display: none;
 }
-#rucher_admin #rucher_content .right {
+#rucher_admin .left .right.invisible, #rucher_admin .right .right.invisible {
+  display: none;
+}
+#rucher_admin .left .right.show, #rucher_admin .right .right.show {
+  display: block;
+}
+#rucher_admin .left .right, #rucher_admin .right .right {
   width: 100%;
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#rucher_admin #rucher_content .right .form_ruche {
+#rucher_admin .left .right .form_ruche, #rucher_admin .right .right .form_ruche {
+  border: 1px solid blue;
   width: 100%;
   height: 100%;
 }
-#rucher_admin #rucher_content .right .form_ruche .btn_content {
+#rucher_admin .left .right .form_ruche .btn_content, #rucher_admin .right .right .form_ruche .btn_content {
   height: 20%;
   margin-top: 1.5%;
   margin-bottom: 5%;
   padding: 1.5%;
 }
-#rucher_admin #rucher_content .right .form_ruche .btn_content .btn_ruche {
+#rucher_admin .left .right .form_ruche .btn_content .btn_ruche, #rucher_admin .right .right .form_ruche .btn_content .btn_ruche {
   display: flex;
   justify-content: space-around;
   margin-bottom: 3.5%;
 }
-#rucher_admin #rucher_content .right .form_ruche .btn_content .btn_ruche .ajouter {
+#rucher_admin .left .right .form_ruche .btn_content .btn_ruche .ajouter, #rucher_admin .right .right .form_ruche .btn_content .btn_ruche .ajouter {
   border: none;
   background: rgba(0, 255, 0, 0.3);
 }
-#rucher_admin #rucher_content .right .form_ruche .btn_content .btn_ruche .ajouter:hover {
+#rucher_admin .left .right .form_ruche .btn_content .btn_ruche .ajouter:hover, #rucher_admin .right .right .form_ruche .btn_content .btn_ruche .ajouter:hover {
   border: 1px solid green;
   box-shadow: 2px 2px 2px rgba(0, 255, 0, 0.5);
   background: rgba(0, 255, 0, 0.5);
   transition: all ease 0.5s;
 }
-#rucher_admin #rucher_content .right .form_ruche .btn_content .btn_ruche .modifier {
+#rucher_admin .left .right .form_ruche .btn_content .btn_ruche .modifier, #rucher_admin .right .right .form_ruche .btn_content .btn_ruche .modifier {
   border: none;
   background: rgba(255, 178, 0, 0.5);
 }
-#rucher_admin #rucher_content .right .form_ruche .btn_content .btn_ruche .modifier:hover {
+#rucher_admin .left .right .form_ruche .btn_content .btn_ruche .modifier:hover, #rucher_admin .right .right .form_ruche .btn_content .btn_ruche .modifier:hover {
   border: 1px solid #ffb200;
   box-shadow: 2px 2px 2px #ffb200;
   background: rgba(255, 178, 0, 0.5);
   transition: all ease 0.5s;
 }
-#rucher_admin #rucher_content .right .form_ruche .btn_content .other_btn {
+#rucher_admin .left .right .form_ruche .btn_content .other_btn, #rucher_admin .right .right .form_ruche .btn_content .other_btn {
   margin-top: 2%;
   display: flex;
   justify-content: space-around;
 }
-#rucher_admin #rucher_content .right .form_ruche .btn_content .other_btn #admin_rucher {
+#rucher_admin .left .right .form_ruche .btn_content .other_btn #admin_rucher, #rucher_admin .right .right .form_ruche .btn_content .other_btn #admin_rucher {
   border: none;
   font-weight: bold;
   background: rgba(255, 255, 0, 0.5);
 }
-#rucher_admin #rucher_content .right .form_ruche .btn_content .other_btn #admin_rucher:hover {
+#rucher_admin .left .right .form_ruche .btn_content .other_btn #admin_rucher:hover, #rucher_admin .right .right .form_ruche .btn_content .other_btn #admin_rucher:hover {
   border: 1px solid #ffb200;
   box-shadow: 2px 2px 2px #ffb200;
   background: rgba(255, 178, 0, 0.5);
   transition: all ease 0.5s;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content {
+#rucher_admin .left .right .form_ruche .table_content, #rucher_admin .right .right .form_ruche .table_content {
   height: 50%;
   margin-bottom: 1.5%;
   display: flex;
   justify-content: space-around;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content .select_ruche {
+#rucher_admin .left .right .form_ruche .table_content .select_ruche, #rucher_admin .right .right .form_ruche .table_content .select_ruche {
   width: 200px;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content .select_ruche thead {
+#rucher_admin .left .right .form_ruche .table_content .select_ruche thead, #rucher_admin .right .right .form_ruche .table_content .select_ruche thead {
   display: block;
   margin-right: 6px;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content .select_ruche thead th {
+#rucher_admin .left .right .form_ruche .table_content .select_ruche thead th, #rucher_admin .right .right .form_ruche .table_content .select_ruche thead th {
   width: 85%;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content .select_ruche tbody {
+#rucher_admin .left .right .form_ruche .table_content .select_ruche tbody, #rucher_admin .right .right .form_ruche .table_content .select_ruche tbody {
   display: block;
   overflow-y: auto;
   height: 345px;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content .select_ruche tbody td {
+#rucher_admin .left .right .form_ruche .table_content .select_ruche tbody td, #rucher_admin .right .right .form_ruche .table_content .select_ruche tbody td {
   width: 90%;
   text-align: center;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content .view_rucher thead {
+#rucher_admin .left .right .form_ruche .table_content .view_rucher thead, #rucher_admin .right .right .form_ruche .table_content .view_rucher thead {
   display: block;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content .view_rucher tbody {
+#rucher_admin .left .right .form_ruche .table_content .view_rucher tbody, #rucher_admin .right .right .form_ruche .table_content .view_rucher tbody {
   display: block;
   overflow: auto;
   height: 45vh;
 }
-#rucher_admin #rucher_content .right .form_ruche .table_content .view_rucher tbody td {
+#rucher_admin .left .right .form_ruche .table_content .view_rucher tbody td, #rucher_admin .right .right .form_ruche .table_content .view_rucher tbody td {
   width: 10%;
 }
 

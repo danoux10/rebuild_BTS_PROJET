@@ -1,0 +1,90 @@
+//reset
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+//scrolling slide
+
+//grip display for view
+
+//LINK navbar
+#navbar{
+  background: black;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  nav{
+    ul{
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      width: 95vw;
+      position: relative;
+      left: -15px;
+      li{
+        color: orangered;
+        cursor: pointer;
+        a{
+          color: orangered;
+        }
+      }
+    }
+  }
+}
+
+//LINK responsive
+//desktop
+@media  screen and (min-width:1441px) {
+  //LINK  navbarDesktop
+  #navbar{
+    nav{
+      ul{
+        li{
+          a,.connexion{
+            position: relative;
+            &::before{
+              content: "";
+              width: 0;
+              height: 0.1em;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              background: orange;
+              transition: all .3s;
+            }
+            &:hover{
+              &::before{
+                width: 100%;
+                left: 0;
+                background: darkgoldenrod;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//mobile
+@media  screen and (max-width:1440px) {
+  //LINK navbarMobile
+  #navbar{
+    font-size: 12px;
+    nav{
+      ul{
+        li{
+          text-shadow: .5px .5px .5px orange;
+          a{
+            text-shadow: .5px .5px .5px orange;
+          }
+        }
+      }
+    }
+  }
+}

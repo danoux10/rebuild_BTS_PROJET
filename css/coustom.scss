@@ -28,6 +28,7 @@ td,th{
   box-shadow: 2px 2px 2px gold;
   transition: all ease .5s;
 }
+
 .unselect{
   //background: none;
   color: black;
@@ -37,6 +38,9 @@ td,th{
 }
 .hidden{
   visibility: hidden;
+}
+
+.invisible{
   display: none;
 }
 
@@ -64,7 +68,7 @@ tbody{
   }
 }
 
-//LINK navbar style
+//LINK navbar css
 #navbar{
   background: #000;
   display: flex;
@@ -103,7 +107,7 @@ tbody{
   }
 }
 
-//LINK form style
+//LINK form css
 .form_style{
   border: 1px outset silver;
   box-shadow: 2px 2px 2px silver;
@@ -242,7 +246,7 @@ tbody{
 }
 
 //LINK home page
-#home_contener{ 
+#home_contener{
   display: flex;
   width: 20%;
   position: relative;
@@ -477,7 +481,7 @@ tbody{
 
 //LINK adminRuche
 #rucher_admin{
-  .invisible{
+  .easter_egg{
     position: fixed;
     left: 45%;
     top: 10%;
@@ -486,12 +490,7 @@ tbody{
     border-radius: 10px;
     box-shadow: 1px 1px 1px rgba(232,232,232,.5);
   }
-  #rucher_content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;
-    height: 75vh;
+ .left,.right {
     table{
       thead{
         th{
@@ -509,6 +508,7 @@ tbody{
       padding: 1%;
       justify-content: space-around;
       width: 80%;
+      height: 100%;
       .view_ruche{
         display: flex;
         flex-direction: column;
@@ -596,13 +596,21 @@ tbody{
     #invisible{
       display: none;
     }
+    .right.invisible{
+      display: none;
+    }
+    .right.show{
+      display: block;
+    }
     .right {
       width: 100%;
+      border: 1px solid red;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       .form_ruche{
+        border: 1px solid blue;
         width: 100%;
         height: 100%;
         .btn_content{
@@ -835,4 +843,4 @@ tbody{
     }
   }
 
-}//end ruche form style
+}//end ruche form css

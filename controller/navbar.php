@@ -6,7 +6,7 @@
             <ul>
                 <?php if($connect_lvl==0){?>
                     <li><a href="home.php">Acceuil</a></li>
-                    <li id="connexion_view"><a>Connexion</a></li>
+                    <li id="connexion_view"><span class="connexion">Connexion</span></li>
                 <?php }?>
                 <?php if($connect_lvl >=2){?>
                     <li><a href="rucher.php">Observer ruche</a></li>

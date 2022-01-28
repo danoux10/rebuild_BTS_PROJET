@@ -1,3 +1,5 @@
+var view_content=document.getElementById('view_content');
+var admin_view=document.getElementById('admin_view');
 var ruche_add = document.getElementById('add_ruche');
 var rucher_add = document.getElementById('add_rucher');
 
@@ -7,6 +9,9 @@ var rucher_add_btn = document.getElementById('ajout_rucher')
 var annul_ruche=document.getElementById('cancel_ruche');
 var annul_rucher=document.getElementById('cancel_rucher');
 
+
+// view_content.classList.add('');
+admin_view.classList.add('show');
 ruche_add.classList.add('hidden');
 rucher_add.classList.add('hidden');
 

@@ -8,28 +8,22 @@
         header('location:home.php');
     }
 ?>
-<link rel="stylesheet" href="../style/coustom.css">
+<link rel="stylesheet" href="../alpha/coustom.css">
 <title>Gestion Utilisateur</title>
 </head>
 <?php
 		include_once '../controller/navbar.php';?>
 <div class="admin top">
     <form action="user.php" method="post" class="view_user">
-       <div>
-            <table class="scroll user_table">
-                <thead>
-                    <tr>
-                        <th>Prenom</th>
-                        <th>Nom</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                        <th>Sct</th>
-                    </tr>
-                </thead>
-                <?php
-                   echo selectTableUser();
-                ?>
-            </table>
+       <div class="scroll select_user">
+           <span>
+               <p>Prenom</p>
+               <p>Nom</p>
+               <p>Email</p>
+               <p>Status</p>
+               <p>Sct</p>
+           </span>
+            <?php echo selectTableUser(); ?>
         </div>
         <button class="button_custum" name="update_user" id="view_update">Modifier Utilisateur</button>
         <div id="delete_alert" class="">
@@ -48,7 +42,7 @@
             <span class="button_custum"  id="view_delete">Suprimer Utilisateur</span>
         </div>
         <div class="other_btn">
-            <table class="sroll status_view">
+            <table class="scroll status_view">
                 <thead>
                     <tr>
                         <th>Status Name</th>

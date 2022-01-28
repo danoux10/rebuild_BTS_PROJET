@@ -8,14 +8,15 @@
             header('location:home.php');
 		}
 ?>
-<link rel="stylesheet" href="../style/coustom.css">
+<link rel="stylesheet" href="../alpha/coustom.css">
 <title>Gestion Ruche</title>
 </head>
 <body id="rucher_admin">
 <?php include_once '../controller/navbar.php'; ?>
-<a  title="generateur de data" href="../_function/auto%20data.php" class="invisible" target="_blank">generateur de donner et ruche</a>
+<a  title="generateur de data" href="../_function/auto%20data.php" class="easter_egg" target="_blank">generateur de donner et ruche</a>
 <div id="rucher_content">
-    <div class="left">
+<!--    LINK left-->
+    <div class="left" id="view_content">
         <form action="" method="post" class="view_ruche">
             <!--btn select view-->
             <div class="btn_ruche">
@@ -51,19 +52,18 @@
                     <canvas id="graph_content"></canvas>
                 </div>
                 <div class="table&select">
-                    <table class="select_single">
-                        <thead>
-                        <th>Nom</th>
-                        <th>Rucher</th>
-                        <th>Select</th>
-                        </thead>
-						<?php echo selectTableSingle(); ?>
-                    </table>
+                    <span>
+                        <p>Nom</p>
+                        <p>Rucher</p>
+                        <p>Select</p>
+                    </span>
+                    <?php echo selectTableSingle(); ?>
                 </div>
             </div>
         </form>
     </div>
-    <div class="right" id="<?php if($_SESSION['status']!=1){echo 'invisible';}?>">
+<!--LINK right-->
+    <div class="right" id="<?php if($_SESSION['status']!=1){echo 'invisible';} else{ echo 'admin_view';}?>">
         <form action="" method="post" class="form_ruche">
             <div class="btn_content">
                 <div class="btn_ruche">
@@ -78,23 +78,21 @@
                 </div>
             </div>
             <div class="table_content">
-                <table class="select_ruche">
-                    <caption>Ruche</caption>
-                    <thead>
-                    <th>Nom</th>
-                    <th>Select</th>
-                    </thead>
+                <div class="select_ruche">
+                    <span>
+                        <p>Nom</p>
+                        <p>Select</p>
+                    </span>
 					<?php echo selectTableRuche(); ?>
-                </table>
-                <table class="view_rucher">
-                    <caption>Rucher</caption>
-                    <thead>
-                    <th>Nom rucher</th>
-                    <th>Localisation</th>
-                    <th>Localisation</th>
-                    </thead>
+                </div>
+                <div class="view_rucher">
+                    <span>
+                        <p>Nom rucher</p>
+                        <p>Localisation</p>
+                        <p>Localisation</p>
+                    </span>
                     <?php echo selectTableRucher(); ?>
-                </table>
+                </div>
             </div>
         </form>
     </div>
