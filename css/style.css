@@ -7,6 +7,14 @@ a {
   text-decoration: none;
 }
 
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 #navbar {
   background: black;
   width: 100vw;
@@ -29,6 +37,16 @@ a {
   color: orangered;
 }
 
+#home_contener {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#home_contener .button_connexion {
+  margin-top: 1%;
+}
+
 @media screen and (min-width: 1441px) {
   #navbar nav ul li a, #navbar nav ul li .connexion {
     position: relative;
@@ -48,6 +66,29 @@ a {
     left: 0;
     background: darkgoldenrod;
   }
+
+  #home_contener {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    width: 40%;
+  }
+  #home_contener #image_home {
+    width: 50%;
+  }
+  #home_contener .button_connexion {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #home_contener .button_connexion button {
+    width: auto;
+    background: none;
+    border-radius: 20px;
+    padding: 1%;
+    cursor: pointer;
+  }
 }
 @media screen and (max-width: 1440px) {
   #navbar {
@@ -58,6 +99,28 @@ a {
   }
   #navbar nav ul li a {
     text-shadow: 0.5px 0.5px 0.5px orange;
+  }
+
+  #home_contener {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 50%;
+  }
+  #home_contener #image_home {
+    width: 100%;
+  }
+  #home_contener .button_connexion {
+    width: 150%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #home_contener .button_connexion button {
+    width: auto;
+    background: none;
+    border-radius: 20px;
+    cursor: pointer;
   }
 }
 

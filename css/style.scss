@@ -8,6 +8,14 @@ a{
   text-decoration: none;
 }
 
+.hidden{
+  display:none;
+}
+.show{
+  display:block;
+}
+
+
 //scrolling slide
 
 //grip display for view
@@ -37,6 +45,19 @@ a{
   }
 }
 
+//LINK home page
+//ANCHOR connexion form
+
+//ANCHOR img
+#home_contener{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .button_connexion{
+    margin-top: 1%;
+  }
+}
 //LINK responsive
 //desktop
 @media  screen and (min-width:1441px) {
@@ -69,7 +90,34 @@ a{
       }
     }
   }
+  //LINK home page
+  //ANCHOR connexion form
+
+  //ANCHOR img
+  #home_contener{
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    width: 40%;
+    #image_home{
+      width: 50%;
+    }
+    .button_connexion{
+      width: 60%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      button{
+        width: auto;
+        background: none;
+        border-radius: 20px;
+        padding: 1%;
+        cursor:pointer;
+      }
+    }
+  }
 }
+
 
 //mobile
 @media  screen and (max-width:1440px) {
@@ -84,6 +132,31 @@ a{
             text-shadow: .5px .5px .5px orange;
           }
         }
+      }
+    }
+  }
+  //LINK home page
+  //ANCHOR connexion form
+
+  //ANCHOR img
+  #home_contener{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    #image_home{
+      width: 100%;
+    }
+    .button_connexion{
+      width: 150%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      button{
+        width: auto;
+        background: none;
+        border-radius: 20px;
+        cursor:pointer;
       }
     }
   }
