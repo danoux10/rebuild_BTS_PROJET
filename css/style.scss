@@ -1,5 +1,7 @@
 //LINK resetCSS
 body{
+  //fixme chage bg
+  background: grey;
   margin: 0;
   font-family: sans-serif;
   &::-webkit-scrollbar{
@@ -254,10 +256,24 @@ button{
     }
   }
 }
-
-//ANCHOR rucher admin
+//ANCHOR rucher admin fixme tu en est la
 .right{
-  //background: red;
+  border: 1px solid white;
+  .form_ruche{
+    background: rgba(silver,.5);
+    .btn_content{
+      background: rgba(#2e2e2e,.5);
+    }
+    .table_content{
+      background: rgba(lime,.5);
+      .select_ruche{
+        background: rgba(red,.5);
+      }
+      .view_rucher{
+        background: rgba(blue,.5);
+      }
+    }
+  }
 }
 //LINK responsive
 //desktop
@@ -347,6 +363,7 @@ button{
   }
 
   //LINK rucher page
+  //ANCHOR graph
   .easter_egg{
     height: 30px;
   }
@@ -441,6 +458,7 @@ button{
   }
 
   //LINK rucher page
+  //ANCHOR graph
   .easter_egg{
     height: 10px;
   }

@@ -152,7 +152,6 @@
     include_once '../model/rucher_admin.php';
     include_once '../_function/graph.php';
 ?>
-<script src="../script/show_graph.js"></script>
 <script src="../script/ruche_show.js"></script>
 <?php
     include_once '../controller/footer.php';
