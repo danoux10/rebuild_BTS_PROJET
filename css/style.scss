@@ -2,6 +2,7 @@
 body{
   margin: 0;
   font-family: sans-serif;
+  background: white;
 }
 
 a{
@@ -38,6 +39,12 @@ button{
   justify-content: space-around;
   align-items: center;
   //height: 30px;
+  span.active{
+    background: rgba(darkgoldenrod,.5);
+    transition: all ease .5s;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+  }
   span{
     font-size: 14px;
     display: flex;
@@ -51,19 +58,23 @@ button{
     height: 40px;
     border-radius: 50px;
     transition: all ease 1s;
-    //fixme on desktop style
-    &:hover{
-      border: 1px solid black;
-      font-weight: bolder;
-      box-shadow: 1px 1px 1px silver;
-      transition: all ease 1s;
-      background: rgba(darkgoldenrod,.5);
-    }
   }
 }
 
 //scrolling slide
-
+.scroll {
+  overflow: scroll;
+  &::-webkit-scrollbar{
+    width: 6px;
+    height: 0;
+    background: #b8860b;
+  }
+  &::-webkit-scrollbar-thumb{
+    width: 6px;
+    border-radius:50px ;
+    background: black;
+  }
+}
 //grip display for view
 
 //LINK navbar
@@ -135,11 +146,137 @@ button{
 }
 
 //LINK rucher page
+.easter_egg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  color: white;
+}
+//ANCHOR graph
+.left{
+  display: flex;
+  padding: 1%;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100%;
+  .view_ruche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .btn_ruche{
+      width: 100%;
+      height: 50%;
+      .dateSelect{
+        margin:1% 0;
+      }
+      .choose{
+        margin: 1% 0;
+        button,a{
+          color: black;
+          font-weight: normal;
+          border : 1px solid black;
+          background: none;
+          border-radius: 50px;
+          padding: .3%;
+          transition: all ease .5s;
+          cursor: pointer;
+          &:hover{
+            background: rgba(184,134,11,.5);
+            border: none;
+            box-shadow: 2px 2px 2px silver;
+            color: white;
+            text-shadow: 1px 1px 1px grey;
+            transition: all ease .5s;
+          }
+        }
+      }
+      .dataSelect{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .view_choose{
+          display: flex;
+          justify-content: center;
+          height: 25px;
+          border-radius: 50px;
+          cursor: pointer;
+          padding: .2% 1%;
+          transition: all ease .5s;
+          &:hover{
+            background: rgba(184,134,11,.5);
+            transition: all ease .5s;
+          }
+        }
+      }
+    }
+    .view\&select{
+      margin-top: 1%;
+      display: flex;
+      justify-content: space-between;
+      .graph{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        margin-right: 1%;
+        #graph_content{
+          width: 500px;
+        }
+      }
+      .table\&select{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        div{
+          span{
+            border-bottom: 1px solid black;
+            height: 40px;
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 1% 1%;
+            justify-content: center;
+            align-content: center;
+            justify-items: center;
+            align-items: center;
+          }
+        }
+        .single_ruche{
+          .scroll{
+            height: 600px;
+            span:nth-child(even){
+              background: silver;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+//ANCHOR rucher admin
+.right{
+  background: red;
+}
 //LINK responsive
 //desktop
 @media  screen and (min-width:1441px) {
   //LINK  navbarDesktop
+  #showAndHide{
+    span{
+      &:hover{
+        border: 1px solid black;
+        font-weight: bolder;
+        box-shadow: 1px 1px 1px silver;
+        transition: all ease 1s;
+        background: rgba(darkgoldenrod,.5);
+      }
+    }
+  }
   #navbar{
     nav{
       ul{
@@ -211,6 +348,8 @@ button{
       }
     }
   }
+
+  //LINK rucher page
 }
 
 
@@ -271,4 +410,6 @@ button{
       }
     }
   }
+
+  //LINK rucher page
 }

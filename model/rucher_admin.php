@@ -8,6 +8,7 @@
 				$dateEnd= $_POST['lastDate'];
 				$hoursStart= $_POST['hoursStart'];
 				$hoursEnd= $_POST['hoursEnd'];
+				
 				$_SESSION['first']=$dateStart;
 				$_SESSION['last']=$dateEnd;
 				$_SESSION['start']=$hoursStart;

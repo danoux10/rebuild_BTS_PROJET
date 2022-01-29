@@ -115,7 +115,7 @@
 	function selectTableSingle(){
 		global $bdd,$rucheSelect;
 		$rucheData = $bdd->query('select * from ruche inner join rucher_data on rucher_data.rucher_id=ruche.rucher_value');
-			$table_ruche = "<div class='sigle_ruche'>";
+			$table_ruche = "<div class='scroll'>";
 			foreach ($rucheData as $data){
 			$name = $data['ruche_name'];
 			$id = $data['ruche_id'];

@@ -49,25 +49,28 @@
                     <?php echo @$_SESSION['download'];?>
                 </div>
             </div>
-
             <!-- view and select-->
             <div class="view&select">
                 <div class="graph">
                     <canvas id="graph_content"></canvas>
                 </div>
                 <div class="table&select">
-                    <span>
-                        <p>Nom</p>
-                        <p>Rucher</p>
-                        <p>Select</p>
-                    </span>
+                    <div>
+                        <span>
+                            <p>Nom</p>
+                            <p>Rucher</p>
+                            <p>Select</p>
+                        </span>
+                    </div>
+                  <div class="single_ruche">
                     <?php echo selectTableSingle(); ?>
+                  </div>
                 </div>
             </div>
         </form>
     </div>
 <!--LINK right-->
-    <div class="right" id="<?php if($_SESSION['status']!=1){echo 'invisible';} else{ echo 'admin_view';}?>">
+    <div class="right" style="display: none" id="<?php if($_SESSION['status']!=1){echo 'invisible';} else{ echo 'admin_view';}?>">
         <form action="" method="post" class="form_ruche">
             <div class="btn_content">
                 <div class="btn_ruche">
@@ -101,7 +104,7 @@
         </form>
     </div>
 </div>
-<div id="ruche_form_content">
+<div id="ruche_form_content" class="hidden">
     <!--LINK form add ruche-->
     <form id="add_ruche" action="rucher.php" class="add_form" method="post">
         <fieldset class="form_part">
