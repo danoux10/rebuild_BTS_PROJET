@@ -121,7 +121,7 @@
 			$id = $data['ruche_id'];
 			$rucher = $data['rucher_name'];
 			if($rucheSelect == $id){
-					$table_ruche .="<span>";
+					$table_ruche .="<span for='$id'>";
 					$table_ruche .="<p> $name </p>";
 					$table_ruche .="<p> $rucher </p>";
 					$table_ruche .="<input type='radio' name='radioRuche' checked value='$id'>";

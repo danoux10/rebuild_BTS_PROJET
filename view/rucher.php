@@ -13,7 +13,7 @@
 </head>
 <body id="rucher_admin">
 <?php include_once '../controller/navbar.php'; ?>
-<nav id="showAndHide">
+<nav id="showAndHide" class="<?php if($_SESSION['status']!=1){ echo 'hidden';} ?>">
     <span id="graph_view"><p>View graph</p></span>
     <span id="rucher_view"><p>View Admin Rucher</p></span>
 </nav>
@@ -49,28 +49,28 @@
                     <?php echo @$_SESSION['download'];?>
                 </div>
             </div>
-            <!-- view and select-->
-            <div class="view&select">
-                <div class="graph">
-                    <canvas id="graph_content"></canvas>
-                </div>
-                <div class="table&select">
-                    <div>
+            <div class="table&select">
+                <div>
                         <span>
                             <p>Nom</p>
                             <p>Rucher</p>
                             <p>Select</p>
                         </span>
-                    </div>
-                  <div class="single_ruche">
-                    <?php echo selectTableSingle(); ?>
-                  </div>
+                </div>
+                <div class="single_ruche" >
+				<?php echo selectTableSingle(); ?>
+                </div>
+            </div>
+            <!-- view and select-->
+            <div class="view&select">
+                <div class="graph">
+                    <canvas id="graph_content"></canvas>
                 </div>
             </div>
         </form>
     </div>
 <!--LINK right-->
-    <div class="right" style="display: none" id="<?php if($_SESSION['status']!=1){echo 'invisible';} else{ echo 'admin_view';}?>">
+    <div class="right" id="admin_view">
         <form action="" method="post" class="form_ruche">
             <div class="btn_content">
                 <div class="btn_ruche">
@@ -104,7 +104,7 @@
         </form>
     </div>
 </div>
-<div id="ruche_form_content" class="hidden">
+<div id="ruche_form_content">
     <!--LINK form add ruche-->
     <form id="add_ruche" action="rucher.php" class="add_form" method="post">
         <fieldset class="form_part">

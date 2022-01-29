@@ -2,7 +2,11 @@
 body{
   margin: 0;
   font-family: sans-serif;
-  background: white;
+  &::-webkit-scrollbar{
+    width: 6px;
+    height: 0;
+    background: #b8860b;
+  }
 }
 
 a{
@@ -38,7 +42,6 @@ button{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  //height: 30px;
   span.active{
     background: rgba(darkgoldenrod,.5);
     transition: all ease .5s;
@@ -59,6 +62,12 @@ button{
     border-radius: 50px;
     transition: all ease 1s;
   }
+}
+#showAndHide.hidden{
+  display: none;
+}
+#view_content.hidden{
+  display: none;
 }
 
 //scrolling slide
@@ -150,23 +159,20 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
   color: white;
 }
 //ANCHOR graph
 .left{
   display: flex;
-  padding: 1%;
-  justify-content: space-around;
+  justify-content: center;
   width: 100vw;
-  height: 100%;
   .view_ruche{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     .btn_ruche{
-      width: 100%;
+      width: 100vw;
       height: 50%;
       .dateSelect{
         margin:1% 0;
@@ -182,14 +188,6 @@ button{
           padding: .3%;
           transition: all ease .5s;
           cursor: pointer;
-          &:hover{
-            background: rgba(184,134,11,.5);
-            border: none;
-            box-shadow: 2px 2px 2px silver;
-            color: white;
-            text-shadow: 1px 1px 1px grey;
-            transition: all ease .5s;
-          }
         }
       }
       .dataSelect{
@@ -211,47 +209,46 @@ button{
         }
       }
     }
+    .table\&select{
+      div{
+        span{
+          border-bottom: 1px solid black;
+          height: 20px;
+          display: grid;
+          grid-auto-columns: 1fr;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 1% 5%;
+          justify-content: center;
+          align-content: center;
+          justify-items: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+      .single_ruche{
+        .scroll{
+          height: 5vh;
+          span:nth-child(even){
+            background: silver;
+          }
+        }
+      }
+    }
     .view\&select{
       margin-top: 1%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
       .graph{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 85%;
+        width: 1100px;
+        height: auto;
         margin-right: 1%;
         #graph_content{
-          width: 500px;
-        }
-      }
-      .table\&select{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        div{
-          span{
-            border-bottom: 1px solid black;
-            height: 40px;
-            display: grid;
-            grid-auto-columns: 1fr;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 1% 1%;
-            justify-content: center;
-            align-content: center;
-            justify-items: center;
-            align-items: center;
-          }
-        }
-        .single_ruche{
-          .scroll{
-            height: 600px;
-            span:nth-child(even){
-              background: silver;
-            }
-          }
+          width: 100%;
         }
       }
     }
@@ -260,7 +257,7 @@ button{
 
 //ANCHOR rucher admin
 .right{
-  background: red;
+  //background: red;
 }
 //LINK responsive
 //desktop
@@ -350,11 +347,43 @@ button{
   }
 
   //LINK rucher page
+  .easter_egg{
+    height: 30px;
+  }
+  .left{
+    height: 100%;
+    .view_ruche{
+      .btn_ruche{
+        .choose{
+          button,a{
+            &:hover{
+              background: rgba(184,134,11,.5);
+              border: none;
+              box-shadow: 2px 2px 2px silver;
+              color: white;
+              text-shadow: 1px 1px 1px grey;
+              transition: all ease .5s;
+            }
+          }
+        }
+      }
+      .table\&select{
+        width: 7%;
+      }
+    }
+  }
 }
 
 
 //mobile
 @media  screen and (max-width:1440px) {
+  #showAndHide{
+    span.active{
+    }
+    span{
+      padding: 0 1%;
+    }
+  }
   //LINK navbarMobile
   #navbar{
     font-size: 12px;
@@ -412,4 +441,31 @@ button{
   }
 
   //LINK rucher page
+  .easter_egg{
+    height: 10px;
+  }
+  .left{
+    .view_ruche{
+      .btn_ruche{
+        .dataSelect{
+          span{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            input{
+              width: 100px;
+            }
+          }
+        }
+      }
+      .table\&select{
+      }
+      .view\&select{
+        width: 100vw;
+        .graph{
+        }
+      }
+    }
+  }
 }

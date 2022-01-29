@@ -1,7 +1,11 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background: white;
+}
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+  background: #b8860b;
 }
 
 a {
@@ -60,6 +64,14 @@ button {
   height: 40px;
   border-radius: 50px;
   transition: all ease 1s;
+}
+
+#showAndHide.hidden {
+  display: none;
+}
+
+#view_content.hidden {
+  display: none;
 }
 
 .scroll {
@@ -143,16 +155,13 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
   color: white;
 }
 
 .left {
   display: flex;
-  padding: 1%;
-  justify-content: space-around;
+  justify-content: center;
   width: 100vw;
-  height: 100%;
 }
 .left .view_ruche {
   display: flex;
@@ -161,7 +170,7 @@ button {
   flex-direction: column;
 }
 .left .view_ruche .btn_ruche {
-  width: 100%;
+  width: 100vw;
   height: 50%;
 }
 .left .view_ruche .btn_ruche .dateSelect {
@@ -179,14 +188,6 @@ button {
   padding: 0.3%;
   transition: all ease 0.5s;
   cursor: pointer;
-}
-.left .view_ruche .btn_ruche .choose button:hover, .left .view_ruche .btn_ruche .choose a:hover {
-  background: rgba(184, 134, 11, 0.5);
-  border: none;
-  box-shadow: 2px 2px 2px silver;
-  color: white;
-  text-shadow: 1px 1px 1px grey;
-  transition: all ease 0.5s;
 }
 .left .view_ruche .btn_ruche .dataSelect {
   display: flex;
@@ -206,49 +207,42 @@ button {
   background: rgba(184, 134, 11, 0.5);
   transition: all ease 0.5s;
 }
+.left .view_ruche .table\&select div span {
+  border-bottom: 1px solid black;
+  height: 20px;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1% 5%;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+.left .view_ruche .table\&select .single_ruche .scroll {
+  height: 5vh;
+}
+.left .view_ruche .table\&select .single_ruche .scroll span:nth-child(even) {
+  background: silver;
+}
 .left .view_ruche .view\&select {
   margin-top: 1%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 .left .view_ruche .view\&select .graph {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 85%;
+  width: 1100px;
+  height: auto;
   margin-right: 1%;
 }
 .left .view_ruche .view\&select .graph #graph_content {
-  width: 500px;
-}
-.left .view_ruche .view\&select .table\&select {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.left .view_ruche .view\&select .table\&select div span {
-  border-bottom: 1px solid black;
-  height: 40px;
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1% 1%;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-}
-.left .view_ruche .view\&select .table\&select .single_ruche .scroll {
-  height: 600px;
-}
-.left .view_ruche .view\&select .table\&select .single_ruche .scroll span:nth-child(even) {
-  background: silver;
-}
-
-.right {
-  background: red;
 }
 
 @media screen and (min-width: 1441px) {
@@ -314,8 +308,31 @@ button {
     padding: 1%;
     cursor: pointer;
   }
+
+  .easter_egg {
+    height: 30px;
+  }
+
+  .left {
+    height: 100%;
+  }
+  .left .view_ruche .btn_ruche .choose button:hover, .left .view_ruche .btn_ruche .choose a:hover {
+    background: rgba(184, 134, 11, 0.5);
+    border: none;
+    box-shadow: 2px 2px 2px silver;
+    color: white;
+    text-shadow: 1px 1px 1px grey;
+    transition: all ease 0.5s;
+  }
+  .left .view_ruche .table\&select {
+    width: 7%;
+  }
 }
 @media screen and (max-width: 1440px) {
+  #showAndHide span {
+    padding: 0 1%;
+  }
+
   #navbar {
     font-size: 12px;
   }
@@ -358,6 +375,23 @@ button {
     background: none;
     border-radius: 20px;
     cursor: pointer;
+  }
+
+  .easter_egg {
+    height: 10px;
+  }
+
+  .left .view_ruche .btn_ruche .dataSelect span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .left .view_ruche .btn_ruche .dataSelect span input {
+    width: 100px;
+  }
+  .left .view_ruche .view\&select {
+    width: 100vw;
   }
 }
 
