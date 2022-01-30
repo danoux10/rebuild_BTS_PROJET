@@ -74,9 +74,9 @@
         <form action="" method="post" class="form_ruche">
             <div class="btn_content">
                 <div class="btn_ruche">
-                    <span id="ajout_ruche" class="ajouter button_custum">Ajouter ruche</span>
-                    <span id="ajout_rucher" class="ajouter button_custum">Ajouter rucher</span>
-                    <button type="sumbit" name="ruche_rucher" class="modifier button_custum">Mettre ruche dans rucher</button>
+                    <span id="ajout_ruche" class="ajouter button_custom">Ajouter ruche</span>
+                    <span id="ajout_rucher" class="ajouter button_custom">Ajouter rucher</span>
+                    <button type="sumbit" name="ruche_rucher" class="modifier button_custom">Mettre ruche dans rucher</button>
                 </div>
                 <div class="other_btn">
 <!--                    TODO si tu as le temps -->
@@ -94,9 +94,9 @@
                 </div>
                 <div class="view_rucher">
                     <span>
-                        <p>Nom rucher</p>
+                        <p>rucher</p>
                         <p>Localisation</p>
-                        <p>Localisation</p>
+                        <p>Select</p>
                     </span>
                     <?php echo selectTableRucher(); ?>
                 </div>

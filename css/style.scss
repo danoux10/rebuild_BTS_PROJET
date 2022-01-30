@@ -1,7 +1,5 @@
 //LINK resetCSS
 body{
-  //fixme chage bg
-  background: grey;
   margin: 0;
   font-family: sans-serif;
   &::-webkit-scrollbar{
@@ -72,13 +70,46 @@ button{
   display: none;
 }
 
+//btn style
+.ajouter{
+  border: none;
+  background: rgba(0, 255, 0, .3);
+  &:hover {
+    border: 1px solid green;
+    box-shadow: 2px 2px 2px rgba(0, 255, 0, .5);
+    background: rgba(0, 255, 0, .5);
+    transition: all ease .5s;
+  }
+}
+
+.modifier{
+  border: none;
+  background: rgba(255, 178, 0, .5);
+  &:hover {
+    border: 1px solid rgb(255, 178, 0);
+    box-shadow: 2px 2px 2px rgb(255, 178, 0);
+    background: rgba(255, 178, 0, .5);
+    transition: all ease .5s;
+  }
+}
+
+.button_custom{
+  border: 1px solid black;
+  padding: 1%;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all ease .5s;
+}
+
 //scrolling slide
 .scroll {
   overflow: scroll;
   &::-webkit-scrollbar{
     width: 6px;
     height: 0;
-    background: #b8860b;
+    border: 1px solid rgba(black,.5);
+    border-radius: 10px;
+    //background: #b8860b;
   }
   &::-webkit-scrollbar-thumb{
     width: 6px;
@@ -257,25 +288,125 @@ button{
   }
 }
 //ANCHOR rucher admin fixme tu en est la
-.right{
-  border: 1px solid white;
-  .form_ruche{
-    background: rgba(silver,.5);
-    .btn_content{
-      background: rgba(#2e2e2e,.5);
-    }
-    .table_content{
-      background: rgba(lime,.5);
-      .select_ruche{
-        background: rgba(red,.5);
+.right {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+
+  .form_ruche {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .btn_content {
+      width: 25%;
+      margin-bottom: 1%;
+
+      .btn_ruche {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .modifier {
+          height: 100%;
+          font-size: 100%;
+        }
       }
-      .view_rucher{
-        background: rgba(blue,.5);
+    }
+
+    .table_content {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      margin-top: 2%;
+      .select_ruche,.view_rucher{
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .select_ruche {
+        width:10vw;
+        span {
+          display: grid;
+          grid-auto-columns: 1fr;
+          grid-template-columns: 1fr 1fr;
+          gap: 1% 2%;
+          justify-content: center;
+          align-content: center;
+          justify-items: center;
+          align-items: center;
+          border-bottom: 1px solid black;
+        }
+        .ruche_content {
+          height: 30vh;
+          span{
+            &:nth-child(even) {
+              background: silver;
+            }
+          }
+        }
+      }
+      .view_rucher {
+        width: 15vw;
+        .rucher_body{
+          span{
+            p{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+              overflow-x:scroll;
+              &:nth-child(1){
+                &::-webkit-scrollbar{
+                  height: 5px;
+                  border-top: 1px solid black;
+                }
+                &::-webkit-scrollbar-thumb{
+                  height: 4px;
+                  width: 10px;
+                  background: rgba(black,.5);
+                }
+              }
+              &:nth-child(2){
+                &::-webkit-scrollbar{
+                  height: 5px;
+                  border-radius: 50px;
+                  border-top: 1px solid black;
+                  border-right: 1px solid black;
+                }
+                &::-webkit-scrollbar-thumb{
+                  height: 4px;
+                  width: 10px;
+                  border-radius: 50px;
+                  background: rgba(black,.5);
+                }
+              }
+            }
+            &:nth-child(even){
+              background: silver;
+            }
+          }
+        }
+        span {
+          display: grid;
+          grid-auto-columns: 1fr;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          justify-content: center;
+          align-content: center;
+          justify-items: center;
+          align-items: center;
+          border-bottom:1px solid black;
+          p,input[type='radio']{
+            text-align: center;
+            width: 5vw;
+          }
+        }
       }
     }
   }
 }
-//LINK responsive
+  //LINK responsive
 //desktop
 @media  screen and (min-width:1441px) {
   //LINK  navbarDesktop
@@ -390,7 +521,6 @@ button{
     }
   }
 }
-
 
 //mobile
 @media  screen and (max-width:1440px) {

@@ -84,32 +84,36 @@
 	function selectTableRucher(){
 		global $bdd;
 		$rucherData = $bdd->query('select * from rucher_data');
+		$table_rucher ="<div class='rucher_body scroll'>";
 		foreach ($rucherData as $data){
 			$location = $data['rucher_location'];
 			$name = $data['rucher_name'];
 			$id = $data['rucher_id'];
 			// table generateur
-			$table_rucher ="<span class='rucher'>";
+			$table_rucher .="<span class='rucher'>";
 			$table_rucher .="<p>$name</p>";
 			$table_rucher .="<p>$location</p>";
 			$table_rucher .="<input type='radio' name='rucher' value='$id'>";
 			$table_rucher .="</span>";
 		}
-		return $table_rucher;
+		$table_rucher .="</div>";
+			return $table_rucher;
 	}
 	
 	function selectTableRuche(){
 		global $bdd;
 		$rucheData = $bdd->query('select * from ruche where rucher_affect=0');
+			$table_ruche ="<div class='ruche_content scroll'>";
 		foreach ($rucheData as $data){
 			$name = $data['ruche_name'];
 			$id = $data['ruche_id'];
-			$table_ruche ="<span class='ruche_multi'>";
+			$table_ruche .="<span class='ruche_multi'>";
 			$table_ruche .="<p> $name </p>";
 			$table_ruche .="<input type='checkbox' name='checkRuche[]' value='$id'>";
 			$table_ruche .="</span>";
 		}
-		return $table_ruche;
+			$table_ruche .="</div>";
+			return $table_ruche;
 	}
 
 	function selectTableSingle(){
