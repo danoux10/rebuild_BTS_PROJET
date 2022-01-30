@@ -1,8 +1,9 @@
 var view_content=document.getElementById('view_content');
 var view_admin = document.getElementById('admin_view');
+var easter_egg = document.getElementById('easter');
 var ruche_add = document.getElementById('add_ruche');
 var rucher_add = document.getElementById('add_rucher');
-
+var btn=document.getElementById('btn');
 //btn
 var graph_btn = document.getElementById('graph_view');
 var rucher_btn = document.getElementById('rucher_view');
@@ -22,6 +23,13 @@ view_content.classList.add('hidden');
 view_admin.classList.add('show');
 ruche_add.classList.add('invisible');
 rucher_add.classList.add('invisible');
+
+if(easter_egg.classList.contains('hidden')) {
+    btn.classList.add('top');
+}else{
+    btn.classList.remove('top');
+}
+
 
 function toggleRucheAdd(){
     if(ruche_add_btn.classList.contains('desactive')){

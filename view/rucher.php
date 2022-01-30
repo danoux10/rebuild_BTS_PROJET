@@ -17,7 +17,7 @@
     <span id="graph_view"><p>View graph</p></span>
     <span id="rucher_view"><p>View Admin Rucher</p></span>
 </nav>
-<a  title="generateur de data" href="../_function/auto%20data.php" class="easter_egg" target="_blank">generateur de donner et ruche</a>
+<a  title="generateur de data" href="../_function/auto%20data.php" id="easter" class="easter_egg <?php if($_SESSION['status']!=1){ echo 'hidden';} ?>" target="_blank">generateur de donner et ruche</a>
 <div id="rucher_content">
 <!--    LINK left-->
     <div class="left" id="view_content">
@@ -73,7 +73,7 @@
     <div class="right" id="admin_view">
         <form action="" method="post" class="form_ruche">
             <div class="btn_content">
-                <div class="btn_ruche">
+                <div id="btn" class="btn_ruche">
                     <span id="ajout_ruche" class="ajouter button_custom">Ajouter ruche</span>
                     <span id="ajout_rucher" class="ajouter button_custom">Ajouter rucher</span>
                     <button type="sumbit" name="ruche_rucher" class="modifier button_custom">Mettre ruche dans rucher</button>

@@ -1,6 +1,7 @@
 //LINK resetCSS
 body{
   margin: 0;
+  //background: pink;
   font-family: sans-serif;
   &::-webkit-scrollbar{
     width: 6px;
@@ -8,7 +9,6 @@ body{
     background: #b8860b;
   }
 }
-
 a{
   text-decoration: none;
 }
@@ -81,7 +81,6 @@ button{
     transition: all ease .5s;
   }
 }
-
 .modifier{
   border: none;
   background: rgba(255, 178, 0, .5);
@@ -92,7 +91,6 @@ button{
     transition: all ease .5s;
   }
 }
-
 .button_custom{
   border: 1px solid black;
   padding: 1%;
@@ -188,6 +186,9 @@ button{
 }
 
 //LINK rucher page
+#easter.hidden{
+  display: none;
+}
 .easter_egg{
   display: flex;
   justify-content: center;
@@ -292,41 +293,33 @@ button{
   display: flex;
   justify-content: center;
   width: 100vw;
-
   .form_ruche {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     .btn_content {
-      width: 25%;
       margin-bottom: 1%;
-
       .btn_ruche {
         display: flex;
         justify-content: space-around;
         align-items: center;
-
         .modifier {
           height: 100%;
           font-size: 100%;
         }
       }
     }
-
     .table_content {
       display: flex;
       justify-content: space-around;
-      width: 50%;
       margin-top: 2%;
       .select_ruche,.view_rucher{
         border: 1px solid black;
         border-radius: 10px;
       }
       .select_ruche {
-        width:10vw;
         span {
           display: grid;
           grid-auto-columns: 1fr;
@@ -517,6 +510,19 @@ button{
       }
       .table\&select{
         width: 7%;
+      }
+    }
+  }
+  .right{
+    .form_ruche{
+      .btn_content{
+        width: 25%;
+      }
+      .table_content{
+        width: 50%;
+        .select_ruche{
+          width: 10vw;
+        }
       }
     }
   }

@@ -182,6 +182,10 @@ button {
   margin-top: 1%;
 }
 
+#easter.hidden {
+  display: none;
+}
+
 .easter_egg {
   display: flex;
   justify-content: center;
@@ -289,7 +293,6 @@ button {
   align-items: center;
 }
 .right .form_ruche .btn_content {
-  width: 25%;
   margin-bottom: 1%;
 }
 .right .form_ruche .btn_content .btn_ruche {
@@ -304,15 +307,11 @@ button {
 .right .form_ruche .table_content {
   display: flex;
   justify-content: space-around;
-  width: 50%;
   margin-top: 2%;
 }
 .right .form_ruche .table_content .select_ruche, .right .form_ruche .table_content .view_rucher {
   border: 1px solid black;
   border-radius: 10px;
-}
-.right .form_ruche .table_content .select_ruche {
-  width: 10vw;
 }
 .right .form_ruche .table_content .select_ruche span {
   display: grid;
@@ -461,6 +460,16 @@ button {
   }
   .left .view_ruche .table\&select {
     width: 7%;
+  }
+
+  .right .form_ruche .btn_content {
+    width: 25%;
+  }
+  .right .form_ruche .table_content {
+    width: 50%;
+  }
+  .right .form_ruche .table_content .select_ruche {
+    width: 10vw;
   }
 }
 @media screen and (max-width: 1440px) {
