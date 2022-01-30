@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: pink;
+  background: white;
   font-family: sans-serif;
 }
 body::-webkit-scrollbar {
@@ -526,6 +526,7 @@ button {
 
   .easter_egg {
     height: 10px;
+    margin-bottom: 1%;
   }
 
   .left .view_ruche .btn_ruche .dataSelect span {
@@ -543,6 +544,9 @@ button {
   .right .form_ruche .btn_content {
     width: 100vw;
   }
+  .right .form_ruche .btn_content .btn_ruche {
+    font-size: 80%;
+  }
   .right .form_ruche .table_content {
     width: 100vw;
   }
@@ -550,10 +554,10 @@ button {
     width: 20vw;
   }
   .right .form_ruche .table_content .view_rucher {
-    width: 40vw;
+    width: 50%;
   }
   .right .form_ruche .table_content .view_rucher span p, .right .form_ruche .table_content .view_rucher span input[type=radio] {
-    width: 15vw;
+    width: 16vw;
   }
   .right .form_ruche .table_content .view_rucher .rucher_body span {
     padding: 0.5%;

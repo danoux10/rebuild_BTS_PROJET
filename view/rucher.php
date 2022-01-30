@@ -95,8 +95,8 @@
                 <div class="view_rucher">
                     <span>
                         <p>rucher</p>
-                        <p>Localisation</p>
-                        <p>Select</p>
+                        <p>Location</p>
+                        <p>Slct</p>
                     </span>
                     <?php echo selectTableRucher(); ?>
                 </div>

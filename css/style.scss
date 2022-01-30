@@ -1,7 +1,7 @@
 //LINK resetCSS
 body{
   margin: 0;
-  background: pink;
+  background: white;
   font-family: sans-serif;
   &::-webkit-scrollbar{
     width: 6px;
@@ -534,6 +534,9 @@ button{
 
 //mobile
 @media  screen and (max-width:1440px) {
+  //body{
+  //  background: pink;
+  //}
   #showAndHide{
     span.active{
     }
@@ -601,6 +604,7 @@ button{
   //ANCHOR graph
   .easter_egg{
     height: 10px;
+    margin-bottom: 1%;
   }
   .left{
     .view_ruche{
@@ -630,6 +634,9 @@ button{
     .form_ruche{
       .btn_content{
         width: 100vw;
+        .btn_ruche{
+          font-size: 80%;
+        }
       }
       .table_content{
         width: 100vw;
@@ -637,10 +644,10 @@ button{
           width: 20vw;
         }
         .view_rucher{
-          width: 40vw;
+          width: 50%;
           span{
             p,input[type='radio']{
-              width: 15vw;
+              width: 16vw;
             }
           }
           .rucher_body{
