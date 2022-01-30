@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background: pink;
   font-family: sans-serif;
 }
 body::-webkit-scrollbar {
@@ -376,7 +377,6 @@ button {
 }
 .right .form_ruche .table_content .view_rucher span p, .right .form_ruche .table_content .view_rucher span input[type=radio] {
   text-align: center;
-  width: 5vw;
 }
 
 @media screen and (min-width: 1441px) {
@@ -471,6 +471,9 @@ button {
   .right .form_ruche .table_content .select_ruche {
     width: 10vw;
   }
+  .right .form_ruche .table_content .select_ruche span p, .right .form_ruche .table_content .select_ruche span input[type=radio] {
+    width: 5vw;
+  }
 }
 @media screen and (max-width: 1440px) {
   #showAndHide span {
@@ -536,6 +539,24 @@ button {
   }
   .left .view_ruche .view\&select {
     width: 100vw;
+  }
+  .right .form_ruche .btn_content {
+    width: 100vw;
+  }
+  .right .form_ruche .table_content {
+    width: 100vw;
+  }
+  .right .form_ruche .table_content .select_ruche {
+    width: 20vw;
+  }
+  .right .form_ruche .table_content .view_rucher {
+    width: 40vw;
+  }
+  .right .form_ruche .table_content .view_rucher span p, .right .form_ruche .table_content .view_rucher span input[type=radio] {
+    width: 15vw;
+  }
+  .right .form_ruche .table_content .view_rucher .rucher_body span {
+    padding: 0.5%;
   }
 }
 

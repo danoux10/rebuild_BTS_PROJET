@@ -1,7 +1,7 @@
 //LINK resetCSS
 body{
   margin: 0;
-  //background: pink;
+  background: pink;
   font-family: sans-serif;
   &::-webkit-scrollbar{
     width: 6px;
@@ -392,7 +392,6 @@ button{
           border-bottom:1px solid black;
           p,input[type='radio']{
             text-align: center;
-            width: 5vw;
           }
         }
       }
@@ -522,6 +521,11 @@ button{
         width: 50%;
         .select_ruche{
           width: 10vw;
+          span{
+            p,input[type='radio']{
+              width: 5vw;
+            }
+          }
         }
       }
     }
@@ -618,6 +622,32 @@ button{
       .view\&select{
         width: 100vw;
         .graph{
+        }
+      }
+    }
+  }
+  .right{
+    .form_ruche{
+      .btn_content{
+        width: 100vw;
+      }
+      .table_content{
+        width: 100vw;
+        .select_ruche{
+          width: 20vw;
+        }
+        .view_rucher{
+          width: 40vw;
+          span{
+            p,input[type='radio']{
+              width: 15vw;
+            }
+          }
+          .rucher_body{
+            span{
+              padding: .5%;
+            }
+          }
         }
       }
     }

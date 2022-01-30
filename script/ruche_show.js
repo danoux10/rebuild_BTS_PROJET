@@ -30,7 +30,6 @@ if(easter_egg.classList.contains('hidden')) {
     btn.classList.remove('top');
 }
 
-
 function toggleRucheAdd(){
     if(ruche_add_btn.classList.contains('desactive')){
         ruche_add.classList.remove('desactive');
