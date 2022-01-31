@@ -21,6 +21,10 @@ a {
   display: none;
 }
 
+#view_content.hidden, #rucher_admin.hidden {
+  display: none;
+}
+
 .show {
   display: block;
 }
@@ -65,14 +69,6 @@ button {
   height: 40px;
   border-radius: 50px;
   transition: all ease 1s;
-}
-
-#showAndHide.hidden {
-  display: none;
-}
-
-#view_content.hidden {
-  display: none;
 }
 
 .ajouter {
@@ -135,11 +131,11 @@ button {
   left: -15px;
 }
 #navbar nav ul li {
-  color: orangered;
+  color: #fec108;
   cursor: pointer;
 }
 #navbar nav ul li a {
-  color: orangered;
+  color: #fec108;
 }
 
 #connexion_content {
@@ -243,12 +239,17 @@ button {
   background: rgba(184, 134, 11, 0.5);
   transition: all ease 0.5s;
 }
+.left .view_ruche .table\&select {
+  border: 1px solid black;
+  border-radius: 10px;
+  border-right: none;
+}
 .left .view_ruche .table\&select div span {
   border-bottom: 1px solid black;
   height: 20px;
   display: grid;
   grid-auto-columns: 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1% 5%;
   justify-content: center;
   align-content: center;
@@ -330,9 +331,6 @@ button {
 }
 .right .form_ruche .table_content .select_ruche .ruche_content span:nth-child(even) {
   background: silver;
-}
-.right .form_ruche .table_content .view_rucher {
-  width: 15vw;
 }
 .right .form_ruche .table_content .view_rucher .rucher_body span p {
   display: flex;
@@ -459,7 +457,11 @@ button {
     transition: all ease 0.5s;
   }
   .left .view_ruche .table\&select {
-    width: 7%;
+    font-size: 14px;
+    width: 10vw;
+  }
+  .left .view_ruche .table\&select p, .left .view_ruche .table\&select input[type=radio] {
+    text-align: center;
   }
 
   .right .form_ruche .btn_content {
@@ -470,9 +472,16 @@ button {
   }
   .right .form_ruche .table_content .select_ruche {
     width: 10vw;
+    text-align: center;
   }
   .right .form_ruche .table_content .select_ruche span p, .right .form_ruche .table_content .select_ruche span input[type=radio] {
     width: 5vw;
+  }
+  .right .form_ruche .view_rucher {
+    width: 10vw;
+  }
+  .right .form_ruche .view_rucher span p, .right .form_ruche .view_rucher span input[type=radio] {
+    width: 3vw;
   }
 }
 @media screen and (max-width: 1440px) {

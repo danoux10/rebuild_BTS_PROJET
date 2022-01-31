@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../alpha/coustom.css">
 <title>Gestion Ruche</title>
 </head>
-<body id="rucher_admin">
+<body>
 <?php include_once '../controller/navbar.php'; ?>
 <nav id="showAndHide" class="<?php if($_SESSION['status']!=1){ echo 'hidden';} ?>">
     <span id="graph_view"><p>View graph</p></span>
@@ -70,7 +70,7 @@
         </form>
     </div>
 <!--LINK right-->
-    <div class="right" id="admin_view">
+    <div class="right" id="rucher_admin">
         <form action="" method="post" class="form_ruche">
             <div class="btn_content">
                 <div id="btn" class="btn_ruche">

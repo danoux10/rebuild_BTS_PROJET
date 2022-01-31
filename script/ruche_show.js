@@ -1,5 +1,5 @@
 var view_content=document.getElementById('view_content');
-var view_admin = document.getElementById('admin_view');
+var view_admin = document.getElementById('rucher_admin');
 var easter_egg = document.getElementById('easter');
 var ruche_add = document.getElementById('add_ruche');
 var rucher_add = document.getElementById('add_rucher');
@@ -24,12 +24,14 @@ view_admin.classList.add('show');
 ruche_add.classList.add('invisible');
 rucher_add.classList.add('invisible');
 
+//hide easter if user
 if(easter_egg.classList.contains('hidden')) {
     btn.classList.add('top');
 }else{
     btn.classList.remove('top');
 }
 
+//show form
 function toggleRucheAdd(){
     if(ruche_add_btn.classList.contains('desactive')){
         ruche_add.classList.remove('desactive');
@@ -74,6 +76,7 @@ function toggleRucherAdd(){
     }
 }
 
+//hide form
 function invisibleRuche(){
     if(annul_ruche.classList.contains('desactive')){
         ruche_add.classList.add('invisible');
@@ -82,7 +85,6 @@ function invisibleRuche(){
         ruche_add_btn.classList.remove('active');
     }
 }
-
 function invisibleRucher(){
     if(annul_rucher.classList.contains('desactive')){
         rucher_add.classList.add('invisible');

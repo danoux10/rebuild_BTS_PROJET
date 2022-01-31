@@ -12,13 +12,15 @@ body{
 a{
   text-decoration: none;
 }
-
 //LINK commun
 .invisible{
   visibility:hidden;
 }
 .hidden{
   display: none;
+}
+#view_content.hidden,#rucher_admin.hidden{
+    display: none;
 }
 .show{
   display:block;
@@ -62,12 +64,6 @@ button{
     border-radius: 50px;
     transition: all ease 1s;
   }
-}
-#showAndHide.hidden{
-  display: none;
-}
-#view_content.hidden{
-  display: none;
 }
 
 //btn style
@@ -132,10 +128,10 @@ button{
       position: relative;
       left: -15px;
       li{
-        color: orangered;
+        color: #fec108;
         cursor: pointer;
         a{
-          color: orangered;
+          color: #fec108;
         }
       }
     }
@@ -244,13 +240,16 @@ button{
       }
     }
     .table\&select{
+      border: 1px solid black;
+      border-radius: 10px;
+      border-right: none;
       div{
         span{
           border-bottom: 1px solid black;
           height: 20px;
           display: grid;
           grid-auto-columns: 1fr;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
           gap: 1% 5%;
           justify-content: center;
           align-content: center;
@@ -288,7 +287,7 @@ button{
     }
   }
 }
-//ANCHOR rucher admin fixme tu en est la
+//ANCHOR rucher admin
 .right {
   display: flex;
   justify-content: center;
@@ -341,7 +340,7 @@ button{
         }
       }
       .view_rucher {
-        width: 15vw;
+        //width: 15vw;
         .rucher_body{
           span{
             p{
@@ -353,6 +352,7 @@ button{
               &:nth-child(1){
                 &::-webkit-scrollbar{
                   height: 5px;
+                  //width: auto;
                   border-top: 1px solid black;
                 }
                 &::-webkit-scrollbar-thumb{
@@ -364,6 +364,7 @@ button{
               &:nth-child(2){
                 &::-webkit-scrollbar{
                   height: 5px;
+                  //width: auto;
                   border-radius: 50px;
                   border-top: 1px solid black;
                   border-right: 1px solid black;
@@ -486,10 +487,10 @@ button{
   }
 
   //LINK rucher page
-  //ANCHOR graph
   .easter_egg{
     height: 30px;
   }
+  //ANCHOR graph
   .left{
     height: 100%;
     .view_ruche{
@@ -508,10 +509,15 @@ button{
         }
       }
       .table\&select{
-        width: 7%;
+        font-size: 14px;
+        width:10vw;
+        p,input[type='radio']{
+          text-align: center;
+        }
       }
     }
   }
+  //ANCHOR admin rucher
   .right{
     .form_ruche{
       .btn_content{
@@ -521,10 +527,19 @@ button{
         width: 50%;
         .select_ruche{
           width: 10vw;
+          text-align: center;
           span{
             p,input[type='radio']{
               width: 5vw;
             }
+          }
+        }
+      }
+      .view_rucher{
+        width: 10vw;
+        span{
+          p,input[type='radio']{
+            width: 3vw;
           }
         }
       }
@@ -601,11 +616,11 @@ button{
   }
 
   //LINK rucher page
-  //ANCHOR graph
   .easter_egg{
     height: 10px;
     margin-bottom: 1%;
   }
+  //ANCHOR graph
   .left{
     .view_ruche{
       .btn_ruche{
@@ -625,11 +640,12 @@ button{
       }
       .view\&select{
         width: 100vw;
-        .graph{
+          .graph{
         }
       }
     }
   }
+  //ANCHOR admin
   .right{
     .form_ruche{
       .btn_content{
