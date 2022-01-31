@@ -120,9 +120,9 @@
               <label for="rucheValue_add">Valeur Ruche</label>
               <input id="rucheValue_add" name="ruche_value" autocomplete="off" type="text" required>
             </span>
-            <span>
-                <button class="add_btn" name="add_ruche" type="submit">Ajouter Ruche</button>
-                <span id="cancel_ruche">Annuler</span>
+            <span class="btn_block">
+                <button class="ajouter" name="add_ruche" type="submit">Ajouter Ruche</button>
+                <span id="cancel_ruche" class="cancel_btn">Annuler</span>
             </span>
         </fieldset>
     </form>
@@ -141,9 +141,9 @@
               <label for="rucherLocation_add">Localisation Rucher</label>
               <input id="rucherLocation_add" name="location" autocomplete="off" type="text" required>
             </span>
-            <span>
-              <button class="add_btn" name="add_rucher" type="submit">Ajouter Rucher</button>
-              <span id="cancel_rucher">Annuler</span>
+            <span class="btn_block">
+              <button class="ajouter" name="add_rucher" type="submit">Ajouter Rucher</button>
+                <span id="cancel_rucher"><p>Annuler</p></span>
             </span>
         </fieldset>
     </form>
