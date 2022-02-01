@@ -48,6 +48,8 @@ function showDelete(){
         add_user_btn.classList.add('desactive');
         add_view.classList.remove('show');
         add_view.classList.add('hidden');
+        update_view.classList.add('show');
+        update_view.classList.remove('hidden');
     }else{
         delete_btn.classList.add('desactive');
         delete_btn.classList.remove('active');

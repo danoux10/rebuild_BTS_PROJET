@@ -740,6 +740,9 @@ button {
   .left .view_ruche .btn_ruche .dataSelect span input {
     width: 100px;
   }
+  .left .view_ruche .table\&select {
+    width: 50%;
+  }
   .left .view_ruche .view\&select {
     width: 100vw;
   }
