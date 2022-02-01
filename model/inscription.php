@@ -3,6 +3,7 @@
 		@$update_user = $_POST['confirm_update_U'];
 		@$cancelUpdate_user = $_POST['cancel_update'];
   @$confirm_delete = $_POST['delete_confirm'];
+		@$delete_btn = $_POST['delete_btn'];
   @$add_status = $_POST['add_status'];
 		@$select_user = $_POST['update_user'];
 		@$cancel_delete= $_POST['delete_cancel'];
@@ -75,20 +76,45 @@
 				}
 			}
 		}
+		
 		if(isset($cancelUpdate_user)){
 			unset($_SESSION['userSelected']);
 		}
 		
 		//supprim user
-	if(isset($confirm_delete)){
 		@$select = $_POST['selected_user'];
-		if ($select == 0){
-			$errors['select_delete']='selectioner un utilisateur';
-		}else{
-			$delete = $bdd->query("delete from users where user_id='$select'");
+		if(isset($delete_btn)){
+				if ($select == 0){
+						$errors['select_delete']='selectionner un utilisateur';
+				}else{
+						$_SESSION['show']=1;
+						$_SESSION['selected']=$select;
+						$selecte = $bdd->query("select * from users where user_id='$select'");
+						foreach ($selecte as $data){
+								$firstname = $data['firstname'];
+								$lastname = $data['lastname'];
+								$_SESSION['user']= $firstname.'  '.$lastname.'  ';
+						}
+				}
 		}
-	}
-	
+		if(isset($confirm_delete)){
+				echo "coucou";
+				$_SESSION['show']=0;
+				@$select = $_SESSION['selected'];
+				$delete = $bdd->query("delete from users where user_id='$select'");
+				unset($_SESSION['user']);
+				unset($_SESSION['selected']);
+		}
+		if (isset($cancel_delete)){
+				$_SESSION['show']=0;
+				unset($_SESSION['user']);
+				unset($_SESSION['selected']);
+		}
+		@var_dump($select);
+		echo '<br>';
+		@var_dump($_SESSION['show']);
+		echo '<br>';
+		@var_dump($_SESSION['user']);
 		//ANCHOR status
 		if(isset($add_status)){
 			$name = htmlspecialchars($_POST['status_name']);

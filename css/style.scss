@@ -737,7 +737,9 @@ button{
     align-items: center;
     //ANCHOR view user
     #view_user{
-      margin-top: 5%;
+      //background: #000;
+      justify-content: start;
+      margin-top: 15vh;
       width: 50%;
       height: 50vh;
     }

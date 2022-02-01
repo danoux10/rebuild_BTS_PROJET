@@ -10,6 +10,7 @@
 ?>
 <link rel="stylesheet" href="../alpha/coustom.css">
 <title>Gestion Utilisateur</title>
+<script> alert('attention pour supprimer il faut selectionner deux foix de meme pour la validation')</script>
 </head>
 <?php include_once '../controller/navbar.php'; ?>
 <div id="user_content">
@@ -27,11 +28,11 @@
         <div class="btn_content">
             <span class="button_custom ajouter" id="add_btn">Ajouter Utilisateur</span>
             <button class="button_custom modifier" name="update_user" id="view_update">Modifier Utilisateur</button>
-            <span class="button_custom supprimer" id="view_delete">Suprimer Utilisateur</span>
+            <button name="delete_btn" class="button_custom supprimer" id="view_delete">Suprimer Utilisateur</button>
         </div>
     </form>
     <div class="form_user">
-        <form action="user.php" method="post" id="form_update" class="form_content update_form">
+        <form action="" method="post" id="form_update" class="form_content update_form">
             <fieldset>
                 <legend class="head_form">
                     <img src="../img/bee-evil.svg" alt="" class="img_update">
@@ -109,14 +110,16 @@
         </form>
     </div>
 </div>
-<div id="delete_alert" class="hidden">
-    <div class="delete_content">
-        <p>Etes vous sur de vouloir supprimer l'Utilisateur</p>
-        <div class="tor_button">
-            <button type="submit" name="delete_confirm" id="confirm_delete" title="action irréversible">Oui</button>
-            <button type="submit" name="delete_cancel" id="cancel_delete">non</button>
+<div id="delete_alert" class="<?php if(@$_SESSION['show']==1){echo 'show';}?>">
+    <form action="user.php" method="post">
+        <div class="delete_content">
+            <p>Etes vous sur de vouloir supprimer l'Utilisateur <?php echo $_SESSION['user'] ?></p>
+            <div class="tor_button">
+                <button type="submit" target="_self" name="delete_confirm" id="confirm_delete" title="action irréversible">Oui</button>
+                <button type="submit" target="_self" name="delete_cancel" id="cancel_delete">non</button>
+            </div>
         </div>
-    </div>
+    </form>
 </div>
 <?php include_once '../model/inscription.php'; ?>
 <script src="../script/show_inscription.js"></script>
