@@ -21,6 +21,7 @@
 	
 	function selectTableUser(){
 		global $userData;
+		$table_user = "<div class='user_content scroll'>";
 		foreach ($userData as $data){
 			$lastname = $data['lastname'] ;
 			$firstname = $data['firstname'];
@@ -36,6 +37,7 @@
 			$table_user .="<input type='radio' name='selected_user' value='$id'>";
 			$table_user .="</span>";
 		}
+		$table_user .= "</div>";
 		return$table_user;
 	}
 	

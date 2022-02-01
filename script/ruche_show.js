@@ -1,4 +1,4 @@
-var view_content=document.getElementById('view_content');
+var view_content = document.getElementById('view_content');
 var view_admin = document.getElementById('rucher_admin');
 var easter_egg = document.getElementById('easter');
 var ruche_add = document.getElementById('add_ruche');
@@ -12,15 +12,15 @@ var rucher_add_btn = document.getElementById('ajout_rucher')
 var annul_ruche=document.getElementById('cancel_ruche');
 var annul_rucher=document.getElementById('cancel_rucher');
 
-graph_btn.classList.add('desactive');
-rucher_btn.classList.add('active');
+graph_btn.classList.add('active');
+rucher_btn.classList.add('desactive');
 ruche_add_btn.classList.add('desactive');
 rucher_add_btn.classList.add('desactive');
 annul_ruche.classList.add('desactive');
 annul_rucher.classList.add('desactive');
 
-view_content.classList.add('hidden');
-view_admin.classList.add('show');
+view_content.classList.add('show');
+view_admin.classList.add('hidden');
 ruche_add.classList.add('invisible');
 rucher_add.classList.add('invisible');
 

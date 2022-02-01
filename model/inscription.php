@@ -1,10 +1,11 @@
 <?php
-    @$add_user = $_POST['add_user'];
+		@$add_user = $_POST['add_user'];
 		@$update_user = $_POST['confirm_update_U'];
 		@$cancelUpdate_user = $_POST['cancel_update'];
-    @$confirm_delete = $_POST['delete_confirm'];
-    @$add_status = $_POST['add_status'];
+  @$confirm_delete = $_POST['delete_confirm'];
+  @$add_status = $_POST['add_status'];
 		@$select_user = $_POST['update_user'];
+		@$cancel_delete= $_POST['delete_cancel'];
 		$errors = array();
     if (isset($add_user)){
         // variable dzclartion; bn,lm;
@@ -21,7 +22,7 @@
 	        }else{
 						//cryot password
 		        $cryptPass = password_hash($password, PASSWORD_BCRYPT);
-						$userAdd = $bdd ->prepare('INSERT INTO users SET firstname= ?,lastname= ?,mail= ?,password= ?,status_reference= ?');
+										$userAdd = $bdd ->prepare('INSERT INTO users SET firstname= ?,lastname= ?,mail= ?,password= ?,status_reference= ?');
 		        $userAdd ->execute([$firstname,$lastname,$email,$cryptPass,$status]);
             $email='';
             unset($password);
@@ -87,7 +88,7 @@
 			$delete = $bdd->query("delete from users where user_id='$select'");
 		}
 	}
-		
+	
 		//ANCHOR status
 		if(isset($add_status)){
 			$name = htmlspecialchars($_POST['status_name']);

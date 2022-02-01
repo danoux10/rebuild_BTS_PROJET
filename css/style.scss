@@ -87,6 +87,17 @@ button{
     transition: all ease .5s;
   }
 }
+.supprimer{
+  border: none;
+  background: rgba(255, 0, 0, .5);
+  &:hover {
+    border: 1px solid rgb(255, 0, 0);
+    box-shadow: 2px 2px 2px rgb(255, 0, 0);
+    background: rgba(255, 0, 0, .5);
+    color: white;
+    transition: all ease .5s;
+  }
+}
 .button_custom{
   border: 1px solid black;
   padding: 1%;
@@ -252,6 +263,7 @@ button{
       border: 1px solid black;
       border-radius: 10px;
       border-right: none;
+      width: 25%;
       div{
         span{
           border-bottom: 1px solid black;
@@ -408,8 +420,8 @@ button{
     }
   }
 }
-//ANCHOR form rucher fixme ici
-//add ruche
+//ANCHOR form rucher
+//add ruche && rucher
 .add_form{
   display: flex;
   position: absolute;
@@ -464,12 +476,110 @@ button{
     }
   }
 }
-//add rucher
 
-//ruche to rucher
+//LINK user page
+#user_content{
+  //ANCHOR view user and select
+  #view_user{
+    //width: ;
+    display: flex;
+    flex-direction: column-reverse;
+    .select_user{
+      .head_user{
+        background: silver;
+      }
+      span{
+        display: grid;
+        grid-auto-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 1% 1%;
+        justify-content: space-around;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        border-bottom: 1px solid black;
+      }
+      .user_content{
+        span:nth-child(even){
+          background: lightgray;
+        }
+      }
+    }
+    .btn_content{
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 1%;
+    }
+  }
+  //ANCHOR form add and update
+  .form_user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fieldset{
+      border-top: none;
+      border-bottom: none;
+      border-radius: 10px;
+      box-shadow: 1px 1px 1px silver;
+      legend{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 3vw;
+        }
+      }
+      select{
+        margin-top: 5%;
+      }
+      .user_info{
+        margin-top: 3%;
+      }
+      .btn_update{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+    //ANCHOR add form
+    .sing_in{
+    }
+    //ANCHOR update form
+    .update_form{
+      img{
+        transform: rotate(60deg);
+      }
+    }
+  }
+}
+//ANCHOR delete alert
+#delete_alert{
+  background: white;
+  padding: 0 .5% .5%;
+  border-radius: 10px;
+  border-left: 2px solid rgba(grey,.8);
+  border-top: 2px solid rgba(grey,.8);
+  border-right: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  box-shadow: 2px 2px 2px rgba(grey,.5);
+  position: absolute;
+  .tor_button{
+    display: flex;
+    justify-content: space-around;
+    #confirm_delete{
+      background: rgba(lime,.5);
+      border: 1px solid green;
+    }
+    #cancel_delete{
+      background: rgba(red,.5);
+      border: 1px solid darkred;
+    }
+  }
+}
 
-  //LINK responsive
-//desktop
+
+//LINK responsive
+//ANCHOR desktop
 @media  screen and (min-width:1441px) {
   //LINK  navbarDesktop
   #showAndHide{
@@ -554,13 +664,12 @@ button{
       }
     }
   }
-
   //LINK rucher page
   .easter_egg{
     height: 30px;
   }
   //ANCHOR graph
-  .left{
+  view_content{
     height: 100%;
     .view_ruche{
       .btn_ruche{
@@ -579,7 +688,7 @@ button{
       }
       .table\&select{
         font-size: 14px;
-        width:10vw;
+        width:20vw;
         p,input[type='radio']{
           text-align: center;
         }
@@ -614,14 +723,44 @@ button{
       }
     }
   }
-  //ANCHOR form rucher fixme la
+  //ANCHOR form rucher
   .add_form{
     top: 25vh;
     left: 43vw;
   }
+  //LINK user page
+  //ANCHOR view user and select
+  #user_content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    //ANCHOR view user
+    #view_user{
+      margin-top: 5%;
+      width: 50%;
+      height: 50vh;
+    }
+    //ANCHOR form user
+    .form_user{
+      margin-top: 5%;
+      fieldset{
+        img{
+          display: block;
+          width: 5vw;
+        }
+      }
+    }
+  }
+  //ANCHOR alert delete
+  #delete_alert{
+    top: 25%;
+    left: 45%;
+  }
+
 }
 
-//mobile
+//ANCHOR mobile
 @media  screen and (max-width:1440px) {
   body{
     //background: pink;
@@ -710,6 +849,7 @@ button{
         }
       }
       .table\&select{
+
       }
       .view\&select{
         width: 100vw;
@@ -748,9 +888,46 @@ button{
       }
     }
   }
-  //ANCHOR form rucher fixme ici aussi
+  //ANCHOR form rucher
   .add_form{
     top: 20vh;
     left: 20vw;
+  }
+
+  //LINK user page
+  #user_content{
+    padding: .5%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    //ANCHOR view user
+    #view_user{
+      .select_user{
+        .user_content{
+          height: 20vh;
+        }
+      }
+      .btn_content{
+        span{
+          text-align: center;
+        }
+      }
+    }
+    //ANCHOR form user
+    .form_user{
+      fieldset{
+        legend{
+          text-align: center;
+         img{
+           display: none;
+         }
+        }
+      }
+    }
+  }
+  //ANCHOR delete form
+  #delete_alert{
+    top: 25vh;
+    left: 10vw;
   }
 }

@@ -93,6 +93,18 @@ button {
   transition: all ease 0.5s;
 }
 
+.supprimer {
+  border: none;
+  background: rgba(255, 0, 0, 0.5);
+}
+.supprimer:hover {
+  border: 1px solid red;
+  box-shadow: 2px 2px 2px red;
+  background: rgba(255, 0, 0, 0.5);
+  color: white;
+  transition: all ease 0.5s;
+}
+
 .button_custom {
   border: 1px solid black;
   padding: 1%;
@@ -255,6 +267,7 @@ button {
   border: 1px solid black;
   border-radius: 10px;
   border-right: none;
+  width: 25%;
 }
 .left .view_ruche .table\&select div span {
   border-bottom: 1px solid black;
@@ -444,6 +457,90 @@ button {
   height: 100%;
 }
 
+#user_content #view_user {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#user_content #view_user .select_user .head_user {
+  background: silver;
+}
+#user_content #view_user .select_user span {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1% 1%;
+  justify-content: space-around;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+#user_content #view_user .select_user .user_content span:nth-child(even) {
+  background: lightgray;
+}
+#user_content #view_user .btn_content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1%;
+}
+#user_content .form_user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#user_content .form_user fieldset {
+  border-top: none;
+  border-bottom: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px silver;
+}
+#user_content .form_user fieldset legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#user_content .form_user fieldset legend img {
+  width: 3vw;
+}
+#user_content .form_user fieldset select {
+  margin-top: 5%;
+}
+#user_content .form_user fieldset .user_info {
+  margin-top: 3%;
+}
+#user_content .form_user fieldset .btn_update {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+#user_content .form_user .update_form img {
+  transform: rotate(60deg);
+}
+
+#delete_alert {
+  background: white;
+  padding: 0 0.5% 0.5%;
+  border-radius: 10px;
+  border-left: 2px solid rgba(128, 128, 128, 0.8);
+  border-top: 2px solid rgba(128, 128, 128, 0.8);
+  border-right: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.5);
+  position: absolute;
+}
+#delete_alert .tor_button {
+  display: flex;
+  justify-content: space-around;
+}
+#delete_alert .tor_button #confirm_delete {
+  background: rgba(0, 255, 0, 0.5);
+  border: 1px solid green;
+}
+#delete_alert .tor_button #cancel_delete {
+  background: rgba(255, 0, 0, 0.5);
+  border: 1px solid darkred;
+}
+
 @media screen and (min-width: 1441px) {
   #showAndHide span:hover {
     border: 1px solid black;
@@ -512,10 +609,10 @@ button {
     height: 30px;
   }
 
-  .left {
+  view_content {
     height: 100%;
   }
-  .left .view_ruche .btn_ruche .choose button:hover, .left .view_ruche .btn_ruche .choose a:hover {
+  view_content .view_ruche .btn_ruche .choose button:hover, view_content .view_ruche .btn_ruche .choose a:hover {
     background: rgba(184, 134, 11, 0.5);
     border: none;
     box-shadow: 2px 2px 2px silver;
@@ -523,11 +620,11 @@ button {
     text-shadow: 1px 1px 1px grey;
     transition: all ease 0.5s;
   }
-  .left .view_ruche .table\&select {
+  view_content .view_ruche .table\&select {
     font-size: 14px;
-    width: 10vw;
+    width: 20vw;
   }
-  .left .view_ruche .table\&select p, .left .view_ruche .table\&select input[type=radio] {
+  view_content .view_ruche .table\&select p, view_content .view_ruche .table\&select input[type=radio] {
     text-align: center;
   }
 
@@ -554,6 +651,30 @@ button {
   .add_form {
     top: 25vh;
     left: 43vw;
+  }
+
+  #user_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #user_content #view_user {
+    margin-top: 5%;
+    width: 50%;
+    height: 50vh;
+  }
+  #user_content .form_user {
+    margin-top: 5%;
+  }
+  #user_content .form_user fieldset img {
+    display: block;
+    width: 5vw;
+  }
+
+  #delete_alert {
+    top: 25%;
+    left: 45%;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -647,6 +768,30 @@ button {
   .add_form {
     top: 20vh;
     left: 20vw;
+  }
+
+  #user_content {
+    padding: 0.5%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  #user_content #view_user .select_user .user_content {
+    height: 20vh;
+  }
+  #user_content #view_user .btn_content span {
+    text-align: center;
+  }
+  #user_content .form_user fieldset legend {
+    text-align: center;
+  }
+  #user_content .form_user fieldset legend img {
+    display: none;
+  }
+
+  #delete_alert {
+    top: 25vh;
+    left: 10vw;
   }
 }
 
