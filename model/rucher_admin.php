@@ -76,10 +76,10 @@
 			@$rucheSelect = $_POST['checkRuche'];
 			@$rucherSelect = $_POST['rucher'];
 			if($rucheSelect==NULL){
-					$errors['selectRuche']="choisir les ruches a ajouter";
+					$_SESSION['errors']['selectRuche']="choisir les ruches a ajouter";
 			}
 			if($rucherSelect==NULL){
-					$errors['selectRucher']="choisir un rucher";
+					$_SESSION['errors']['selectRucher']="choisir un rucher";
 			}
 			if($rucheSelect!=NULL && $rucherSelect!=NULL){
 					foreach ($rucheSelect as $item){
@@ -87,7 +87,7 @@
 							$upRuche = $bdd->prepare("update ruche set rucher_value=?,rucher_affect=1 where ruche_id=?");
 							$upRuche->execute([$rucherSelect,$test]);
 					}
-					$errors['rucheInRucher']="les ruches ont bien été ajoutér au rucher";
+					$_SESSION['errors']['rucheInRucher']="les ruches ont bien été ajoutér au rucher";
 			}
 	}
 

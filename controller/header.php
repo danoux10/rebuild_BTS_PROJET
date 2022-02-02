@@ -1,6 +1,7 @@
 <?php
   include_once '../_config/bdd.php';
   session_start();
+  include_once '../controller/error_message.php';
 ?>
 <head>
 	<meta charset="UTF-8">

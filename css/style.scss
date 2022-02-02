@@ -66,6 +66,17 @@ button{
   }
 }
 
+//error message
+.error_message{
+  width: 100vw;
+  height: 2.5vh;
+  background: rgba(red,.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: all ease .5s;
+}
 //btn style
 .ajouter{
   border: none;

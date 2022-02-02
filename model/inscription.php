@@ -7,7 +7,7 @@
   @$add_status = $_POST['add_status'];
 		@$select_user = $_POST['update_user'];
 		@$cancel_delete= $_POST['delete_cancel'];
-		$errors = array();
+//		$errors = array();
     if (isset($add_user)){
         // variable dzclartion; bn,lm;
 		    $firstname = htmlspecialchars($_POST['firstname']);
@@ -31,7 +31,7 @@
             $lastname='';
             }
         }else{
-            $errors['password'] = 'Mot de passe non identique';
+            $_SESSION['errors']['password'] = 'Mot de passe non identique';
         }
 				@$_SESSION['password']= $password;
 		    $_SESSION['firstname'] = $firstname;
@@ -43,7 +43,7 @@
 		if(isset($select_user)){
 			@$userId = $_POST['selected_user'];
 			if ($userId == 0){
-					$errors['select_delete']='selectioner un utilisateur';
+					$_SESSION['errors']['select_delete']='selectioner un utilisateur';
 			}else {
 				$_SESSION['userSelected'] = $userId;
 			}
@@ -85,7 +85,7 @@
 		@$select = $_POST['selected_user'];
 		if(isset($delete_btn)){
 				if ($select == 0){
-						$errors['select_delete']='selectionner un utilisateur';
+						$_SESSION['errors']['select_delete']='selectionner un utilisateur';
 				}else{
 						$_SESSION['show']=1;
 						$_SESSION['selected']=$select;
@@ -110,16 +110,11 @@
 				unset($_SESSION['user']);
 				unset($_SESSION['selected']);
 		}
-		@var_dump($select);
-		echo '<br>';
-		@var_dump($_SESSION['show']);
-		echo '<br>';
-		@var_dump($_SESSION['user']);
 		//ANCHOR status
 		if(isset($add_status)){
 			$name = htmlspecialchars($_POST['status_name']);
 			if(empty($name)){
-				$errors['statusAdd']='veuillez remplir le champ';
+					$_SESSION['errors']['statusAdd']='veuillez remplir le champ';
 			}else{
 				$insert=$bdd->prepare("insert into status set status_name=?");
 				$insert->execute([$name]);

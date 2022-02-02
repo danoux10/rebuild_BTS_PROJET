@@ -21,3 +21,4 @@
             </ul>
         </nav>
 </header>
+<?php echo $errorMessage; ?>
