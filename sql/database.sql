@@ -1,4 +1,4 @@
--- drop database rucher;
+drop database rucher;
 create database rucher;
 use rucher;
 create table status(

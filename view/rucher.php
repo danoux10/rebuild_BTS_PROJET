@@ -10,6 +10,9 @@
 ?>
 <link rel="stylesheet" href="../alpha/coustom.css">
 <title>Gestion Ruche</title>
+<script>
+    alert('il n\'y a des données que pour la première ruche du 01/01/21 au 01/01/21 de 00:00 à 23:59');
+</script>
 </head>
 <body>
 <?php include_once '../controller/navbar.php'; ?>
